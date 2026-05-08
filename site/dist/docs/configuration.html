@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configuration Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive configuration guide for HostingCo system including environment variables, config files, and setup options">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="configuration.html" class="docs-nav-link active">Configuration</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Configuration Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers all configuration options for the HostingCo system.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="configuration-overview" class="docs-section-title">Configuration Overview</h2>
+                        <p>The HostingCo system uses environment variables and configuration files for flexible setup across different environments.</p>
+                        
+                        <h3 class="docs-subsection-title">Configuration Hierarchy</h3>
+                        <div class="alert alert-info">
+                            <strong>1. Environment Variables:</strong> Runtime configuration<br>
+                            <strong>2. Configuration Files:</strong> Static configuration<br>
+                            <strong>3. Database Settings:</strong> Dynamic configuration stored in database<br>
+                            <strong>4. Default Values:</strong> Fallback configuration in code
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="environment-variables" class="docs-section-title">🌍 Environment Variables</h2>
+                        
+                        <h3 class="docs-subsection-title">Root Environment (.env)</h3>
+                        <pre><code class="language-env"># Application Environment
+NODE_ENV=development                    # development, staging, production
+LOG_LEVEL=info                         # error, warn, info, debug
+
+# Database Configuration
+DATABASE_URL=postgresql://hostingco:password@localhost:5432/hostingco
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=hostingco
+DB_USER=hostingco
+DB_PASSWORD=password
+DB_SSL=false                           # true for production</code></pre>
+
+                        <h3 class="docs-subsection-title">Server Configuration</h3>
+                        <pre><code class="language-env"># Server Settings
+PORT=3003
+HOST=localhost
+CORS_ORIGIN=http://localhost:3000
+
+# Security Configuration
+JWT_SECRET=your-super-secret-jwt-key
+JWT_EXPIRES_IN=24h
+BCRYPT_ROUNDS=12</code></pre>
+
+                        <h3 class="docs-subsection-title">Redis Configuration</h3>
+                        <pre><code class="language-env"># Redis Settings
+REDIS_URL=redis://localhost:6379
+REDIS_HOST=localhost
+REDIS_PORT=6379
+REDIS_PASSWORD=
+REDIS_DB=0</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="configuration-files" class="docs-section-title">📁 Configuration Files</h2>
+                        
+                        <h3 class="docs-subsection-title">Application Config</h3>
+                        <pre><code class="language-json">// config/app.json
+{
+  "name": "HostingCo",
+  "version": "1.0.0",
+  "description": "Hosting Management System",
+  "author": "HostingCo Team",
+  "license": "MIT",
+  "features": {
+    "userManagement": true,
+    "billing": true,
+    "support": true,
+    "monitoring": true
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Config</h3>
+                        <pre><code class="language-json">// config/database.json
+{
+  "client": "postgresql",
+  "connection": {
+    "host": "${DB_HOST}",
+    "port": "${DB_PORT}",
+    "database": "${DB_NAME}",
+    "user": "${DB_USER}",
+    "password": "${DB_PASSWORD}",
+    "ssl": "${DB_SSL}"
+  },
+  "pool": {
+    "min": 2,
+    "max": 10,
+    "acquireTimeoutMillis": 30000,
+    "idleTimeoutMillis": 30000
+  },
+  "migrations": {
+    "directory": "./migrations",
+    "tableName": "knex_migrations"
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="environment-specific-config" class="docs-section-title">Environment-Specific Configuration</h2>
+                        
+                        <h3 class="docs-subsection-title">Development Environment</h3>
+                        <div class="alert alert-success">
+                            <strong>Features:</strong> Debug mode, hot reload, detailed logging<br>
+                            <strong>Database:</strong> Local development database<br>
+                            <strong>Security:</strong> Relaxed CORS, self-signed certificates
+                        </div>
+
+                        <h3 class="docs-subsection-title">Production Environment</h3>
+                        <div class="alert alert-warning">
+                            <strong>Features:</strong> Optimized performance, minimal logging<br>
+                            <strong>Database:</strong> Production database with SSL<br>
+                            <strong>Security:</strong> Strict CORS, valid certificates, rate limiting
+                        </div>
+
+                        <h3 class="docs-subsection-title">Staging Environment</h3>
+                        <div class="alert alert-info">
+                            <strong>Features:</strong> Production-like setup with testing features<br>
+                            <strong>Database:</strong> Separate staging database<br>
+                            <strong>Security:</strong> Production security settings
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="configuration-management" class="docs-section-title">Configuration Management</h2>
+                        
+                        <h3 class="docs-subsection-title">Loading Configuration</h3>
+                        <pre><code class="language-javascript">// Load configuration based on environment
+const config = require('./config');
+
+// Access configuration values
+const dbConfig = config.database;
+const serverConfig = config.server;
+
+// Environment-specific overrides
+if (process.env.NODE_ENV === 'production') {
+  config.server.timeout = 30000;
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Validation</h3>
+                        <pre><code class="language-bash"># Validate configuration
+npm run config:validate
+
+# Check required environment variables
+npm run config:check-env
+
+# Test database connection
+npm run config:test-db</code></pre>
+
+                        <div class="alert alert-danger">
+                            <strong>Important:</strong> Always validate configuration before starting the application in production.
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="best-practices" class="docs-section-title">Best Practices</h2>
+                        
+                        <h3 class="docs-subsection-title">Security</h3>
+                        <ul>
+                            <li>Never commit secrets to version control</li>
+                            <li>Use environment-specific configuration files</li>
+                            <li>Encrypt sensitive configuration values</li>
+                            <li>Regularly rotate secrets and passwords</li>
+                        </ul>
+
+                        <h3 class="docs-subsection-title">Performance</h3>
+                        <ul>
+                            <li>Use connection pooling for database</li>
+                            <li>Configure appropriate timeouts</li>
+                            <li>Enable caching where appropriate</li>
+                            <li>Monitor configuration changes</li>
+                        </ul>
+
+                        <h3 class="docs-subsection-title">Maintenance</h3>
+                        <pre><code class="language-bash"># Backup configuration
+npm run config:backup
+
+# Update configuration templates
+npm run config:update-templates
+
+# Generate configuration documentation
+npm run config:docs</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive user management guide for HostingCo system including user creation, roles, permissions, and administration procedures">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="user-management.html" class="docs-nav-link active">User Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">User Management Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers all aspects of user management in the HostingCo system, including user creation, roles, permissions, and administration procedures.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="user-management-overview" class="docs-section-title">User Management Overview</h2>
+                        <p>The HostingCo system implements a robust user management system with role-based access control (RBAC), comprehensive authentication, and detailed user lifecycle management.</p>
+                        
+                        <h3 class="docs-subsection-title">User Types and Roles</h3>
+                        <div class="alert alert-info">
+                            <strong>Super Admin:</strong> Full system access and configuration<br>
+                            <strong>Admin:</strong> User, server, and billing management<br>
+                            <strong>Support:</strong> Customer support and ticket management<br>
+                            <strong>User:</strong> Self-service server and billing management<br>
+                            <strong>Read Only:</strong> View-only access to assigned resources
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-authentication" class="docs-section-title">🔐 User Authentication</h2>
+                        
+                        <h3 class="docs-subsection-title">Registration Process</h3>
+                        
+                        <h4 class="docs-subsection-title">Self-Registration</h4>
+                        <pre><code class="language-bash"># API endpoint for user registration
+POST /api/auth/register
+
+# Request body
+{
+  "email": "newuser@example.com",
+  "password": "SecurePass123!",
+  "name": "John Doe",
+  "company": "Acme Corp"
+}</code></pre>
+
+                        <h4 class="docs-subsection-title">Admin Registration</h4>
+                        <pre><code class="language-bash"># Admin creates user
+POST /api/admin/users
+
+# Request body
+{
+  "email": "user@example.com",
+  "name": "Jane Smith",
+  "role": "user",
+  "permissions": ["servers.read", "billing.read"]
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Login Process</h3>
+                        <pre><code class="language-bash"># User login
+POST /api/auth/login
+
+# Request body
+{
+  "email": "user@example.com",
+  "password": "password123"
+}
+
+# Response
+{
+  "token": "jwt-token-here",
+  "user": {
+    "id": "user-id",
+    "email": "user@example.com",
+    "name": "John Doe",
+    "role": "user"
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="role-based-access-control" class="docs-section-title">Role-Based Access Control</h2>
+                        
+                        <h3 class="docs-subsection-title">Permission System</h3>
+                        <div class="alert alert-success">
+                            <strong>users.read:</strong> View user information<br>
+                            <strong>users.write:</strong> Create and update users<br>
+                            <strong>servers.read:</strong> View server information<br>
+                            <strong>servers.write:</strong> Create and update servers<br>
+                            <strong>billing.read:</strong> View billing information<br>
+                            <strong>billing.write:</strong> Create and update billing
+                        </div>
+
+                        <h3 class="docs-subsection-title">Role Definitions</h3>
+                        <pre><code class="language-typescript">// Role definitions
+export const ROLES = {
+  SUPER_ADMIN: {
+    name: 'Super Admin',
+    permissions: ['*'] // All permissions
+  },
+  ADMIN: {
+    name: 'Admin',
+    permissions: [
+      'users.read', 'users.write',
+      'servers.read', 'servers.write',
+      'billing.read', 'billing.write',
+      'support.read', 'support.write'
+    ]
+  },
+  SUPPORT: {
+    name: 'Support',
+    permissions: [
+      'users.read',
+      'servers.read',
+      'billing.read',
+      'support.read', 'support.write'
+    ]
+  },
+  USER: {
+    name: 'User',
+    permissions: [
+      'profile.read', 'profile.write',
+      'servers.read:own',
+      'billing.read:own'
+    ]
+  },
+  READ_ONLY: {
+    name: 'Read Only',
+    permissions: ['servers.read:assigned']
+  }
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Permission Checking</h3>
+                        <pre><code class="language-typescript">// Permission checking middleware
+export const requirePermission = (permission: string) => {
+  return (req: Request, res: Response, next: NextFunction) => {
+    const user = req.user;
+    
+    if (!user) {
+      return res.status(401).json({ error: 'Unauthorized' });
+    }
+    
+    if (!user.hasPermission(permission)) {
+      return res.status(403).json({ error: 'Forbidden' });
+    }
+    
+    next();
+  };
+};
+
+// Usage in routes
+router.get('/users', requirePermission('users.read'), UserController.getAll);
+router.post('/users', requirePermission('users.write'), UserController.create);</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-lifecycle-management" class="docs-section-title">User Lifecycle Management</h2>
+                        
+                        <h3 class="docs-subsection-title">User Creation</h3>
+                        <pre><code class="language-typescript">// User creation service
+export class UserService {
+  static async create(userData: CreateUserDto, creator?: User): Promise&lt;User&gt; {
+    // Validate user data
+    await this.validateUserData(userData);
+    
+    // Check for existing user
+    const existing = await this.findByEmail(userData.email);
+    if (existing) {
+      throw new Error('User already exists');
+    }
+    
+    // Hash password
+    const passwordHash = await bcrypt.hash(userData.password, 12);
+    
+    // Create user
+    const user = await User.create({
+      ...userData,
+      passwordHash,
+      createdBy: creator?.id
+    });
+    
+    // Send welcome email
+    await EmailService.sendWelcomeEmail(user.email, user.name);
+    
+    return user;
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">User Updates</h3>
+                        <pre><code class="language-bash"># Update user information
+PUT /api/users/:id
+
+# Request body
+{
+  "name": "Updated Name",
+  "company": "New Company",
+  "phone": "+1234567890"
+}
+
+# Change password
+PUT /api/users/:id/password
+
+# Request body
+{
+  "currentPassword": "oldpassword",
+  "newPassword": "newpassword"
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">User Deactivation</h3>
+                        <pre><code class="language-typescript">// User deactivation
+export class UserService {
+  static async deactivate(userId: string, deactivatedBy: string): Promise&lt;User&gt; {
+    const user = await this.findById(userId);
+    if (!user) {
+      throw new Error('User not found');
+    }
+    
+    // Deactivate user
+    await User.update(userId, {
+      isActive: false,
+      deactivatedAt: new Date(),
+      deactivatedBy
+    });
+    
+    // Revoke all active sessions
+    await SessionService.revokeAllUserSessions(userId);
+    
+    // Send deactivation notification
+    await EmailService.sendDeactivationEmail(user.email);
+    
+    return user;
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-administration" class="docs-section-title">User Administration</h2>
+                        
+                        <h3 class="docs-subsection-title">User Management Interface</h3>
+                        <pre><code class="language-typescript">// Admin user management component
+export const UserManagement: React.FC = () => {
+  const [users, setUsers] = useState&lt;User[]&gt;([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadUsers();
+  }, []);
+
+  const loadUsers = async () => {
+    try {
+      const response = await api.get('/admin/users');
+      setUsers(response.data);
+    } catch (error) {
+      console.error('Failed to load users:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const createUser = async (userData: CreateUserDto) => {
+    try {
+      await api.post('/admin/users', userData);
+      loadUsers();
+    } catch (error) {
+      console.error('Failed to create user:', error);
+    }
+  };
+
+  return (
+    &lt;div className="user-management"&gt;
+      &lt;UserList users={users} onCreateUser={createUser} /&gt;
+    &lt;/div&gt;
+  );
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Bulk Operations</h3>
+                        <pre><code class="language-bash"># Bulk user creation
+POST /api/admin/users/bulk
+
+# Request body
+{
+  "users": [
+    {
+      "email": "user1@example.com",
+      "name": "User One",
+      "role": "user"
+    },
+    {
+      "email": "user2@example.com",
+      "name": "User Two",
+      "role": "user"
+    }
+  ]
+}
+
+# Bulk user updates
+PUT /api/admin/users/bulk
+
+# Bulk user deactivation
+DELETE /api/admin/users/bulk</code></pre>
+
+                        <h3 class="docs-subsection-title">User Import/Export</h3>
+                        <pre><code class="language-bash"># Export users
+GET /api/admin/users/export?format=csv
+GET /api/admin/users/export?format=json
+
+# Import users
+POST /api/admin/users/import
+Content-Type: multipart/form-data
+
+# File: users.csv
+email,name,role,company
+user1@example.com,User One,user,Company A
+user2@example.com,User Two,user,Company B</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="session-management" class="docs-section-title">🔑 Session Management</h2>
+                        
+                        <h3 class="docs-subsection-title">JWT Token Management</h3>
+                        <pre><code class="language-typescript">// JWT token service
+export class TokenService {
+  static generateToken(user: User): string {
+    const payload = {
+      id: user.id,
+      email: user.email,
+      role: user.role,
+      permissions: user.permissions
+    };
+    
+    return jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: '24h',
+      issuer: 'hostingco',
+      audience: 'hostingco-users'
+    });
+  }
+
+  static verifyToken(token: string): any {
+    try {
+      return jwt.verify(token, process.env.JWT_SECRET);
+    } catch (error) {
+      throw new Error('Invalid token');
+    }
+  }
+
+  static refreshToken(refreshToken: string): string {
+    // Implement refresh token logic
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Session Tracking</h3>
+                        <pre><code class="language-typescript">// Session tracking
+export class SessionService {
+  static async createSession(user: User, userAgent: string): Promise&lt;Session&gt; {
+    return Session.create({
+      userId: user.id,
+      token: generateToken(user),
+      userAgent,
+      ipAddress: getClientIP(),
+      createdAt: new Date(),
+      expiresAt: new Date(Date.now() + 24 * 60 * 60 * 1000) // 24 hours
+    });
+  }
+
+  static async revokeSession(sessionId: string): Promise&lt;void&gt; {
+    await Session.update(sessionId, { isActive: false });
+  }
+
+  static async revokeAllUserSessions(userId: string): Promise&lt;void&gt; {
+    await Session.update({ userId }, { isActive: false });
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Session Monitoring</h3>
+                        <pre><code class="language-bash"># View active sessions
+GET /api/admin/sessions
+
+# Revoke specific session
+DELETE /api/admin/sessions/:sessionId
+
+# Revoke all user sessions
+DELETE /api/admin/users/:userId/sessions</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-security" class="docs-section-title">🔒 User Security</h2>
+                        
+                        <h3 class="docs-subsection-title">Password Policies</h3>
+                        <div class="alert alert-warning">
+                            <strong>Minimum Length:</strong> 8 characters<br>
+                            <strong>Complexity:</strong> Must include uppercase, lowercase, numbers, and special characters<br>
+                            <strong>History:</strong> Cannot reuse last 5 passwords<br>
+                            <strong>Expiration:</strong> Passwords expire after 90 days
+                        </div>
+
+                        <h3 class="docs-subsection-title">Password Validation</h3>
+                        <pre><code class="language-typescript">// Password validation
+export class PasswordValidator {
+  static validate(password: string): ValidationResult {
+    const errors: string[] = [];
+
+    if (password.length &lt; 8) {
+      errors.push('Password must be at least 8 characters long');
+    }
+
+    if (!/[A-Z]/.test(password)) {
+      errors.push('Password must contain at least one uppercase letter');
+    }
+
+    if (!/[a-z]/.test(password)) {
+      errors.push('Password must contain at least one lowercase letter');
+    }
+
+    if (!/\d/.test(password)) {
+      errors.push('Password must contain at least one number');
+    }
+
+    if (!/[!@#$%^&*]/.test(password)) {
+      errors.push('Password must contain at least one special character');
+    }
+
+    return {
+      isValid: errors.length === 0,
+      errors
+    };
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Two-Factor Authentication</h3>
+                        <pre><code class="language-typescript">// 2FA implementation
+export class TwoFactorService {
+  static generateSecret(): string {
+    return speakeasy.generateSecret({
+      name: 'HostingCo',
+      issuer: 'HostingCo'
+    }).base32;
+  }
+
+  static verifyToken(secret: string, token: string): boolean {
+    return speakeasy.totp.verify({
+      secret,
+      encoding: 'base32',
+      token,
+      window: 2
+    });
+  }
+
+  static generateQRCode(secret: string): string {
+    return speakeasy.otpauthURL({
+      secret,
+      label: 'HostingCo',
+      issuer: 'HostingCo'
+    });
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Account Lockout</h3>
+                        <pre><code class="language-typescript">// Account lockout protection
+export class SecurityService {
+  static async handleFailedLogin(email: string): Promise&lt;void&gt; {
+    const attempts = await Redis.incr(`login_attempts:${email}`);
+    await Redis.expire(`login_attempts:${email}`, 3600); // 1 hour
+
+    if (attempts &gt;= 5) {
+      await UserService.lockAccount(email);
+      await EmailService.sendAccountLockedEmail(email);
+    }
+  }
+
+  static async resetLoginAttempts(email: string): Promise&lt;void&gt; {
+    await Redis.del(`login_attempts:${email}`);
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-analytics" class="docs-section-title">User Analytics</h2>
+                        
+                        <h3 class="docs-subsection-title">User Metrics</h3>
+                        <div class="alert alert-info">
+                            <strong>Total Users:</strong> Number of registered users<br>
+                            <strong>Active Users:</strong> Users who logged in within last 30 days<br>
+                            <strong>New Users:</strong> Users registered in last 30 days<br>
+                            <strong>User Retention:</strong> Percentage of users who return after signup
+                        </div>
+
+                        <h3 class="docs-subsection-title">Usage Analytics</h3>
+                        <pre><code class="language-bash"># Get user statistics
+GET /api/admin/analytics/users
+
+# Get user activity
+GET /api/admin/analytics/users/activity?period=30d
+
+# Get user retention
+GET /api/admin/analytics/users/retention</code></pre>
+
+                        <h3 class="docs-subsection-title">Reporting</h3>
+                        <pre><code class="language-typescript">// User analytics service
+export class UserAnalyticsService {
+  static async getUserMetrics(): Promise&lt;UserMetrics&gt; {
+    const totalUsers = await User.count();
+    const activeUsers = await User.count({
+      where: {
+        lastLoginAt: {
+          [Op.gte]: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000)
+        }
+      }
+    });
+
+    return {
+      totalUsers,
+      activeUsers,
+      newUsers: await this.getNewUsers(),
+      retentionRate: await this.calculateRetentionRate()
+    };
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="user-management-best-practices" class="docs-section-title">User Management Best Practices</h2>
+                        
+                        <h3 class="docs-subsection-title">Security Best Practices</h3>
+                        <div class="alert alert-success">
+                            <strong>Principle of Least Privilege:</strong> Grant minimum necessary permissions<br>
+                            <strong>Regular Audits:</strong> Review user permissions and access regularly<br>
+                            <strong>Secure Defaults:</strong> Start with restrictive permissions<br>
+                            <strong>Access Review:</strong> Periodic review of user accounts and roles
+                        </div>
+
+                        <h3 class="docs-subsection-title">User Experience Best Practices</h3>
+                        <ul>
+                            <li>Clear and intuitive registration process</li>
+                            <li>Helpful error messages and validation feedback</li>
+                            <li>Easy password reset and account recovery</li>
+                            <li>Consistent user interface across all user management features</li>
+                        </ul>
+
+                        <h3 class="docs-subsection-title">Administrative Best Practices</h3>
+                        <pre><code class="language-bash"># Regular user management tasks
+npm run users:audit           # Audit user permissions
+npm run users:cleanup          # Clean up inactive users
+npm run users:backup           # Backup user data
+npm run users:report           # Generate user reports</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

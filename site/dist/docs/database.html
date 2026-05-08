@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Database Operations Guide - HostingCo</title>
+    <meta name="description" content="Complete database operations guide for HostingCo system including schema, migrations, and maintenance procedures">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="data-management.html" class="docs-nav-link">Data Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link active">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Database Operations Guide</h1>
+                    <p class="docs-description">This guide covers all database operations, schema, and maintenance procedures for the HostingCo system.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="database-overview" class="docs-section-title">Database Overview</h2>
+                        <p>The HostingCo system uses PostgreSQL as the primary database with Redis for caching and session management.</p>
+                        
+                        <h3 class="docs-subsection-title">Database Components</h3>
+                        <div class="alert alert-info">
+                            <strong>PostgreSQL 15+:</strong> Main application database<br>
+                            <strong>Redis 7+:</strong> Caching and session storage<br>
+                            <strong>Knex.js:</strong> Database query builder and migration tool
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-schema" class="docs-section-title">Database Schema</h2>
+                        
+                        <h3 class="docs-subsection-title">Core Tables</h3>
+                        
+                        <h4 class="docs-subsection-title">users</h4>
+                        <p>User accounts and authentication data.</p>
+                        <pre><code class="language-sql">CREATE TABLE users (
+    id VARCHAR(50) PRIMARY KEY,
+    email VARCHAR(255) UNIQUE NOT NULL,
+    password_hash VARCHAR(255) NOT NULL,
+    name VARCHAR(255) NOT NULL,
+    phone VARCHAR(50),
+    company VARCHAR(255),
+    role VARCHAR(50) DEFAULT 'user',
+    permissions JSONB DEFAULT '[]',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+
+                        <h4 class="docs-subsection-title">servers</h4>
+                        <p>Server configurations and status information.</p>
+                        <pre><code class="language-sql">CREATE TABLE servers (
+    id VARCHAR(50) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    hostname VARCHAR(255) NOT NULL,
+    ip_address INET NOT NULL,
+    status VARCHAR(50) DEFAULT 'active',
+    specs JSONB NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-operations" class="docs-section-title">Database Operations</h2>
+                        
+                        <h3 class="docs-subsection-title">Connection Management</h3>
+                        <pre><code class="language-bash"># Test database connection
+npm run db:test
+
+# Check connection pool status
+npm run db:pool-status
+
+# Reset connection pool
+npm run db:reset-pool</code></pre>
+
+                        <h3 class="docs-subsection-title">Query Operations</h3>
+                        <pre><code class="language-javascript">// Using Knex.js for queries
+const knex = require('knex')(databaseConfig);
+
+// Select users
+const users = await knex('users').where('active', true);
+
+// Insert new user
+const userId = await knex('users').insert({
+  email: 'user@example.com',
+  name: 'John Doe'
+}).returning('id');</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-maintenance" class="docs-section-title">Database Maintenance</h2>
+                        
+                        <h3 class="docs-subsection-title">Backup Procedures</h3>
+                        <pre><code class="language-bash"># Create full backup
+pg_dump hostingco_prod > backup_$(date +%Y%m%d).sql
+
+# Automated backup
+npm run db:backup
+
+# Restore from backup
+psql hostingco_prod < backup_20240508.sql</code></pre>
+
+                        <h3 class="docs-subsection-title">Performance Optimization</h3>
+                        <div class="alert alert-success">
+                            <strong>Index Optimization:</strong> Regular index analysis and rebuilding<br>
+                            <strong>Query Optimization:</strong> Slow query monitoring and optimization<br>
+                            <strong>Vacuum:</strong> Regular table vacuuming for performance
+                        </div>
+
+                        <pre><code class="language-bash"># Analyze query performance
+npm run db:analyze-queries
+
+# Rebuild indexes
+npm run db:reindex
+
+# Vacuum tables
+npm run db:vacuum</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="redis-caching" class="docs-section-title">Redis Caching</h2>
+                        
+                        <h3 class="docs-subsection-title">Cache Management</h3>
+                        <pre><code class="language-bash"># Check Redis status
+npm run redis:status
+
+# Clear cache
+npm run redis:clear
+
+# Monitor Redis performance
+npm run redis:monitor</code></pre>
+
+                        <h3 class="docs-subsection-title">Session Storage</h3>
+                        <div class="alert alert-info">
+                            <strong>Session Store:</strong> User sessions stored in Redis<br>
+                            <strong>TTL:</strong> 24-hour session expiration<br>
+                            <strong>Security:</strong> Encrypted session data
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

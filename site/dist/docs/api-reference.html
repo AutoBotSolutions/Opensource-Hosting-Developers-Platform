@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API Reference - HostingCo</title>
+    <meta name="description" content="Complete API documentation for the HostingCo management system with interactive examples">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link active">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <h2 class="docs-sidebar-title">API Documentation</h2>
+            <nav class="docs-nav">
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Getting Started</div>
+                    <div class="docs-nav-item">
+                        <a href="#overview" class="docs-nav-link">Overview</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#authentication" class="docs-nav-link">Authentication</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#response-format" class="docs-nav-link">Response Format</a>
+                    </div>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Endpoints</div>
+                    <div class="docs-nav-item">
+                        <a href="#health-check" class="docs-nav-link">Health Check</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#authentication-endpoints" class="docs-nav-link">Authentication</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#dashboard-endpoints" class="docs-nav-link">Dashboard</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#hosting-endpoints" class="docs-nav-link">Hosting</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#billing-endpoints" class="docs-nav-link">Billing</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#support-endpoints" class="docs-nav-link">Support</a>
+                    </div>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Testing</div>
+                    <div class="docs-nav-item">
+                        <a href="#quick-commands" class="docs-nav-link">Quick Commands</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="#endpoint-status" class="docs-nav-link">Endpoint Status</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <div class="docs-header">
+                <h1 class="docs-title">API Reference</h1>
+                <p class="docs-description">Complete API documentation for the HostingCo management system with interactive examples and testing tools.</p>
+                <div class="docs-meta">
+                    <div class="docs-meta-item">
+                        <span class="docs-meta-emoji">⏱️</span>
+                        <span>15 min read</span>
+                    </div>
+                    <div class="docs-meta-item">
+                        <span class="docs-meta-emoji">Page</span>
+                        <span>Last updated: 2026-05-08</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="docs-toc">
+                <h3 class="docs-toc-title">Table of Contents</h3>
+                <ul class="docs-toc-list">
+                    <li class="docs-toc-item">
+                        <a href="#overview" class="docs-toc-link">Overview</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#base-url" class="docs-toc-link">Base URL</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#authentication" class="docs-toc-link">Authentication</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#response-format" class="docs-toc-link">Response Format</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#health-check" class="docs-toc-link">Health Check</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#authentication-endpoints" class="docs-toc-link">Authentication Endpoints</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#dashboard-endpoints" class="docs-toc-link">Dashboard Endpoints</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#hosting-endpoints" class="docs-toc-link">Hosting Endpoints</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#billing-endpoints" class="docs-toc-link">Billing Endpoints</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#support-endpoints" class="docs-toc-link">Support Endpoints</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#quick-commands" class="docs-toc-link">Quick Test Commands</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#endpoint-status" class="docs-toc-link">Endpoint Status</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Overview Section -->
+            <section class="docs-section">
+                <h2 id="overview" class="docs-section-title">Overview</h2>
+                <p>The HostingCo API provides a comprehensive RESTful interface for managing hosting services, billing, support tickets, and system operations. All endpoints return JSON responses and follow consistent patterns.</p>
+
+                <div class="alert alert-info">
+                    <strong>Base URL:</strong> <code>http://localhost:3003/api</code> (Development)<br>
+                    <strong>Production URL:</strong> <code>https://yourdomain.com/api</code>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="base-url" class="docs-section-title">Base URL</h2>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Development</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <code>http://localhost:3003/api</code></p>
+                            <p><strong>Description:</strong> Local development server</p>
+                            <p><strong>Status:</strong> <span class="badge badge-success">Active</span></p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Production</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <code>https://yourdomain.com/api</code></p>
+                            <p><strong>Description:</strong> Production environment</p>
+                            <p><strong>Status:</strong> <span class="badge badge-secondary">Configured</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="authentication" class="docs-section-title">Authentication</h2>
+                <p>Most API endpoints require authentication using JWT tokens. Include the token in the Authorization header:</p>
+                
+                <pre><code class="language-http">Authorization: Bearer &lt;your-jwt-token&gt;</code></pre>
+
+                <h3 class="docs-subsection-title">Authentication Flow</h3>
+                <ol>
+                    <li>Login to obtain JWT token</li>
+                    <li>Include token in subsequent requests</li>
+                    <li>Token expires after 24 hours (configurable)</li>
+                </ol>
+
+                <div class="alert alert-warning">
+                    <strong>Security Note:</strong> Always use HTTPS in production to protect your JWT tokens.
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="response-format" class="docs-section-title">Response Format</h2>
+                <p>All API responses follow a consistent format:</p>
+
+                <h3 class="docs-subsection-title">Success Response</h3>
+                <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    // Response data
+  },
+  "message": "Operation successful",
+  "timestamp": "2026-05-08T03:14:24.942Z"
+}</code></pre>
+
+                <h3 class="docs-subsection-title">Error Response</h3>
+                <pre><code class="language-json">{
+  "success": false,
+  "error": {
+    "code": "ERROR_CODE",
+    "message": "Error description",
+    "details": {
+      // Additional error details
+    }
+  },
+  "timestamp": "2026-05-08T03:14:24.942Z"
+}</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="health-check" class="docs-section-title">Health Check</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/health</div>
+                    </div>
+                    <div class="api-description">
+                        Check API server health and status.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Request</div>
+                            <pre><code class="language-bash">curl http://localhost:3003/api/health</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "status": "healthy",
+    "timestamp": "2026-05-08T03:52:58.868Z",
+    "uptime": 571.586811102,
+    "environment": "development",
+    "version": "1.0.0"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="authentication-endpoints" class="docs-section-title">Authentication Endpoints</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/auth/login</div>
+                    </div>
+                    <div class="api-description">
+                        Authenticate user and return JWT token.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Request Body</div>
+                            <pre><code class="language-json">{
+  "email": "user@example.com",
+  "password": "password123"
+}</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...",
+    "user": {
+      "id": "user_123",
+      "email": "user@example.com",
+      "name": "John Doe",
+      "role": "user"
+    }
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/auth/register</div>
+                    </div>
+                    <div class="api-description">
+                        Register a new user account.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Request Body</div>
+                            <pre><code class="language-json">{
+  "email": "newuser@example.com",
+  "password": "password123",
+  "name": "New User",
+  "company": "Example Corp"
+}</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "user": {
+      "id": "user_456",
+      "email": "newuser@example.com",
+      "name": "New User",
+      "role": "user"
+    }
+  },
+  "message": "User registered successfully"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/auth/logout</div>
+                    </div>
+                    <div class="api-description">
+                        Logout user and invalidate token.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "message": "Logged out successfully"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="dashboard-endpoints" class="docs-section-title">Dashboard Endpoints</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/dashboard/stats</div>
+                    </div>
+                    <div class="api-description">
+                        Get dashboard statistics and overview data.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "overview": {
+      "totalUsers": 150,
+      "activeUsers": 120,
+      "totalServers": 45,
+      "activeServers": 42,
+      "totalRevenue": 12500.00,
+      "monthlyRevenue": 2500.00
+    },
+    "servers": {
+      "byStatus": {
+        "active": 42,
+        "inactive": 3
+      },
+      "averageUptime": 99.8
+    },
+    "billing": {
+      "pendingInvoices": 8,
+      "totalRevenue": 45678.90
+    }
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/dashboard/refresh</div>
+                    </div>
+                    <div class="api-description">
+                        Refresh dashboard data and statistics.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "refreshed": true,
+    "timestamp": "2026-05-08T03:14:24.942Z"
+  },
+  "message": "Dashboard data refreshed successfully"
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="hosting-endpoints" class="docs-section-title">Hosting Endpoints</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/hosting/plans</div>
+                    </div>
+                    <div class="api-description">
+                        Get available hosting plans.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": [
+    {
+      "id": "basic",
+      "name": "Basic Plan",
+      "type": "shared",
+      "price": 9.99,
+      "specs": {
+        "cpu": 2,
+        "ram": "4GB",
+        "storage": "50GB",
+        "bandwidth": "1TB"
+      },
+      "features": [
+        "Free SSL",
+        "Daily Backups",
+        "Email Support"
+      ]
+    },
+    {
+      "id": "pro",
+      "name": "Pro Plan",
+      "type": "vps",
+      "price": 29.99,
+      "specs": {
+        "cpu": 4,
+        "ram": "8GB",
+        "storage": "100GB",
+        "bandwidth": "2TB"
+      },
+      "features": [
+        "Free SSL",
+        "Daily Backups",
+        "Priority Support",
+        "Root Access"
+      ]
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/hosting/servers</div>
+                    </div>
+                    <div class="api-description">
+                        Get user's servers.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": [
+    {
+      "id": "server_001",
+      "name": "web-server-01",
+      "plan": "pro",
+      "status": "active",
+      "ip": "192.168.1.101",
+      "hostname": "web-server-01.acme.com",
+      "uptime": 99.9,
+      "statistics": {
+        "cpuUsage": 25.5,
+        "memoryUsage": 60.2,
+        "diskUsage": 45.8
+      }
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/hosting/servers/:id/power</div>
+                    </div>
+                    <div class="api-description">
+                        Perform server power actions (start, stop, restart).
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Request Body</div>
+                            <pre><code class="language-json">{
+  "action": "restart"
+}</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Available Actions</div>
+                            <ul>
+                                <li><code>start</code> - Start server</li>
+                                <li><code>stop</code> - Stop server</li>
+                                <li><code>restart</code> - Restart server</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "message": "Server restart command initiated successfully",
+  "data": {
+    "id": "server_001",
+    "action": "restart",
+    "status": "active"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="billing-endpoints" class="docs-section-title">Billing Endpoints</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/billing/invoices</div>
+                    </div>
+                    <div class="api-description">
+                        Get user's invoices.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": [
+    {
+      "id": "inv_001",
+      "number": "INV-2026-001",
+      "amount": 29.99,
+      "status": "paid",
+      "dueDate": "2026-06-01T00:00:00.000Z",
+      "description": "Pro Plan - June 2026"
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/billing/summary</div>
+                    </div>
+                    <div class="api-description">
+                        Get billing summary and statistics.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "totalRevenue": 45678.90,
+    "thisMonthRevenue": 3456.78,
+    "pendingInvoices": 3,
+    "overdueInvoices": 2,
+    "totalInvoices": 94,
+    "paidInvoices": 89,
+    "nextBillingDate": "2026-06-01T00:00:00.000Z"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="support-endpoints" class="docs-section-title">Support Endpoints</h2>
+                
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method get">GET</div>
+                        <div class="api-url">/support/tickets</div>
+                    </div>
+                    <div class="api-description">
+                        Get user's support tickets.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "data": [
+    {
+      "id": "ticket_001",
+      "subject": "Server downtime issue",
+      "status": "in_progress",
+      "priority": "high",
+      "category": "Technical",
+      "createdAt": "2026-05-07T10:00:00.000Z",
+      "messages": [
+        {
+          "sender": "user",
+          "content": "My VPS server has been down...",
+          "timestamp": "2026-05-07T10:00:00.000Z"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="api-endpoint">
+                    <div class="api-header">
+                        <div class="api-method post">POST</div>
+                        <div class="api-url">/support/tickets</div>
+                    </div>
+                    <div class="api-description">
+                        Create new support ticket.
+                    </div>
+                    <div class="api-body">
+                        <div class="api-section">
+                            <div class="api-section-title">Headers</div>
+                            <pre><code class="language-http">Authorization: Bearer &lt;token&gt;</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Request Body</div>
+                            <pre><code class="language-json">{
+  "subject": "Server configuration help",
+  "description": "I need help configuring my server settings",
+  "priority": "medium",
+  "category": "Technical"
+}</code></pre>
+                        </div>
+                        
+                        <div class="api-section">
+                            <div class="api-section-title">Response</div>
+                            <pre><code class="language-json">{
+  "success": true,
+  "message": "Support ticket created successfully",
+  "data": {
+    "id": "ticket_002",
+    "subject": "Server configuration help",
+    "status": "open",
+    "priority": "medium",
+    "createdAt": "2026-05-08T10:00:00.000Z"
+  }
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="quick-commands" class="docs-section-title">Quick Test Commands</h2>
+                <p>These are verified commands to test the API endpoints:</p>
+
+                <h3 class="docs-subsection-title">Health Check (No auth required)</h3>
+                <pre><code class="language-bash">curl http://localhost:3003/api/health</code></pre>
+
+                <h3 class="docs-subsection-title">Hosting Plans (No auth required)</h3>
+                <pre><code class="language-bash">curl http://localhost:3003/api/hosting/plans</code></pre>
+
+                <h3 class="docs-subsection-title">Login (Get token)</h3>
+                <pre><code class="language-bash">curl -X POST http://localhost:3003/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@hostingco.com","password":"admin123"}'</code></pre>
+
+                <h3 class="docs-subsection-title">Dashboard Stats (Auth required)</h3>
+                <pre><code class="language-bash">curl http://localhost:3003/api/dashboard/stats \
+  -H "Authorization: Bearer &lt;token&gt;"</code></pre>
+
+                <h3 class="docs-subsection-title">Server Actions (Auth required)</h3>
+                <pre><code class="language-bash">curl -X POST http://localhost:3003/api/hosting/servers/server_id/power \
+  -H "Authorization: Bearer &lt;token&gt;" \
+  -H "Content-Type: application/json" \
+  -d '{"action":"restart"}'</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="endpoint-status" class="docs-section-title">Endpoint Status</h2>
+                <p>Current status of all API endpoints:</p>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Health Check</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/health</code></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Auth Login</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/auth/login</code></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Hosting Plans</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/hosting/plans</code></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Dashboard Stats</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/dashboard/stats</code> (requires auth)</p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Server Management</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/hosting/servers/*</code></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Billing</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/billing/*</code></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="flex justify-between items-center">
+                                <span>Support</span>
+                                <span class="badge badge-success">Working</span>
+                            </div>
+                            <p><code>/api/support/*</code></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <strong>Authentication Notes:</strong>
+                    <ul>
+                        <li>Default admin credentials: <code>admin@hostingco.com</code> / <code>admin123</code></li>
+                        <li>JWT tokens expire after 24 hours</li>
+                        <li>Include token in <code>Authorization: Bearer &lt;token&gt;</code> header</li>
+                        <li>Protected endpoints return 401 without valid token</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Navigation Footer -->
+            <div class="docs-nav-footer">
+                <a href="quick-start.html" class="docs-nav-prev">
+                    <span class="docs-nav-emoji">Back</span>
+                    <span>Quick Start Guide</span>
+                </a>
+                <a href="installation.html" class="docs-nav-next">
+                    <span>Installation Guide</span>
+                    <span class="docs-nav-emoji">Next</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-text">HostingCo</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced hosting management system built for modern infrastructure.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="quick-start.html">Quick Start</a></li>
+                        <li><a href="api-reference.html">API Reference</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/issues" target="_blank">Issues</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/releases" target="_blank">Releases</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 HostingCo System. Built with modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

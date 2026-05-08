@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive data management guide for HostingCo system including seed data, configuration, migrations, and database operations">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="data-management.html" class="docs-nav-link active">Data Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Data Management Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers all aspects of data management for the HostingCo system, including seed data, configuration, migrations, and database operations.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="data-directory-structure" class="docs-section-title">📁 Data Directory Structure</h2>
+                        <pre><code class="language-ascii">data/
+├── README.md                    # Data documentation
+├── seed/                        # Database seed data
+│   ├── users.json              # Sample user accounts
+│   ├── servers.json            # Sample server configurations
+│   ├── invoices.json           # Sample invoice data
+│   └── support-tickets.json    # Sample support tickets
+├── config/                      # Configuration files
+│   ├── hosting-plans.json      # Hosting plan definitions
+│   └── system-settings.json    # System configuration
+├── sample/                      # Sample data for development
+│   ├── dashboard-stats.json    # Dashboard statistics
+│   └── analytics-data.json     # Analytics and metrics data
+├── migrations/                  # Database migrations
+│   ├── 001_initial_schema.sql  # Initial database schema
+│   └── 002_add_indexes.sql     # Performance indexes
+└── backups/                     # Backup storage (auto-created)
+    ├── database/                # Database backups
+    ├── files/                   # File backups
+    └── logs/                    # Log backups</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="seed-data-management" class="docs-section-title">🌱 Seed Data Management</h2>
+                        <p>Seed data provides initial data for development and testing environments.</p>
+                        
+                        <h3 class="docs-subsection-title">Available Seed Files</h3>
+                        <div class="alert alert-info">
+                            <strong>users.json:</strong> Sample user accounts with different roles<br>
+                            <strong>servers.json:</strong> Sample server configurations and statuses<br>
+                            <strong>invoices.json:</strong> Sample invoice data for testing billing<br>
+                            <strong>support-tickets.json:</strong> Sample support ticket scenarios
+                        </div>
+
+                        <h3 class="docs-subsection-title">Loading Seed Data</h3>
+                        <pre><code class="language-bash"># Load all seed data
+npm run seed:all
+
+# Load specific seed data
+npm run seed:users
+npm run seed:servers
+npm run seed:invoices</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="configuration-management" class="docs-section-title">Configuration Management</h2>
+                        <p>Configuration files define system settings and business rules.</p>
+                        
+                        <h3 class="docs-subsection-title">Key Configuration Files</h3>
+                        <div class="alert alert-success">
+                            <strong>hosting-plans.json:</strong> Defines available hosting plans and pricing<br>
+                            <strong>system-settings.json:</strong> Global system configuration<br>
+                            <strong>feature-flags.json:</strong> Feature toggle settings
+                        </div>
+
+                        <h3 class="docs-subsection-title">Updating Configuration</h3>
+                        <pre><code class="language-bash"># Reload configuration without restart
+npm run config:reload
+
+# Validate configuration files
+npm run config:validate</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-migrations" class="docs-section-title">Database Migrations</h2>
+                        <p>Database migrations manage schema changes and data transformations.</p>
+                        
+                        <h3 class="docs-subsection-title">Migration Commands</h3>
+                        <pre><code class="language-bash"># Run pending migrations
+npm run migrate:latest
+
+# Rollback last migration
+npm run migrate:rollback
+
+# Create new migration
+npm run migrate:create migration_name</code></pre>
+
+                        <div class="alert alert-warning">
+                            <strong>Important:</strong> Always backup your database before running migrations in production.
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

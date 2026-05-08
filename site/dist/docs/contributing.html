@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contributing Guidelines - HostingCo</title>
+    <meta name="description" content="Comprehensive contributing guidelines for HostingCo system including development setup, coding standards, and contribution process">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="contributing.html" class="docs-nav-link active">Contributing</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Contributing Guidelines</h1>
+                    <p class="docs-description">This guide covers how to contribute to the HostingCo system, including development setup, coding standards, and the contribution process.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="welcome" class="docs-section-title">Welcome!</h2>
+                        <p>Thank you for your interest in contributing to HostingCo! This document provides guidelines and standards for contributing to the project.</p>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="getting-started" class="docs-section-title">Getting Started</h2>
+                        
+                        <h3 class="docs-subsection-title">Prerequisites</h3>
+                        <div class="alert alert-info">
+                            <strong>Node.js 18+ and npm 8+</strong><br>
+                            <strong>PostgreSQL 15+</strong><br>
+                            <strong>Redis 7+</strong><br>
+                            <strong>Git</strong><br>
+                            <strong>Basic knowledge of TypeScript, React, and Node.js</strong>
+                        </div>
+
+                        <h3 class="docs-subsection-title">First-Time Setup</h3>
+                        
+                        <h4 class="docs-subsection-title">1. Fork the Repository</h4>
+                        <pre><code class="language-bash"># Fork the repository on GitHub
+# Then clone your fork
+git clone https://github.com/YOUR_USERNAME/hostingco-system.git
+cd hostingco-system</code></pre>
+
+                        <h4 class="docs-subsection-title">2. Set Up Development Environment</h4>
+                        <pre><code class="language-bash"># Install dependencies
+npm run install:all
+
+# Set up environment
+cp .env.example .env
+
+# Start development servers
+npm run dev</code></pre>
+
+                        <h4 class="docs-subsection-title">3. Configure Git Hooks</h4>
+                        <pre><code class="language-bash"># Install pre-commit hooks
+npm run setup:hooks
+
+# Verify hooks are installed
+npm run check:hooks</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="development-workflow" class="docs-section-title">Development Workflow</h2>
+                        
+                        <h3 class="docs-subsection-title">Branch Strategy</h3>
+                        <div class="alert alert-success">
+                            <strong>main:</strong> Production-ready code<br>
+                            <strong>develop:</strong> Integration branch for features<br>
+                            <strong>feature/*:</strong> Feature branches<br>
+                            <strong>bugfix/*:</strong> Bug fix branches<br>
+                            <strong>hotfix/*:</strong> Critical fixes for production
+                        </div>
+
+                        <h3 class="docs-subsection-title">Creating a Feature Branch</h3>
+                        <pre><code class="language-bash"># Create feature branch
+git checkout -b feature/your-feature-name
+
+# Make your changes
+# Commit your work
+git commit -m "feat: add your feature description"
+
+# Push to your fork
+git push origin feature/your-feature-name</code></pre>
+
+                        <h3 class="docs-subsection-title">Pull Request Process</h3>
+                        <ol>
+                            <li>Create a pull request from your feature branch to <code>develop</code></li>
+                            <li>Ensure all tests pass</li>
+                            <li>Request code review from team members</li>
+                            <li>Address feedback and make necessary changes</li>
+                            <li>Merge after approval</li>
+                        </ol>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="coding-standards" class="docs-section-title">📝 Coding Standards</h2>
+                        
+                        <h3 class="docs-subsection-title">Code Style</h3>
+                        <div class="alert alert-warning">
+                            <strong>TypeScript:</strong> Use TypeScript for all new code<br>
+                            <strong>ESLint:</strong> Follow ESLint configuration<br>
+                            <strong>Prettier:</strong> Use Prettier for code formatting<br>
+                            <strong>Conventional Commits:</strong> Follow conventional commit message format
+                        </div>
+
+                        <h3 class="docs-subsection-title">File Naming</h3>
+                        <pre><code class="language-text"># Components
+ComponentName.tsx        # PascalCase for React components
+componentName.test.tsx   # Test files with .test suffix
+componentName.styles.css  # Styles with .styles suffix
+
+# Utilities
+utilityName.ts           # camelCase for utility functions
+utilityName.test.ts      # Test files
+
+# Types
+types.ts                 # Type definitions
+interfaces.ts           # Interface definitions</code></pre>
+
+                        <h3 class="docs-subsection-title">Code Organization</h3>
+                        <pre><code class="language-typescript">// Import order
+import React from 'react';                    // React imports
+import { useState, useEffect } from 'react';   // React hooks
+import { Button } from './components';        // Local components
+import { api } from '../services';             // Services
+import { User } from '../types';                // Types
+
+// Component definition
+export const ComponentName: React.FC = () => {
+  // Hooks
+  const [state, setState] = useState&lt;Type&gt;(initialValue);
+  
+  // Effects
+  useEffect(() => {
+    // Effect logic
+  }, [dependencies]);
+  
+  // Event handlers
+  const handleClick = () => {
+    // Handler logic
+  };
+  
+  // Render
+  return (
+    &lt;div&gt;
+      {/* JSX content */}
+    &lt;/div&gt;
+  );
+};</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="testing-guidelines" class="docs-section-title">Testing Guidelines</h2>
+                        
+                        <h3 class="docs-subsection-title">Test Types</h3>
+                        <div class="alert alert-info">
+                            <strong>Unit Tests:</strong> Test individual functions and components<br>
+                            <strong>Integration Tests:</strong> Test component interactions<br>
+                            <strong>E2E Tests:</strong> Test complete user flows<br>
+                            <strong>Performance Tests:</strong> Test application performance
+                        </div>
+
+                        <h3 class="docs-subsection-title">Writing Tests</h3>
+                        <pre><code class="language-typescript">// Component test example
+import { render, screen, fireEvent } from '@testing-library/react';
+import { Button } from './Button';
+
+describe('Button Component', () => {
+  it('renders correctly', () => {
+    render(&lt;Button&gt;Click me&lt;/Button&gt;);
+    expect(screen.getByText('Click me')).toBeInTheDocument();
+  });
+
+  it('handles click events', () => {
+    const handleClick = jest.fn();
+    render(&lt;Button onClick={handleClick}&gt;Click me&lt;/Button&gt;);
+    
+    fireEvent.click(screen.getByText('Click me'));
+    expect(handleClick).toHaveBeenCalledTimes(1);
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Test Coverage</h3>
+                        <div class="alert alert-success">
+                            <strong>Target Coverage:</strong> 80% minimum<br>
+                            <strong>Critical Paths:</strong> 100% coverage required<br>
+                            <strong>Branch Coverage:</strong> All branches tested<br>
+                            <strong>Edge Cases:</strong> Error conditions tested
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="documentation" class="docs-section-title">Documentation</h2>
+                        
+                        <h3 class="docs-subsection-title">Code Documentation</h3>
+                        <pre><code class="language-typescript">/**
+ * User service for managing user accounts
+ * @example
+ * // Create a new user
+ * const user = await userService.create({
+ *   email: 'user@example.com',
+ *   name: 'John Doe'
+ * });
+ */
+export class UserService {
+  /**
+   * Creates a new user account
+   * @param userData - User data to create account
+   * @returns Promise that resolves to created user
+   * @throws {ValidationError} When user data is invalid
+   */
+  async create(userData: CreateUserDto): Promise&lt;User&gt; {
+    // Implementation
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">API Documentation</h3>
+                        <pre><code class="language-typescript">/**
+ * @api {post} /api/users Create User
+ * @apiName CreateUser
+ * @apiGroup Users
+ * @apiDescription Creates a new user account
+ * @apiParam {Object} userData User data
+ * @apiParam {String} userData.email User email
+ * @apiParam {String} userData.name User name
+ * @apiSuccess {Object} user Created user object
+ * @apiError {400} ValidationError Invalid user data
+ */</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="pull-request-guidelines" class="docs-section-title">🔀 Pull Request Guidelines</h2>
+                        
+                        <h3 class="docs-subsection-title">PR Requirements</h3>
+                        <div class="alert alert-warning">
+                            <strong>Clear Description:</strong> Explain what and why<br>
+                            <strong>Testing:</strong> All tests must pass<br>
+                            <strong>Documentation:</strong> Update relevant docs<br>
+                            <strong>Breaking Changes:</strong> Clearly document any breaking changes
+                        </div>
+
+                        <h3 class="docs-subsection-title">PR Template</h3>
+                        <pre><code class="language-markdown">## Description
+Brief description of the changes
+
+## Type of Change
+- [ ] Bug fix
+- [ ] New feature
+- [ ] Breaking change
+- [ ] Documentation update
+
+## Testing
+- [ ] All tests pass
+- [ ] New tests added
+- [ ] Manual testing completed
+
+## Checklist
+- [ ] Code follows project style guidelines
+- [ ] Self-review completed
+- [ ] Documentation updated
+- [ ] No breaking changes (or clearly documented)</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="community-guidelines" class="docs-section-title">Community Guidelines</h2>
+                        
+                        <h3 class="docs-subsection-title">Code of Conduct</h3>
+                        <div class="alert alert-info">
+                            <strong>Be Respectful:</strong> Treat everyone with respect<br>
+                            <strong>Be Inclusive:</strong> Welcome contributors of all backgrounds<br>
+                            <strong>Be Constructive:</strong> Provide helpful feedback<br>
+                            <strong>Be Professional:</strong> Maintain professional communication
+                        </div>
+
+                        <h3 class="docs-subsection-title">Getting Help</h3>
+                        <ul>
+                            <li>Join our Discord server for real-time help</li>
+                            <li>Create an issue for bugs or questions</li>
+                            <li>Check existing documentation first</li>
+                            <li>Search for similar issues before creating new ones</li>
+                        </ul>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>
