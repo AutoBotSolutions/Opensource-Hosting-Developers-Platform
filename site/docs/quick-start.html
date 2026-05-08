@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Start Guide - HostingCo</title>
+    <meta name="description" content="Get HostingCo running in minutes with our step-by-step quick start guide">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link active">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <div class="docs-layout">
+        <!-- Sidebar -->
+        <aside class="docs-sidebar">
+            <h2 class="docs-sidebar-title">Documentation</h2>
+            <nav class="docs-nav">
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Getting Started</div>
+                    <div class="docs-nav-item">
+                        <a href="quick-start.html" class="docs-nav-link active">Quick Start Guide</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="data-management.html" class="docs-nav-link">Data Management</a>
+                    </div>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">API Reference</div>
+                    <div class="docs-nav-item">
+                        <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                    </div>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Architecture</div>
+                    <div class="docs-nav-item">
+                        <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="database.html" class="docs-nav-link">Database Design</a>
+                    </div>
+                </div>
+                
+                <div class="docs-nav-section">
+                    <div class="docs-nav-section-title">Operations</div>
+                    <div class="docs-nav-item">
+                        <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="security.html" class="docs-nav-link">Security</a>
+                    </div>
+                    <div class="docs-nav-item">
+                        <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                    </div>
+                </div>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="docs-content">
+            <div class="docs-header">
+                <h1 class="docs-title">Quick Start Guide</h1>
+                <p class="docs-description">Get the HostingCo system running in minutes with this comprehensive quick start guide.</p>
+                <div class="docs-meta">
+                    <div class="docs-meta-item">
+                        <span class="docs-meta-emoji">⏱️</span>
+                        <span>5 min read</span>
+                    </div>
+                    <div class="docs-meta-item">
+                        <span class="docs-meta-emoji">Page</span>
+                        <span>Quick Start</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Table of Contents -->
+            <div class="docs-toc">
+                <h3 class="docs-toc-title">Table of Contents</h3>
+                <ul class="docs-toc-list">
+                    <li class="docs-toc-item">
+                        <a href="#prerequisites" class="docs-toc-link">Prerequisites</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#method-1-manual-setup-recommended" class="docs-toc-link">Method 1: Manual Setup (Recommended)</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#method-2-docker-setup" class="docs-toc-link">Method 2: Docker Setup</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#verification" class="docs-toc-link">Verification</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#access-points" class="docs-toc-link">Access Points</a>
+                    </li>
+                    <li class="docs-toc-item">
+                        <a href="#next-steps" class="docs-toc-link">Next Steps</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Content Sections -->
+            <section class="docs-section">
+                <h2 id="prerequisites" class="docs-section-title">Prerequisites (Verified)</h2>
+                <p>Before you begin, ensure you have the following installed:</p>
+                
+                <div class="alert alert-info">
+                    <strong>Verified Versions:</strong> These are the exact versions we've tested and confirmed working.
+                </div>
+
+                <ul>
+                    <li><strong>Node.js</strong>: 18+ (verified: v20.19.2)</li>
+                    <li><strong>npm</strong>: 8+ (verified: v9.2.0)</li>
+                    <li><strong>Git</strong>: For version control</li>
+                    <li><strong>PostgreSQL</strong>: 15+ (optional for development)</li>
+                    <li><strong>Redis</strong>: 7+ (optional for development)</li>
+                </ul>
+
+                <h3 class="docs-subsection-title">Check Your Versions</h3>
+                <p>Verify your installation with these commands:</p>
+                <pre><code class="language-bash">node --version    # Should return v18.0.0+
+npm --version     # Should return 8.0.0+
+git --version     # Should show git version</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="method-1-manual-setup-recommended" class="docs-section-title">Method 1: Manual Setup (Recommended)</h2>
+                <p>This method gives you full control over the setup process and is ideal for development.</p>
+
+                <h3 class="docs-subsection-title">Step 1: Clone Repository</h3>
+                <pre><code class="language-bash"># Clone the repository
+git clone https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform.git
+cd hostingco-system</code></pre>
+
+                <h3 class="docs-subsection-title">Step 2: Install Dependencies</h3>
+                <pre><code class="language-bash"># Install all dependencies for all packages
+npm run install:all
+
+# This installs dependencies for:
+# - Root package (concurrently, etc.)
+# - Backend package
+# - Frontend package  
+# - Shared package</code></pre>
+
+                <h3 class="docs-subsection-title">Step 3: Environment Configuration</h3>
+                <pre><code class="language-bash"># Copy environment template
+cp .env.example .env
+
+# Edit configuration (optional for development)
+nano .env</code></pre>
+
+                <h3 class="docs-subsection-title">Step 4: Build and Start</h3>
+                <pre><code class="language-bash"># Build all packages
+npm run build
+
+# Start development servers
+npm run dev
+
+# Or start individually:
+npm run dev:backend    # Backend on port 3003
+npm run dev:frontend   # Frontend on port 3000</code></pre>
+
+                <div class="alert alert-success">
+                    <strong>That's it!</strong> Your HostingCo system should now be running.
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="method-2-docker-setup" class="docs-section-title">Method 2: Docker Setup</h2>
+                <p>If you prefer using Docker for containerized deployment:</p>
+
+                <h3 class="docs-subsection-title">Step 1: Clone and Setup</h3>
+                <pre><code class="language-bash">git clone https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform.git
+cd hostingco-system
+cp .env.example .env</code></pre>
+
+                <h3 class="docs-subsection-title">Step 2: Docker Build and Run</h3>
+                <pre><code class="language-bash"># Build and start all services
+docker-compose up -d --build
+
+# Check logs
+docker-compose logs -f</code></pre>
+
+                <h3 class="docs-subsection-title">Step 3: Verify Services</h3>
+                <pre><code class="language-bash"># Check container status
+docker-compose ps
+
+# Access services
+# Frontend: http://localhost:3000
+# Backend: http://localhost:3003</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="verification" class="docs-section-title">Verification</h2>
+                <p>Once the services are running, verify everything is working correctly:</p>
+
+                <h3 class="docs-subsection-title">Check System Status</h3>
+                <pre><code class="language-bash"># Check if services are running
+curl http://localhost:3003/api/health
+curl http://localhost:3000
+
+# Check processes
+ps aux | grep -E "(node|vite)" | grep -v grep
+
+# Test API endpoints
+curl http://localhost:3003/api/hosting/plans</code></pre>
+
+                <h3 class="docs-subsection-title">Expected Output</h3>
+                <p>Health check should return:</p>
+                <pre><code class="language-json">{
+  "success": true,
+  "data": {
+    "status": "healthy",
+    "timestamp": "2026-05-08T03:52:58.868Z",
+    "uptime": 571.586811102,
+    "environment": "development"
+  }
+}</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="access-points" class="docs-section-title">Access Points</h2>
+                <p>Once running, you can access the system at these URLs:</p>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Frontend Application</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <a href="http://localhost:3000">http://localhost:3000</a></p>
+                            <p><strong>Description:</strong> React-based user interface</p>
+                            <p><strong>Status:</strong> <span class="badge badge-success">Running</span></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Backend API</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <a href="http://localhost:3003/api">http://localhost:3003/api</a></p>
+                            <p><strong>Description:</strong> Node.js REST API</p>
+                            <p><strong>Status:</strong> <span class="badge badge-success">Running</span></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Health Check</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <a href="http://localhost:3003/api/health">http://localhost:3003/api/health</a></p>
+                            <p><strong>Description:</strong> System health status</p>
+                            <p><strong>Status:</strong> <span class="badge badge-success">Healthy</span></p>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">API Documentation</h4>
+                        </div>
+                        <div class="card-body">
+                            <p><strong>URL:</strong> <a href="http://localhost:3003/api/hosting/plans">http://localhost:3003/api/hosting/plans</a></p>
+                            <p><strong>Description:</strong> Sample API endpoint</p>
+                            <p><strong>Status:</strong> <span class="badge badge-success">Working</span></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="default-login" class="docs-section-title">Default Login Credentials</h2>
+                <p>For testing purposes, use these default credentials:</p>
+
+                <div class="alert alert-warning">
+                    <strong>Security Note:</strong> These are development credentials only. Change them in production!
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Role</th>
+                            <th>Permissions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>admin@hostingco.com</code></td>
+                            <td><code>admin123</code></td>
+                            <td>Administrator</td>
+                            <td>Full access</td>
+                        </tr>
+                        <tr>
+                            <td><code>john.doe@acme.com</code></td>
+                            <td><code>password123</code></td>
+                            <td>User</td>
+                            <td>Read, Write</td>
+                        </tr>
+                        <tr>
+                            <td><code>support.agent@hostingco.com</code></td>
+                            <td><code>support123</code></td>
+                            <td>Support</td>
+                            <td>Read, Write</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="project-structure" class="docs-section-title">Project Structure</h2>
+                <p>Understanding the project structure helps with navigation and development:</p>
+
+                <pre><code class="language-bash">HostingCo/
+├── backend/          # Node.js API (port 3003)
+├── frontend/         # React SPA (port 3000)
+├── shared/           # TypeScript types
+├── data/             # Seed data & config
+├── scripts/          # Automation scripts
+├── docs/             # Documentation
+└── logs/             # Application logs</code></pre>
+
+                <h3 class="docs-subsection-title">Key Directories</h3>
+                <ul>
+                    <li><strong>backend/</strong> - Node.js/Express API server</li>
+                    <li><strong>frontend/</strong> - React single-page application</li>
+                    <li><strong>shared/</strong> - TypeScript types and utilities</li>
+                    <li><strong>data/</strong> - Seed data, configuration, and migrations</li>
+                    <li><strong>scripts/</strong> - Automation and utility scripts</li>
+                    <li><strong>docs/</strong> - Comprehensive documentation</li>
+                </ul>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="common-commands" class="docs-section-title">Common Commands</h2>
+                <p>Here are the most commonly used commands during development:</p>
+
+                <h3 class="docs-subsection-title">Development</h3>
+                <pre><code class="language-bash">npm run dev              # Start both servers
+npm run dev:backend      # Backend only
+npm run dev:frontend     # Frontend only</code></pre>
+
+                <h3 class="docs-subsection-title">Building</h3>
+                <pre><code class="language-bash">npm run build            # Build all packages
+npm run build:backend    # Backend compilation
+npm run build:frontend   # Frontend build</code></pre>
+
+                <h3 class="docs-subsection-title">Testing</h3>
+                <pre><code class="language-bash">npm run test             # Run all tests
+npm run test:backend     # Backend tests
+npm run test:frontend    # Frontend tests</code></pre>
+
+                <h3 class="docs-subsection-title">Production</h3>
+                <pre><code class="language-bash">npm start                # Start production server</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="troubleshooting" class="docs-section-title">Troubleshooting</h2>
+                <p>Common issues and their solutions:</p>
+
+                <h3 class="docs-subsection-title">Services Already Running</h3>
+                <p>If you get "port already in use" errors:</p>
+                <pre><code class="language-bash"># Check current status
+curl http://localhost:3003/api/health
+
+# If restart needed
+pkill -f "npm run dev"
+npm run dev</code></pre>
+
+                <h3 class="docs-subsection-title">Authentication Issues</h3>
+                <p>If you get 401 errors for protected endpoints:</p>
+                <pre><code class="language-bash"># Get auth token
+curl -X POST http://localhost:3003/api/auth/login \
+  -H "Content-Type: application/json" \
+  -d '{"email":"admin@hostingco.com","password":"admin123"}'</code></pre>
+
+                <h3 class="docs-subsection-title">Port Conflicts</h3>
+                <pre><code class="language-bash"># Check port usage
+lsof -i :3000  # Frontend
+lsof -i :3003  # Backend
+
+# Kill processes if needed
+sudo fuser -k 3000/tcp
+sudo fuser -k 3003/tcp</code></pre>
+
+                <h3 class="docs-subsection-title">Missing Dependencies</h3>
+                <pre><code class="language-bash"># Install all dependencies
+npm run install:all
+
+# Build shared packages first
+cd shared && npm run build && cd ..</code></pre>
+            </section>
+
+            <section class="docs-section">
+                <h2 id="next-steps" class="docs-section-title">Next Steps</h2>
+                <p>Now that you have HostingCo running, here's what you can do next:</p>
+
+                <div class="grid grid-cols-1 gap-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Explore the API</h4>
+                            <p>Test the REST API endpoints and understand the data structures.</p>
+                            <a href="api-reference.html" class="btn btn-primary">View API Documentation</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Review Documentation</h4>
+                            <p>Dive deeper into system architecture, security, and operations.</p>
+                            <a href="architecture.html" class="btn btn-primary">Read Architecture Guide</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Data Management</h4>
+                            <p>Learn about seed data, configuration, and database operations.</p>
+                            <a href="data-management.html" class="btn btn-primary">Data Management Guide</a>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-body">
+                            <h4>Development</h4>
+                            <p>Start customizing the system for your specific needs.</p>
+                            <a href="development-guide.html" class="btn btn-primary">Development Guide</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Navigation Footer -->
+            <div class="docs-nav-footer">
+                <a href="../index.html" class="docs-nav-prev">
+                    <span class="docs-nav-emoji">Back</span>
+                    <span>Back to Home</span>
+                </a>
+                <a href="installation.html" class="docs-nav-next">
+                    <span>Installation Guide</span>
+                    <span class="docs-nav-emoji">Next</span>
+                </a>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-text">HostingCo</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced hosting management system built for modern infrastructure.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="quick-start.html">Quick Start</a></li>
+                        <li><a href="api-reference.html">API Reference</a></li>
+                        <li><a href="installation.html">Installation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/issues" target="_blank">Issues</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/releases" target="_blank">Releases</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 HostingCo System. Built with modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

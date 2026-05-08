@@ -1,0 +1,121 @@
+[
+  {
+    "id": "ticket_001",
+    "userId": "user_001",
+    "subject": "Server downtime issue",
+    "description": "My VPS server has been down for the last 2 hours. I need urgent assistance as this is affecting my business operations.",
+    "status": "in_progress",
+    "priority": "high",
+    "category": "Technical",
+    "assignedTo": "support_001",
+    "createdAt": "2026-05-07T10:00:00.000Z",
+    "updatedAt": "2026-05-07T12:00:00.000Z",
+    "messages": [
+      {
+        "id": "msg_001",
+        "ticketId": "ticket_001",
+        "sender": "user",
+        "content": "My VPS server has been down for the last 2 hours. I need urgent assistance as this is affecting my business operations.",
+        "timestamp": "2026-05-07T10:00:00.000Z"
+      },
+      {
+        "id": "msg_002",
+        "ticketId": "ticket_001",
+        "sender": "support",
+        "content": "We are investigating the issue. Our team is working on it and we'll provide an update shortly.",
+        "timestamp": "2026-05-07T11:30:00.000Z"
+      },
+      {
+        "id": "msg_003",
+        "ticketId": "ticket_001",
+        "sender": "support",
+        "content": "We found the issue. There was a network configuration problem. We're fixing it now. Estimated resolution time: 30 minutes.",
+        "timestamp": "2026-05-07T12:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "ticket_002",
+    "userId": "user_001",
+    "subject": "Billing question",
+    "description": "I have a question about my latest invoice INV-2026-004. Can you help me understand the additional storage charge?",
+    "status": "open",
+    "priority": "medium",
+    "category": "Billing",
+    "assignedTo": null,
+    "createdAt": "2026-05-08T09:00:00.000Z",
+    "updatedAt": "2026-05-08T09:00:00.000Z",
+    "messages": [
+      {
+        "id": "msg_004",
+        "ticketId": "ticket_002",
+        "sender": "user",
+        "content": "I have a question about my latest invoice INV-2026-004. Can you help me understand the additional storage charge?",
+        "timestamp": "2026-05-08T09:00:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "ticket_003",
+    "userId": "user_001",
+    "subject": "Domain transfer help",
+    "description": "I need help transferring my domain from GoDaddy to your service. The domain is acme.com.",
+    "status": "resolved",
+    "priority": "low",
+    "category": "Domain",
+    "assignedTo": "support_001",
+    "createdAt": "2026-05-05T14:30:00.000Z",
+    "updatedAt": "2026-05-06T16:45:00.000Z",
+    "messages": [
+      {
+        "id": "msg_005",
+        "ticketId": "ticket_003",
+        "sender": "user",
+        "content": "I need help transferring my domain from GoDaddy to your service. The domain is acme.com.",
+        "timestamp": "2026-05-05T14:30:00.000Z"
+      },
+      {
+        "id": "msg_006",
+        "ticketId": "ticket_003",
+        "sender": "support",
+        "content": "We can help you with that. Please provide your domain name and current registrar.",
+        "timestamp": "2026-05-05T15:00:00.000Z"
+      },
+      {
+        "id": "msg_007",
+        "ticketId": "ticket_003",
+        "sender": "user",
+        "content": "Domain: acme.com, Registrar: GoDaddy",
+        "timestamp": "2026-05-05T15:30:00.000Z"
+      },
+      {
+        "id": "msg_008",
+        "ticketId": "ticket_003",
+        "sender": "support",
+        "content": "Thank you! We've initiated the transfer process. You should receive an email shortly with confirmation instructions.",
+        "timestamp": "2026-05-06T16:45:00.000Z"
+      }
+    ]
+  },
+  {
+    "id": "ticket_004",
+    "userId": "admin_001",
+    "subject": "Backup server maintenance",
+    "description": "Scheduled maintenance for backup-server-01. Need to coordinate with user to minimize downtime.",
+    "status": "open",
+    "priority": "medium",
+    "category": "Technical",
+    "assignedTo": "support_001",
+    "createdAt": "2026-05-08T07:00:00.000Z",
+    "updatedAt": "2026-05-08T07:00:00.000Z",
+    "messages": [
+      {
+        "id": "msg_009",
+        "ticketId": "ticket_004",
+        "sender": "admin",
+        "content": "Scheduled maintenance for backup-server-01. Need to coordinate with user to minimize downtime.",
+        "timestamp": "2026-05-08T07:00:00.000Z"
+      }
+    ]
+  }
+]

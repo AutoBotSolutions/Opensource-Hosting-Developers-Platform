@@ -1,0 +1,153 @@
+[
+  {
+    "id": "inv_001",
+    "userId": "user_001",
+    "number": "INV-2026-001",
+    "amount": 29.99,
+    "tax": 2.40,
+    "total": 32.39,
+    "status": "paid",
+    "dueDate": "2026-02-01T00:00:00.000Z",
+    "paidDate": "2026-01-28T14:30:00.000Z",
+    "description": "Pro Plan - February 2026",
+    "items": [
+      {
+        "id": "item_001",
+        "description": "Pro Plan Hosting",
+        "quantity": 1,
+        "unitPrice": 29.99,
+        "total": 29.99
+      }
+    ],
+    "billingAddress": {
+      "name": "John Doe",
+      "company": "Acme Corporation",
+      "address": "123 Business Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94102",
+      "country": "USA"
+    },
+    "paymentMethod": {
+      "type": "credit_card",
+      "last4": "4242",
+      "brand": "Visa"
+    },
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-01-28T14:30:00.000Z"
+  },
+  {
+    "id": "inv_002",
+    "userId": "user_001",
+    "number": "INV-2026-002",
+    "amount": 99.99,
+    "tax": 8.00,
+    "total": 107.99,
+    "status": "paid",
+    "dueDate": "2026-03-01T00:00:00.000Z",
+    "paidDate": "2026-02-25T10:15:00.000Z",
+    "description": "Enterprise Plan - March 2026",
+    "items": [
+      {
+        "id": "item_002",
+        "description": "Enterprise Plan Hosting",
+        "quantity": 1,
+        "unitPrice": 99.99,
+        "total": 99.99
+      }
+    ],
+    "billingAddress": {
+      "name": "John Doe",
+      "company": "Acme Corporation",
+      "address": "123 Business Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94102",
+      "country": "USA"
+    },
+    "paymentMethod": {
+      "type": "credit_card",
+      "last4": "4242",
+      "brand": "Visa"
+    },
+    "createdAt": "2026-02-01T00:00:00.000Z",
+    "updatedAt": "2026-02-25T10:15:00.000Z"
+  },
+  {
+    "id": "inv_003",
+    "userId": "user_001",
+    "number": "INV-2026-003",
+    "amount": 9.99,
+    "tax": 0.80,
+    "total": 10.79,
+    "status": "overdue",
+    "dueDate": "2026-04-01T00:00:00.000Z",
+    "paidDate": null,
+    "description": "Basic Plan - April 2026",
+    "items": [
+      {
+        "id": "item_003",
+        "description": "Basic Plan Hosting",
+        "quantity": 1,
+        "unitPrice": 9.99,
+        "total": 9.99
+      }
+    ],
+    "billingAddress": {
+      "name": "John Doe",
+      "company": "Acme Corporation",
+      "address": "123 Business Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94102",
+      "country": "USA"
+    },
+    "paymentMethod": null,
+    "createdAt": "2026-03-01T00:00:00.000Z",
+    "updatedAt": "2026-04-02T00:00:00.000Z"
+  },
+  {
+    "id": "inv_004",
+    "userId": "user_001",
+    "number": "INV-2026-004",
+    "amount": 29.99,
+    "tax": 2.40,
+    "total": 32.39,
+    "status": "pending",
+    "dueDate": "2026-06-01T00:00:00.000Z",
+    "paidDate": null,
+    "description": "Pro Plan - June 2026",
+    "items": [
+      {
+        "id": "item_004",
+        "description": "Pro Plan Hosting",
+        "quantity": 1,
+        "unitPrice": 29.99,
+        "total": 29.99
+      },
+      {
+        "id": "item_005",
+        "description": "Additional Storage - 50GB",
+        "quantity": 1,
+        "unitPrice": 10.00,
+        "total": 10.00
+      }
+    ],
+    "billingAddress": {
+      "name": "John Doe",
+      "company": "Acme Corporation",
+      "address": "123 Business Street",
+      "city": "San Francisco",
+      "state": "CA",
+      "zip": "94102",
+      "country": "USA"
+    },
+    "paymentMethod": {
+      "type": "credit_card",
+      "last4": "4242",
+      "brand": "Visa"
+    },
+    "createdAt": "2026-05-01T00:00:00.000Z",
+    "updatedAt": "2026-05-01T00:00:00.000Z"
+  }
+]

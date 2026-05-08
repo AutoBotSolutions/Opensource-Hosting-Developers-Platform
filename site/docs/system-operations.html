@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Operations Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive system operations guide for HostingCo including startup, shutdown, monitoring, maintenance, and troubleshooting procedures">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="data-management.html" class="docs-nav-link">Data Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link active">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">System Operations Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers all system operations for the HostingCo management system, including startup, shutdown, monitoring, maintenance, and troubleshooting procedures.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="system-startup" class="docs-section-title">System Startup</h2>
+                        
+                        <h3 class="docs-subsection-title">Development Environment</h3>
+                        
+                        <h4 class="docs-subsection-title">Quick Start (Verified)</h4>
+                        <pre><code class="language-bash"># 1. Navigate to project root
+cd /home/robbie/Desktop/HostingCo
+
+# 2. Install all dependencies (if not already done)
+npm run install:all
+
+# 3. Start both frontend and backend servers
+npm run dev
+
+# 4. Verify services are running
+curl http://localhost:3003/api/health
+curl http://localhost:3000</code></pre>
+
+                        <h4 class="docs-subsection-title">Individual Service Startup</h4>
+                        <pre><code class="language-bash"># Backend only (port 3003)
+npm run dev:backend
+
+# Frontend only (port 3000)
+npm run dev:frontend</code></pre>
+
+                        <div class="alert alert-success">
+                            <strong>Verification:</strong> Backend health check should return status 200, and frontend should load at localhost:3000
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="system-shutdown" class="docs-section-title">🛑 System Shutdown</h2>
+                        
+                        <h3 class="docs-subsection-title">Graceful Shutdown</h3>
+                        <pre><code class="language-bash"># Stop development servers
+Ctrl+C (in terminal running npm run dev)
+
+# Or stop individual processes
+npm run stop:backend
+npm run stop:frontend</code></pre>
+
+                        <h3 class="docs-subsection-title">Force Shutdown</h3>
+                        <pre><code class="language-bash"># Kill processes if unresponsive
+npm run kill:all
+
+# Find and kill specific processes
+lsof -ti:3003 | xargs kill -9  # Backend
+lsof -ti:3000 | xargs kill -9  # Frontend</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="monitoring" class="docs-section-title">System Monitoring</h2>
+                        
+                        <h3 class="docs-subsection-title">Health Checks</h3>
+                        <pre><code class="language-bash"># Backend health check
+curl http://localhost:3003/api/health
+
+# Database connection check
+npm run health:db
+
+# System resources check
+npm run health:system</code></pre>
+
+                        <h3 class="docs-subsection-title">Log Monitoring</h3>
+                        <pre><code class="language-bash"># View real-time logs
+npm run logs:dev
+
+# View specific service logs
+npm run logs:backend
+npm run logs:frontend
+
+# View error logs only
+npm run logs:errors</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="maintenance" class="docs-section-title">System Maintenance</h2>
+                        
+                        <h3 class="docs-subsection-title">Regular Maintenance Tasks</h3>
+                        <div class="alert alert-info">
+                            <strong>Daily:</strong> Check system logs and error rates<br>
+                            <strong>Weekly:</strong> Update dependencies and security patches<br>
+                            <strong>Monthly:</strong> Database optimization and cleanup<br>
+                            <strong>Quarterly:</strong> Security audit and performance review
+                        </div>
+
+                        <h3 class="docs-subsection-title">Database Maintenance</h3>
+                        <pre><code class="language-bash"># Database backup
+npm run db:backup
+
+# Database optimization
+npm run db:optimize
+
+# Clear old logs
+npm run logs:cleanup</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

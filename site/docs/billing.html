@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing System Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive billing system guide for HostingCo including invoicing, payment processing, and subscription management">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="billing.html" class="docs-nav-link active">Billing System</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Billing System Guide</h1>
+                    <p class="docs-description">Comprehensive billing system guide for HostingCo including invoicing, payment processing, and subscription management.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="billing-overview" class="docs-section-title">Billing Overview</h2>
+                        <p>The HostingCo billing system provides comprehensive invoicing, payment processing, and subscription management capabilities.</p>
+                        
+                        <h3 class="docs-subsection-title">Key Features</h3>
+                        <div class="alert alert-info">
+                            <strong>Automated Invoicing:</strong> Generate invoices automatically based on usage<br>
+                            <strong>Payment Processing:</strong> Support for multiple payment gateways<br>
+                            <strong>Subscription Management:</strong> Handle recurring billing and plan changes<br>
+                            <strong>Financial Reporting:</strong> Detailed revenue and payment analytics
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="payment-gateways" class="docs-section-title">🔗 Payment Gateways</h2>
+                        
+                        <h3 class="docs-subsection-title">Supported Providers</h3>
+                        <div class="alert alert-success">
+                            <strong>Stripe:</strong> Credit card and ACH payments<br>
+                            <strong>PayPal:</strong> Digital wallet and international payments<br>
+                            <strong>Bank Transfer:</strong> Direct bank transfers for enterprise clients<br>
+                            <strong>Cryptocurrency:</strong> Bitcoin and Ethereum payments
+                        </div>
+
+                        <h3 class="docs-subsection-title">Configuration</h3>
+                        <pre><code class="language-env"># Stripe Configuration
+STRIPE_PUBLIC_KEY=pk_test_...
+STRIPE_SECRET_KEY=sk_test_...
+STRIPE_WEBHOOK_SECRET=whsec_...
+
+# PayPal Configuration
+PAYPAL_CLIENT_ID=...
+PAYPAL_CLIENT_SECRET=...
+PAYPAL_WEBHOOK_ID=...</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="subscription-management" class="docs-section-title">Subscription Management</h2>
+                        
+                        <h3 class="docs-subsection-title">Subscription Lifecycle</h3>
+                        <ol>
+                            <li>Customer selects hosting plan</li>
+                            <li>Subscription created with billing cycle</li>
+                            <li>Initial payment processed</li>
+                            <li>Service provisioned and activated</li>
+                            <li>Recurring payments processed automatically</li>
+                            <li>Service managed based on payment status</li>
+                        </ol>
+
+                        <h3 class="docs-subsection-title">Plan Management</h3>
+                        <pre><code class="language-javascript">// Create subscription
+const subscription = await billing.createSubscription({
+  customerId: 'cus_123',
+  planId: 'plan_basic',
+  billingCycle: 'monthly',
+  paymentMethodId: 'pm_123'
+});
+
+// Update subscription
+await billing.updateSubscription(subscription.id, {
+  planId: 'plan_pro'
+});</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="invoicing" class="docs-section-title">Invoicing</h2>
+                        
+                        <h3 class="docs-subsection-title">Invoice Generation</h3>
+                        <pre><code class="language-bash"># Generate monthly invoices
+npm run billing:generate-invoices
+
+# Generate single invoice
+npm run billing:invoice:create --customer=cus_123
+
+# Send pending invoices
+npm run billing:invoices:send</code></pre>
+
+                        <h3 class="docs-subsection-title">Invoice Templates</h3>
+                        <div class="alert alert-warning">
+                            <strong>PDF Generation:</strong> Professional invoice PDFs with company branding<br>
+                            <strong>Email Templates:</strong> Automated invoice delivery via email<br>
+                            <strong>Customization:</strong> Configurable invoice layouts and content<br>
+                            <strong>Tax Calculation:</strong> Automatic tax calculation based on location
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="financial-reports" class="docs-section-title">Financial Reports</h2>
+                        
+                        <h3 class="docs-subsection-title">Revenue Analytics</h3>
+                        <pre><code class="language-bash"># Generate revenue report
+npm run billing:report:revenue
+
+# Generate payment report
+npm run billing:report:payments
+
+# Generate customer report
+npm run billing:report:customers</code></pre>
+
+                        <h3 class="docs-subsection-title">Key Metrics</h3>
+                        <ul>
+                            <li>Monthly Recurring Revenue (MRR)</li>
+                            <li>Annual Recurring Revenue (ARR)</li>
+                            <li>Customer Lifetime Value (CLV)</li>
+                            <li>Churn Rate</li>
+                            <li>Payment Success Rate</li>
+                        </ul>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="billing-security" class="docs-section-title">🔒 Billing Security</h2>
+                        
+                        <h3 class="docs-subsection-title">PCI Compliance</h3>
+                        <div class="alert alert-danger">
+                            <strong>Tokenization:</strong> Credit card data never stored on servers<br>
+                            <strong>Encryption:</strong> All sensitive data encrypted at rest and in transit<br>
+                            <strong>Audit Logging:</strong> All billing activities logged for compliance<br>
+                            <strong>Access Control:</strong> Role-based access to billing functions
+                        </div>
+
+                        <h3 class="docs-subsection-title">Fraud Prevention</h3>
+                        <pre><code class="language-bash"># Enable fraud detection
+npm run billing:fraud:enable
+
+# Review suspicious transactions
+npm run billing:fraud:review
+
+# Block fraudulent customers
+npm run billing:fraud:block --customer=cus_123</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

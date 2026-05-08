@@ -1,0 +1,189 @@
+{
+  "overview": {
+    "totalUsers": 150,
+    "activeUsers": 120,
+    "totalServers": 45,
+    "activeServers": 42,
+    "totalRevenue": 12500.00,
+    "monthlyRevenue": 2500.00,
+    "newUsers": 12,
+    "churnRate": 3.2
+  },
+  "servers": {
+    "byStatus": {
+      "active": 42,
+      "inactive": 3,
+      "maintenance": 0
+    },
+    "byPlan": {
+      "basic": 20,
+      "pro": 15,
+      "enterprise": 10
+    },
+    "byLocation": {
+      "us-east-1": 18,
+      "us-west-1": 12,
+      "eu-central-1": 8,
+      "eu-west-1": 4,
+      "asia-southeast-1": 3
+    },
+    "averageUptime": 99.8,
+    "totalCPUUsage": 65.4,
+    "totalMemoryUsage": 72.1,
+    "totalDiskUsage": 58.9
+  },
+  "users": {
+    "byRole": {
+      "admin": 5,
+      "user": 145
+    },
+    "byStatus": {
+      "active": 120,
+      "inactive": 30
+    },
+    "newThisMonth": 12,
+    "topCountries": [
+      {"country": "United States", "count": 85},
+      {"country": "United Kingdom", "count": 23},
+      {"country": "Germany", "count": 18},
+      {"country": "Canada", "count": 12},
+      {"country": "Australia", "count": 8}
+    ]
+  },
+  "billing": {
+    "pendingInvoices": 8,
+    "overdueInvoices": 2,
+    "totalPending": 1250.00,
+    "totalOverdue": 299.98,
+    "paidThisMonth": 2500.00,
+    "revenueByPlan": {
+      "basic": 500.00,
+      "pro": 1200.00,
+      "enterprise": 800.00
+    },
+    "paymentMethods": {
+      "creditCard": 85,
+      "bankTransfer": 12,
+      "paypal": 3
+    }
+  },
+  "support": {
+    "totalTickets": 234,
+    "openTickets": 12,
+    "inProgressTickets": 8,
+    "resolvedTickets": 214,
+    "averageResponseTime": "2.5 hours",
+    "averageResolutionTime": "4.2 hours",
+    "ticketsByCategory": {
+      "Technical": 89,
+      "Billing": 45,
+      "Domain": 23,
+      "Account": 34,
+      "General": 43
+    },
+    "ticketsByPriority": {
+      "high": 23,
+      "medium": 156,
+      "low": 55
+    },
+    "customerSatisfaction": 4.6
+  },
+  "performance": {
+    "apiResponseTime": 145,
+    "databaseQueryTime": 23,
+    "cacheHitRate": 94.2,
+    "errorRate": 0.12,
+    "uptime": 99.95
+  },
+  "analytics": {
+    "pageViews": {
+      "today": 12543,
+      "yesterday": 11892,
+      "thisWeek": 78456,
+      "thisMonth": 312456
+    },
+    "uniqueVisitors": {
+      "today": 3456,
+      "yesterday": 3234,
+      "thisWeek": 19876,
+      "thisMonth": 78934
+    },
+    "bounceRate": 32.4,
+    "averageSessionDuration": "4m 32s",
+    "topPages": [
+      {"page": "/dashboard", "views": 5432},
+      {"page": "/hosting", "views": 3211},
+      {"page": "/billing", "views": 2876},
+      {"page": "/support", "views": 1543},
+      {"page": "/settings", "views": 987}
+    ]
+  },
+  "alerts": [
+    {
+      "id": "alert_001",
+      "type": "server",
+      "severity": "warning",
+      "message": "Server web-server-01 CPU usage at 85%",
+      "timestamp": "2026-05-08T10:30:00.000Z",
+      "resolved": false
+    },
+    {
+      "id": "alert_002",
+      "type": "billing",
+      "severity": "info",
+      "message": "3 invoices due in next 7 days",
+      "timestamp": "2026-05-08T09:00:00.000Z",
+      "resolved": false
+    },
+    {
+      "id": "alert_003",
+      "type": "support",
+      "severity": "high",
+      "message": "High priority ticket requires attention",
+      "timestamp": "2026-05-08T08:15:00.000Z",
+      "resolved": true
+    }
+  ],
+  "recentActivity": [
+    {
+      "id": "activity_001",
+      "type": "server",
+      "description": "New server deployed: test-server-01",
+      "timestamp": "2026-05-08T11:45:00.000Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "activity_002",
+      "type": "user",
+      "description": "New user registered: Jane Smith",
+      "timestamp": "2026-05-08T10:30:00.000Z",
+      "userId": "admin_001"
+    },
+    {
+      "id": "activity_003",
+      "type": "billing",
+      "description": "Payment received: $299.99",
+      "timestamp": "2026-05-08T09:15:00.000Z",
+      "userId": "user_001"
+    },
+    {
+      "id": "activity_004",
+      "type": "support",
+      "description": "Support ticket #1234 resolved",
+      "timestamp": "2026-05-08T08:00:00.000Z",
+      "userId": "support_001"
+    }
+  ],
+  "health": {
+    "overall": "healthy",
+    "services": {
+      "api": "healthy",
+      "database": "healthy",
+      "cache": "healthy",
+      "storage": "healthy",
+      "email": "degraded"
+    },
+    "lastCheck": "2026-05-08T12:00:00.000Z",
+    "uptime": "99.95%"
+  }
+}

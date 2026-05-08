@@ -1,0 +1,182 @@
+[
+  {
+    "id": "admin_001",
+    "email": "admin@hostingco.com",
+    "password": "$2b$10$N9qo8uLOickgx2ZMRZoMye.IY4J.O5k.9qG8hKqN6ZqZqZqZqZqZ",
+    "name": "System Administrator",
+    "phone": "+1-555-0100",
+    "company": "HostingCo",
+    "role": "admin",
+    "permissions": ["read", "write", "delete", "admin"],
+    "settings": {
+      "personal": {
+        "name": "System Administrator",
+        "email": "admin@hostingco.com",
+        "phone": "+1-555-0100",
+        "company": "HostingCo",
+        "timezone": "America/New_York",
+        "language": "en"
+      },
+      "notifications": {
+        "email": {
+          "billing": true,
+          "serverAlerts": true,
+          "maintenance": true,
+          "security": true,
+          "marketing": false
+        },
+        "push": {
+          "billing": true,
+          "serverAlerts": true,
+          "maintenance": true,
+          "security": true,
+          "marketing": false
+        },
+        "sms": {
+          "billing": false,
+          "serverAlerts": true,
+          "maintenance": false,
+          "security": true,
+          "marketing": false
+        }
+      },
+      "security": {
+        "twoFactorAuth": true,
+        "sessionTimeout": "8h",
+        "ipWhitelist": [],
+        "apiKeys": []
+      },
+      "preferences": {
+        "theme": "dark",
+        "dateFormat": "MM/DD/YYYY",
+        "timeFormat": "12h",
+        "currency": "USD",
+        "defaultPage": "dashboard"
+      }
+    },
+    "createdAt": "2026-01-01T00:00:00.000Z",
+    "updatedAt": "2026-05-08T03:14:24.942Z",
+    "lastLoginAt": "2026-05-08T08:30:00.000Z",
+    "isActive": true
+  },
+  {
+    "id": "user_001",
+    "email": "john.doe@acme.com",
+    "password": "$2b$10$N9qo8uLOickgx2ZMRZoMye.IY4J.O5k.9qG8hKqN6ZqZqZqZqZqZ",
+    "name": "John Doe",
+    "phone": "+1-555-0123",
+    "company": "Acme Corporation",
+    "role": "user",
+    "permissions": ["read", "write"],
+    "settings": {
+      "personal": {
+        "name": "John Doe",
+        "email": "john.doe@acme.com",
+        "phone": "+1-555-0123",
+        "company": "Acme Corporation",
+        "timezone": "America/Los_Angeles",
+        "language": "en"
+      },
+      "notifications": {
+        "email": {
+          "billing": true,
+          "serverAlerts": true,
+          "maintenance": true,
+          "security": true,
+          "marketing": true
+        },
+        "push": {
+          "billing": true,
+          "serverAlerts": true,
+          "maintenance": false,
+          "security": true,
+          "marketing": false
+        },
+        "sms": {
+          "billing": true,
+          "serverAlerts": true,
+          "maintenance": false,
+          "security": true,
+          "marketing": false
+        }
+      },
+      "security": {
+        "twoFactorAuth": false,
+        "sessionTimeout": "24h",
+        "ipWhitelist": [],
+        "apiKeys": []
+      },
+      "preferences": {
+        "theme": "light",
+        "dateFormat": "MM/DD/YYYY",
+        "timeFormat": "12h",
+        "currency": "USD",
+        "defaultPage": "dashboard"
+      }
+    },
+    "createdAt": "2026-02-15T10:30:00.000Z",
+    "updatedAt": "2026-05-07T14:20:00.000Z",
+    "lastLoginAt": "2026-05-07T16:45:00.000Z",
+    "isActive": true
+  },
+  {
+    "id": "support_001",
+    "email": "support.agent@hostingco.com",
+    "password": "$2b$10$N9qo8uLOickgx2ZMRZoMye.IY4J.O5k.9qG8hKqN6ZqZqZqZqZqZ",
+    "name": "Sarah Support",
+    "phone": "+1-555-0145",
+    "company": "HostingCo",
+    "role": "support",
+    "permissions": ["read", "write"],
+    "settings": {
+      "personal": {
+        "name": "Sarah Support",
+        "email": "support.agent@hostingco.com",
+        "phone": "+1-555-0145",
+        "company": "HostingCo",
+        "timezone": "America/Chicago",
+        "language": "en"
+      },
+      "notifications": {
+        "email": {
+          "billing": false,
+          "serverAlerts": true,
+          "maintenance": true,
+          "security": true,
+          "marketing": false
+        },
+        "push": {
+          "billing": false,
+          "serverAlerts": true,
+          "maintenance": true,
+          "security": true,
+          "marketing": false
+        },
+        "sms": {
+          "billing": false,
+          "serverAlerts": true,
+          "maintenance": false,
+          "security": true,
+          "marketing": false
+        }
+      },
+      "security": {
+        "twoFactorAuth": true,
+        "sessionTimeout": "12h",
+        "ipWhitelist": ["192.168.1.0/24"],
+        "apiKeys": ["sk_support_123456789"]
+      },
+      "preferences": {
+        "theme": "light",
+        "dateFormat": "MM/DD/YYYY",
+        "timeFormat": "24h",
+        "currency": "USD",
+        "defaultPage": "support"
+      }
+    },
+    "createdAt": "2026-01-15T09:00:00.000Z",
+    "updatedAt": "2026-05-08T07:15:00.000Z",
+    "lastLoginAt": "2026-05-08T07:30:00.000Z",
+    "isActive": true
+  }
+]

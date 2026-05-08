@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Server Procedures - HostingCo</title>
+    <meta name="description" content="Complete development server procedures guide for HostingCo system including server management, debugging, and development workflows">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="development.html" class="docs-nav-link active">Development Servers</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Development Server Procedures</h1>
+                    <p class="docs-description">This guide covers all procedures for running and managing the HostingCo development servers.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="development-server-overview" class="docs-section-title">Development Server Overview</h2>
+                        <p>The HostingCo system consists of multiple development servers:</p>
+                        
+                        <div class="alert alert-info">
+                            <strong>Frontend Server (Vite/React):</strong> Port 3000<br>
+                            <strong>Backend API Server (Node.js/Express):</strong> Port 3003<br>
+                            <strong>Database Server (PostgreSQL):</strong> Port 5432<br>
+                            <strong>Cache Server (Redis):</strong> Port 6379
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="starting-development-servers" class="docs-section-title">Starting Development Servers</h2>
+                        
+                        <h3 class="docs-subsection-title">Method 1: Concurrent Development (Recommended)</h3>
+                        <pre><code class="language-bash"># From project root - starts both frontend and backend
+npm run dev
+
+# This runs:
+# - npm run dev:backend (port 3003)
+# - npm run dev:frontend (port 3000)</code></pre>
+
+                        <h3 class="docs-subsection-title">Method 2: Individual Servers</h3>
+                        <pre><code class="language-bash"># Start backend only
+npm run dev:backend
+
+# Start frontend only
+npm run dev:frontend
+
+# Start with specific environments
+npm run dev:backend --env=development
+npm run dev:frontend --env=development</code></pre>
+
+                        <h3 class="docs-subsection-title">Method 3: Using Scripts</h3>
+                        <pre><code class="language-bash"># Use automation scripts
+./scripts/dev.sh                    # Start all servers
+./scripts/dev-backend.sh            # Start backend only
+./scripts/dev-frontend.sh           # Start frontend only</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="server-configuration" class="docs-section-title">Server Configuration</h2>
+                        
+                        <h3 class="docs-subsection-title">Backend Server Configuration</h3>
+                        <pre><code class="language-json">// backend/package.json scripts
+{
+  "scripts": {
+    "dev": "nodemon --exec ts-node src/index.ts",
+    "dev:debug": "nodemon --exec ts-node --inspect src/index.ts",
+    "dev:watch": "ts-node --watch src/index.ts"
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Frontend Server Configuration</h3>
+                        <pre><code class="language-json">// frontend/vite.config.ts
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
+export default defineConfig({
+  plugins: [react()],
+  server: {
+    port: 3000,
+    host: true,
+    proxy: {
+      '/api': {
+        target: 'http://localhost:3003',
+        changeOrigin: true
+      }
+    }
+  }
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Environment Variables</h3>
+                        <pre><code class="language-env"># .env.development
+NODE_ENV=development
+PORT=3003
+FRONTEND_URL=http://localhost:3000
+DATABASE_URL=postgresql://localhost:5432/hostingco_dev
+REDIS_URL=redis://localhost:6379
+LOG_LEVEL=debug</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-setup" class="docs-section-title">Database Setup</h2>
+                        
+                        <h3 class="docs-subsection-title">PostgreSQL Development Server</h3>
+                        <pre><code class="language-bash"># Start PostgreSQL service
+sudo systemctl start postgresql
+
+# Create development database
+createdb hostingco_dev
+
+# Check connection
+psql -d hostingco_dev -c "SELECT version();"</code></pre>
+
+                        <h3 class="docs-subsection-title">Redis Development Server</h3>
+                        <pre><code class="language-bash"># Start Redis service
+sudo systemctl start redis
+
+# Check connection
+redis-cli ping
+
+# Monitor Redis
+redis-cli monitor</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Migrations</h3>
+                        <pre><code class="language-bash"># Run migrations
+npm run migrate:latest
+
+# Seed development data
+npm run seed:dev
+
+# Reset database
+npm run db:reset:dev</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="hot-reload-and-watch-modes" class="docs-section-title">Hot Reload and Watch Modes</h2>
+                        
+                        <h3 class="docs-subsection-title">Frontend Hot Reload</h3>
+                        <div class="alert alert-success">
+                            <strong>Vite HMR:</strong> Hot Module Replacement for React components<br>
+                            <strong>Fast Refresh:</strong> Preserves component state during reloads<br>
+                            <strong>CSS Updates:</strong> Instant CSS changes without full reload
+                        </div>
+
+                        <h3 class="docs-subsection-title">Backend Auto-Restart</h3>
+                        <pre><code class="language-json">// nodemon configuration
+{
+  "watch": ["src"],
+  "ext": "ts,js,json",
+  "ignore": ["src/**/*.test.ts"],
+  "exec": "ts-node src/index.ts",
+  "env": {
+    "NODE_ENV": "development"
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">File Watching</h3>
+                        <pre><code class="language-bash"># Watch for file changes
+npm run dev:watch
+
+# Watch specific directories
+npm run dev:watch -- --watch src --watch config
+
+# Ignore specific files
+npm run dev:watch -- --ignore src/**/*.test.ts</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="debugging-development" class="docs-section-title">🐛 Debugging Development</h2>
+                        
+                        <h3 class="docs-subsection-title">Backend Debugging</h3>
+                        <pre><code class="language-bash"># Start with Node.js debugger
+npm run dev:debug
+
+# Connect with Chrome DevTools
+# Open chrome://inspect and click "Open dedicated DevTools for Node"
+
+# Or use VS Code debugger
+# Set breakpoints in VS Code and press F5</code></pre>
+
+                        <h3 class="docs-subsection-title">Frontend Debugging</h3>
+                        <pre><code class="language-bash"># Start with source maps
+npm run dev:debug
+
+# Use Chrome DevTools
+# Open Developer Tools and use Sources panel
+
+# React DevTools
+# Install React DevTools browser extension</code></pre>
+
+                        <h3 class="docs-subsection-title">VS Code Configuration</h3>
+                        <pre><code class="language-json">// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/src/index.ts",
+      "runtimeArgs": ["-r", "ts-node/register"],
+      "env": {
+        "NODE_ENV": "development"
+      },
+      "console": "integratedTerminal",
+      "restart": true,
+      "protocol": "inspector"
+    }
+  ]
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="development-workflows" class="docs-section-title">Development Workflows</h2>
+                        
+                        <h3 class="docs-subsection-title">Daily Development Workflow</h3>
+                        <ol>
+                            <li>Start development servers: <code>npm run dev</code></li>
+                            <li>Check database status: <code>npm run db:status</code></li>
+                            <li>Run tests: <code>npm test</code></li>
+                            <li>Make changes and see hot reload</li>
+                            <li>Run specific tests: <code>npm run test:watch</code></li>
+                            <li>Commit changes: <code>git add . && git commit -m "feat: ..."</code></li>
+                        </ol>
+
+                        <h3 class="docs-subsection-title">Feature Development Workflow</h3>
+                        <pre><code class="language-bash"># 1. Create feature branch
+git checkout -b feature/new-feature
+
+# 2. Start development servers
+npm run dev
+
+# 3. Make changes with hot reload
+# Edit files and see changes immediately
+
+# 4. Run tests
+npm test
+
+# 5. Build and test production build
+npm run build && npm run test:e2e
+
+# 6. Commit and push
+git add . && git commit -m "feat: add new feature"
+git push origin feature/new-feature</code></pre>
+
+                        <h3 class="docs-subsection-title">Testing Workflow</h3>
+                        <pre><code class="language-bash"># Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run specific test files
+npm test -- User.test.ts
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run E2E tests
+npm run test:e2e</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="troubleshooting-development" class="docs-section-title">Troubleshooting Development Issues</h2>
+                        
+                        <h3 class="docs-subsection-title">Common Issues</h3>
+                        <div class="alert alert-warning">
+                            <strong>Port Conflicts:</strong> Kill processes using ports 3000/3003<br>
+                            <strong>Database Connection:</strong> Check PostgreSQL/Redis status<br>
+                            <strong>Module Resolution:</strong> Clear node_modules and reinstall<br>
+                            <strong>Hot Reload Issues:</strong> Check file permissions and watchers
+                        </div>
+
+                        <h3 class="docs-subsection-title">Port Issues</h3>
+                        <pre><code class="language-bash"># Find processes using ports
+lsof -i :3000  # Frontend
+lsof -i :3003  # Backend
+
+# Kill processes
+kill -9 &lt;PID&gt;
+
+# Or use killall
+killall node</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Issues</h3>
+                        <pre><code class="language-bash"># Check PostgreSQL status
+sudo systemctl status postgresql
+
+# Restart PostgreSQL
+sudo systemctl restart postgresql
+
+# Check Redis status
+sudo systemctl status redis
+
+# Restart Redis
+sudo systemctl restart redis</code></pre>
+
+                        <h3 class="docs-subsection-title">Module Issues</h3>
+                        <pre><code class="language-bash"># Clean and reinstall
+rm -rf node_modules package-lock.json
+npm install
+
+# Clear npm cache
+npm cache clean --force
+
+# Rebuild packages
+npm run rebuild</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="development-best-practices" class="docs-section-title">Development Best Practices</h2>
+                        
+                        <h3 class="docs-subsection-title">Environment Management</h3>
+                        <div class="alert alert-success">
+                            <strong>Separate Environments:</strong> Use different configs for dev/staging/prod<br>
+                            <strong>Environment Variables:</strong> Never commit sensitive data<br>
+                            <strong>Local Configuration:</strong> Use .env.local for personal settings<br>
+                            <strong>Consistent Setup:</strong> Use scripts for reproducible environments
+                        </div>
+
+                        <h3 class="docs-subsection-title">Code Organization</h3>
+                        <ul>
+                            <li>Keep development and production code separate</li>
+                            <li>Use feature flags for experimental features</li>
+                            <li>Maintain clean git history with meaningful commits</li>
+                            <li>Write tests for new features and bug fixes</li>
+                        </ul>
+
+                        <h3 class="docs-subsection-title">Performance Optimization</h3>
+                        <pre><code class="language-bash"># Monitor performance
+npm run dev:profile
+
+# Check bundle size
+npm run build:analyze
+
+# Optimize builds
+npm run build:optimize</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

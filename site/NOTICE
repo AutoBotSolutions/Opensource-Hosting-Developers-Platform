@@ -1,0 +1,163 @@
+HostingCo System
+Copyright (c) 2026 HostingCo
+
+This product includes software developed by HostingCo and third-party
+open source projects. This notice file provides attribution and licensing
+information for all components used in the HostingCo system.
+
+---
+
+## HostingCo System Components
+
+### Frontend Application
+- **React** - MIT License
+- **TypeScript** - Apache License 2.0
+- **Vite** - MIT License
+- **Tailwind CSS** - MIT License
+- **Inter Font** - SIL Open Font License 1.1
+
+### Backend Application
+- **Node.js** - MIT License
+- **Express.js** - MIT License
+- **PostgreSQL** - PostgreSQL License
+- **Redis** - BSD 3-Clause License
+- **Knex.js** - MIT License
+
+### Infrastructure & Deployment
+- **Docker** - Apache License 2.0
+- **Nginx** - BSD 2-Clause License
+- **GitHub Actions** - MIT License
+- **SSL/TLS** - Various open source implementations
+
+---
+
+## Third-Party Dependencies
+
+### Frontend Dependencies
+- **@types/react** - MIT License
+- **@types/node** - MIT License
+- **React Router** - MIT License
+- **Axios** - MIT License
+- **React Hook Form** - Apache License 2.0
+- **React Query** - MIT License
+- **Zustand** - MIT License
+- **Lucide React** - ISC License
+- **Class Variance Authority** - Apache License 2.0
+- **Tailwind Merge** - MIT License
+- **clsx** - MIT License
+
+### Backend Dependencies
+- **@types/express** - MIT License
+- **@types/node** - MIT License
+- **bcrypt** - MIT License
+- **jsonwebtoken** - MIT License
+- **cors** - MIT License
+- **helmet** - MIT License
+- **express-rate-limit** - MIT License
+- **multer** - MIT License
+- **nodemailer** - MIT License
+- **stripe** - MIT License
+- **socket.io** - MIT License
+- **winston** - MIT License
+- **joi** - BSD 3-Clause License
+- **dotenv** - BSD 2-Clause License
+
+### Development Dependencies
+- **ESLint** - MIT License
+- **Prettier** - MIT License
+- **Jest** - MIT License
+- **Supertest** - MIT License
+- **Concurrently** - MIT License
+- **Nodemon** - MIT License
+- **TypeScript Compiler** - Apache License 2.0
+
+---
+
+## External Services & APIs
+
+### Payment Processing
+- **Stripe API** - Stripe Terms of Service
+- **PayPal SDK** - PayPal Developer Agreement
+
+### Email Services
+- **SendGrid API** - SendGrid Terms of Service
+- **SMTP Protocol** - RFC standards
+
+### Cloud Services
+- **AWS SDK for JavaScript** - Apache License 2.0
+- **Google Cloud Platform APIs** - Various licenses
+- **DigitalOcean API** - DigitalOcean Terms of Service
+
+### Monitoring & Analytics
+- **Google Analytics** - Google Analytics Terms of Service
+- **Sentry Error Tracking** - Sentry Terms of Service
+- **Prometheus** - Apache License 2.0
+- **Grafana** - Apache License 2.0
+
+---
+
+## Data Formats & Protocols
+
+### Web Standards
+- **HTML5** - W3C Software License
+- **CSS3** - W3C Software License
+- **JavaScript ES2022** - ECMA International License
+- **JSON** - JSON License
+- **REST API** - Roy Fielding License
+- **WebSocket Protocol** - IETF License
+
+### Security Standards
+- **JWT (JSON Web Tokens)** - Apache License 2.0
+- **OAuth 2.0** - Various licenses
+- **TLS 1.3** - IETF License
+- **bcrypt** - BSD 3-Clause License
+
+---
+
+## Icons & Visual Assets
+
+### Icon Libraries
+- **Lucide Icons** - ISC License
+- **Heroicons** - MIT License
+- **Feather Icons** - MIT License
+
+### Fonts
+- **Inter Font Family** - SIL Open Font License 1.1
+- **JetBrains Mono** - SIL Open Font License 1.1
+
+---
+
+## Database & Storage
+
+### Database Systems
+- **PostgreSQL Database** - PostgreSQL License
+- **Redis Cache** - BSD 3-Clause License
+- **File Storage Systems** - Various open source licenses
+
+### Data Formats
+- **SQL** - Public domain
+- **JSON Schema** - AFL License
+- **OpenAPI Specification** - Apache License 2.0
+
+---
+
+## Attribution Requirements
+
+This NOTICE file must be included in all distributions of the HostingCo system.
+When redistributing the software, this file must be preserved and distributed
+along with the software.
+
+For specific license terms and conditions, please refer to the individual
+license files in the legal/licenses/ directory and the main LICENSE file.
+
+---
+
+## Contact Information
+
+For questions about licensing, attribution, or third-party dependencies:
+
+HostingCo Legal Department
+Email: legal@hostingco.com
+GitHub: https://github.com/hostingco/hostingco-system/issues
+
+Last updated: 2026-05-08

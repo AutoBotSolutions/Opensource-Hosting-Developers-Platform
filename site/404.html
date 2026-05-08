@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found - HostingCo</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Check out our documentation or return to the homepage.">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="docs/quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="docs/api-reference.html" class="nav-link">API</a></li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 404 Content -->
+    <main class="error-page">
+        <div class="container">
+            <div class="error-content">
+                <div class="error-visual">
+                    <div class="error-number">404</div>
+                    <div class="error-illustration">
+                        <span class="error-emoji">Search</span>
+                    </div>
+                </div>
+                
+                <div class="error-text">
+                    <h1>Page Not Found</h1>
+                    <p>Oops! The page you're looking for doesn't exist or has been moved.</p>
+                    
+                    <div class="error-actions">
+                        <a href="index.html" class="btn btn-primary">
+                            <span class="btn-emoji">Home</span>
+                            Go Home
+                        </a>
+                        <a href="docs/quick-start.html" class="btn btn-secondary">
+                            <span class="btn-emoji">Guide</span>
+                            Quick Start
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Help Section -->
+            <div class="help-section">
+                <h2>Looking for something specific?</h2>
+                <div class="help-grid">
+                    <div class="help-card">
+                        <div class="help-icon">
+                            <span class="help-emoji">Docs</span>
+                        </div>
+                        <h3>Documentation</h3>
+                        <p>Browse our comprehensive documentation</p>
+                        <a href="docs/quick-start.html" class="help-link">Browse Docs →</a>
+                    </div>
+                    
+                    <div class="help-card">
+                        <div class="help-icon">
+                            <span class="help-emoji">API</span>
+                        </div>
+                        <h3>API Reference</h3>
+                        <p>Explore our API endpoints and usage</p>
+                        <a href="docs/api-reference.html" class="help-link">View API →</a>
+                    </div>
+                    
+                    <div class="help-card">
+                        <div class="help-icon">
+                            <span class="help-emoji">Support</span>
+                        </div>
+                        <h3>Support</h3>
+                        <p>Get help from our support team</p>
+                        <a href="docs/support.html" class="help-link">Get Support →</a>
+                    </div>
+                    
+                    <div class="help-card">
+                        <div class="help-icon">
+                            <span class="help-emoji">Quick</span>
+                        </div>
+                        <h3>Quick Start</h3>
+                        <p>Get up and running quickly</p>
+                        <a href="docs/quick-start.html" class="help-link">Start Now →</a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Search Section -->
+            <div class="search-section">
+                <h2>Search Documentation</h2>
+                <p>Can't find what you're looking for? Try searching our documentation.</p>
+                <div class="search-box">
+                    <input type="text" id="errorSearchInput" placeholder="Search for guides, API docs, and more...">
+                    <button class="search-btn" onclick="performErrorSearch()">
+                        <span class="search-emoji">Search</span>
+                    </button>
+                </div>
+                <div id="errorSearchResults" class="search-results"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-text">HostingCo</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced hosting management system built for modern infrastructure.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="docs/quick-start.html">Quick Start</a></li>
+                        <li><a href="docs/api-reference.html">API Reference</a></li>
+                        <li><a href="docs/installation.html">Installation</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" target="_blank">GitHub</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/issues" target="_blank">Issues</a></li>
+                        <li><a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/releases" target="_blank">Releases</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 HostingCo System. Built with modern web technologies.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/navigation.js"></script>
+    
+    <script>
+        // Simple search functionality for 404 page
+        function performErrorSearch() {
+            const input = document.getElementById('errorSearchInput');
+            const results = document.getElementById('errorSearchResults');
+            const query = input.value.trim();
+            
+            if (query.length < 2) {
+                results.innerHTML = '';
+                return;
+            }
+            
+            // Simple search data
+            const pages = [
+                { title: 'Quick Start Guide', url: 'docs/quick-start.html', desc: 'Get started with HostingCo' },
+                { title: 'API Reference', url: 'docs/api-reference.html', desc: 'Complete API documentation' },
+                { title: 'Installation Guide', url: 'docs/installation.html', desc: 'Installation instructions' },
+                { title: 'System Architecture', url: 'docs/architecture.html', desc: 'Architecture overview' },
+                { title: 'Security Guide', url: 'docs/security.html', desc: 'Security best practices' },
+                { title: 'System Operations', url: 'docs/system-operations.html', desc: 'Operations guide' },
+                { title: 'Data Management', url: 'docs/data-management.html', desc: 'Data operations' },
+                { title: 'Deployment Guide', url: 'docs/deployment.html', desc: 'Deployment strategies' },
+                { title: 'Troubleshooting', url: 'docs/troubleshooting.html', desc: 'Common issues' }
+            ];
+            
+            const matches = pages.filter(page => 
+                page.title.toLowerCase().includes(query.toLowerCase()) ||
+                page.desc.toLowerCase().includes(query.toLowerCase())
+            );
+            
+            if (matches.length === 0) {
+                results.innerHTML = '<p>No results found</p>';
+                return;
+            }
+            
+            results.innerHTML = matches.map(page => `
+                <div class="search-result">
+                    <h4><a href="${page.url}">${page.title}</a></h4>
+                    <p>${page.desc}</p>
+                </div>
+            `).join('');
+        }
+        
+        // Enter key search
+        document.getElementById('errorSearchInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                performErrorSearch();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+{
+  "general": {
+    "siteName": "HostingCo",
+    "siteUrl": "https://hostingco.com",
+    "supportEmail": "support@hostingco.com",
+    "adminEmail": "admin@hostingco.com",
+    "timezone": "UTC",
+    "dateFormat": "MM/DD/YYYY",
+    "timeFormat": "12h",
+    "currency": "USD",
+    "language": "en",
+    "maintenanceMode": false,
+    "registrationEnabled": true,
+    "requireEmailVerification": false,
+    "defaultPlan": "basic"
+  },
+  "billing": {
+    "currency": "USD",
+    "taxRate": 8.0,
+    "invoicePrefix": "INV-",
+    "autoBilling": true,
+    "billingDay": 1,
+    "gracePeriod": 7,
+    "lateFee": 0.05,
+    "paymentMethods": {
+      "creditCard": true,
+      "bankTransfer": true,
+      "paypal": false,
+      "crypto": false
+    },
+    "invoices": {
+      "autoGenerate": true,
+      "sendEmail": true,
+      "reminderDays": [7, 3, 1],
+      "lateFeeDays": 7
+    }
+  },
+  "notifications": {
+    "email": {
+      "enabled": true,
+      "smtp": {
+        "host": "smtp.hostingco.com",
+        "port": 587,
+        "secure": false,
+        "auth": {
+          "user": "noreply@hostingco.com",
+          "pass": "smtp_password_placeholder"
+        }
+      },
+      "templates": {
+        "welcome": "Welcome to HostingCo!",
+        "invoice": "Your invoice is ready",
+        "payment": "Payment confirmation",
+        "serverAlert": "Server alert",
+        "maintenance": "Scheduled maintenance"
+      }
+    },
+    "sms": {
+      "enabled": false,
+      "provider": "twilio",
+      "apiKey": "sms_api_key_placeholder",
+      "fromNumber": "+1234567890"
+    },
+    "push": {
+      "enabled": true,
+      "serviceWorker": "/sw.js",
+      "publicKey": "push_public_key_placeholder"
+    },
+    "types": {
+      "billing": {
+        "email": true,
+        "sms": false,
+        "push": true
+      },
+      "serverAlerts": {
+        "email": true,
+        "sms": true,
+        "push": true
+      },
+      "maintenance": {
+        "email": true,
+        "sms": false,
+        "push": true
+      },
+      "security": {
+        "email": true,
+        "sms": true,
+        "push": true
+      },
+      "marketing": {
+        "email": true,
+        "sms": false,
+        "push": false
+      }
+    }
+  },
+  "security": {
+    "sessionTimeout": "24h",
+    "passwordMinLength": 8,
+    "passwordRequireSpecial": true,
+    "passwordRequireNumber": true,
+    "passwordRequireUppercase": true,
+    "twoFactorAuth": {
+      "enabled": true,
+      "required": false,
+      "issuer": "HostingCo"
+    },
+    "rateLimiting": {
+      "enabled": true,
+      "windowMs": 900000,
+      "maxRequests": 100,
+      "skipSuccessfulRequests": false,
+      "skipFailedRequests": false
+    },
+    "ipWhitelist": {
+      "enabled": false,
+      "allowedIPs": []
+    },
+    "cors": {
+      "enabled": true,
+      "origins": ["http://localhost:3000", "https://hostingco.com"],
+      "credentials": true
+    },
+    "helmet": {
+      "enabled": true,
+      "contentSecurityPolicy": true,
+      "crossOriginEmbedderPolicy": false
+    }
+  },
+  "backup": {
+    "enabled": true,
+    "schedule": "0 2 * * *",
+    "retention": 30,
+    "compression": true,
+    "encryption": true,
+    "storage": {
+      "type": "local",
+      "path": "/backups",
+      "s3": {
+        "bucket": "",
+        "region": "",
+        "accessKey": "",
+        "secretKey": ""
+      }
+    },
+    "databases": {
+      "postgresql": true,
+      "redis": true
+    },
+    "files": {
+      "uploads": true,
+      "logs": true,
+      "config": true
+    }
+  },
+  "monitoring": {
+    "enabled": true,
+    "metrics": {
+      "cpu": true,
+      "memory": true,
+      "disk": true,
+      "network": true,
+      "uptime": true
+    },
+    "alerts": {
+      "cpuThreshold": 80,
+      "memoryThreshold": 85,
+      "diskThreshold": 90,
+      "uptimeThreshold": 99
+    },
+    "logging": {
+      "level": "info",
+      "maxFiles": 10,
+      "maxSize": "10m",
+      "datePattern": "YYYY-MM-DD"
+    }
+  },
+  "api": {
+    "version": "v1",
+    "baseUrl": "https://api.hostingco.com",
+    "rateLimit": {
+      "enabled": true,
+      "windowMs": 900000,
+      "maxRequests": 100
+    },
+    "cors": {
+      "enabled": true,
+      "origins": ["http://localhost:3000", "https://hostingco.com"],
+      "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+      "headers": ["Content-Type", "Authorization"]
+    },
+    "documentation": {
+      "enabled": true,
+      "url": "/docs",
+      "swagger": true
+    }
+  },
+  "features": {
+    "registration": {
+      "enabled": true,
+      "requireApproval": false,
+      "defaultRole": "user",
+      "emailVerification": false
+    },
+    "servers": {
+      "autoProvisioning": true,
+      "monitoring": true,
+      "backups": true,
+      "ssl": true
+    },
+    "support": {
+      "enabled": true,
+      "ticketSystem": true,
+      "liveChat": false,
+      "knowledgeBase": true,
+      "phoneSupport": false
+    },
+    "analytics": {
+      "enabled": true,
+      "tracking": true,
+      "reports": true,
+      "export": true
+    }
+  },
+  "development": {
+    "debugMode": false,
+    "verboseLogging": false,
+    "mockPayments": true,
+    "mockEmails": true,
+    "seedData": true,
+    "hotReload": true
+  }
+}

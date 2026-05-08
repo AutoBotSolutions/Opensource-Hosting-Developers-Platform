@@ -1,0 +1,240 @@
+{
+  "plans": [
+    {
+      "id": "basic",
+      "name": "Basic Plan",
+      "type": "shared",
+      "price": 9.99,
+      "setupFee": 0,
+      "billingCycle": "monthly",
+      "currency": "USD",
+      "description": "Perfect for small websites and personal projects",
+      "specs": {
+        "cpu": 2,
+        "ram": "4GB",
+        "storage": "50GB",
+        "bandwidth": "1TB",
+        "databases": 1,
+        "emailAccounts": 5,
+        "domains": 1
+      },
+      "features": [
+        "Free SSL Certificate",
+        "Daily Backups",
+        "Email Support",
+        "99.9% Uptime Guarantee",
+        "cPanel Control Panel",
+        "One-Click App Installer"
+      ],
+      "limitations": {
+        "maxWebsites": 1,
+        "maxSubdomains": 5,
+        "maxBandwidth": "1TB",
+        "maxStorage": "50GB"
+      },
+      "addOns": [
+        {
+          "id": "basic_storage_50",
+          "name": "Additional Storage (50GB)",
+          "price": 10.00,
+          "type": "storage"
+        },
+        {
+          "id": "basic_backup_daily",
+          "name": "Daily Backup Retention (30 days)",
+          "price": 5.00,
+          "type": "backup"
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "pro",
+      "name": "Pro Plan",
+      "type": "vps",
+      "price": 29.99,
+      "setupFee": 0,
+      "billingCycle": "monthly",
+      "currency": "USD",
+      "description": "Ideal for growing businesses and developers",
+      "specs": {
+        "cpu": 4,
+        "ram": "8GB",
+        "storage": "100GB",
+        "bandwidth": "2TB",
+        "databases": 5,
+        "emailAccounts": 25,
+        "domains": 5
+      },
+      "features": [
+        "Free SSL Certificate",
+        "Daily Backups",
+        "Priority Support",
+        "99.95% Uptime Guarantee",
+        "Root Access",
+        "SSD Storage",
+        "Managed Updates",
+        "DDoS Protection"
+      ],
+      "limitations": {
+        "maxWebsites": 5,
+        "maxSubdomains": 25,
+        "maxBandwidth": "2TB",
+        "maxStorage": "100GB"
+      },
+      "addOns": [
+        {
+          "id": "pro_storage_100",
+          "name": "Additional Storage (100GB)",
+          "price": 15.00,
+          "type": "storage"
+        },
+        {
+          "id": "pro_backup_realtime",
+          "name": "Real-time Backups",
+          "price": 20.00,
+          "type": "backup"
+        },
+        {
+          "id": "pro_monitoring",
+          "name": "Advanced Monitoring",
+          "price": 10.00,
+          "type": "monitoring"
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "id": "enterprise",
+      "name": "Enterprise Plan",
+      "type": "dedicated",
+      "price": 99.99,
+      "setupFee": 0,
+      "billingCycle": "monthly",
+      "currency": "USD",
+      "description": "Perfect for large applications and high-traffic websites",
+      "specs": {
+        "cpu": 8,
+        "ram": "16GB",
+        "storage": "200GB",
+        "bandwidth": "5TB",
+        "databases": "unlimited",
+        "emailAccounts": "unlimited",
+        "domains": "unlimited"
+      },
+      "features": [
+        "Free SSL Certificate",
+        "Real-time Backups",
+        "24/7 Phone Support",
+        "99.99% Uptime Guarantee",
+        "Root Access",
+        "NVMe SSD Storage",
+        "Managed Security",
+        "Advanced DDoS Protection",
+        "Dedicated Account Manager",
+        "Custom Configuration"
+      ],
+      "limitations": {
+        "maxWebsites": "unlimited",
+        "maxSubdomains": "unlimited",
+        "maxBandwidth": "5TB",
+        "maxStorage": "200GB"
+      },
+      "addOns": [
+        {
+          "id": "enterprise_storage_500",
+          "name": "Additional Storage (500GB)",
+          "price": 50.00,
+          "type": "storage"
+        },
+        {
+          "id": "enterprise_backup_geo",
+          "name": "Geographic Backup Redundancy",
+          "price": 75.00,
+          "type": "backup"
+        },
+        {
+          "id": "enterprise_compliance",
+          "name": "HIPAA/PCI Compliance",
+          "price": 100.00,
+          "type": "compliance"
+        }
+      ],
+      "isActive": true,
+      "createdAt": "2026-01-01T00:00:00.000Z",
+      "updatedAt": "2026-01-01T00:00:00.000Z"
+    }
+  ],
+  "locations": [
+    {
+      "id": "us-east-1",
+      "name": "US East (Virginia)",
+      "country": "USA",
+      "city": "Ashburn, VA",
+      "latency": "Low",
+      "features": ["SSD Storage", "DDoS Protection", "24/7 Monitoring"]
+    },
+    {
+      "id": "us-west-1",
+      "name": "US West (California)",
+      "country": "USA",
+      "city": "San Francisco, CA",
+      "latency": "Low",
+      "features": ["SSD Storage", "DDoS Protection", "24/7 Monitoring"]
+    },
+    {
+      "id": "eu-central-1",
+      "name": "EU Central (Frankfurt)",
+      "country": "Germany",
+      "city": "Frankfurt",
+      "latency": "Medium",
+      "features": ["SSD Storage", "DDoS Protection", "GDPR Compliant"]
+    },
+    {
+      "id": "eu-west-1",
+      "name": "EU West (London)",
+      "country": "UK",
+      "city": "London",
+      "latency": "Medium",
+      "features": ["SSD Storage", "DDoS Protection", "GDPR Compliant"]
+    },
+    {
+      "id": "asia-southeast-1",
+      "name": "Asia Southeast (Singapore)",
+      "country": "Singapore",
+      "city": "Singapore",
+      "latency": "Medium",
+      "features": ["SSD Storage", "DDoS Protection", "24/7 Monitoring"]
+    }
+  ],
+  "addOns": [
+    {
+      "id": "ssl_wildcard",
+      "name": "Wildcard SSL Certificate",
+      "price": 199.99,
+      "billingCycle": "yearly",
+      "description": "Secure unlimited subdomains",
+      "type": "security"
+    },
+    {
+      "id": "cdn_acceleration",
+      "name": "CDN Acceleration",
+      "price": 25.00,
+      "billingCycle": "monthly",
+      "description": "Global content delivery network",
+      "type": "performance"
+    },
+    {
+      "id": "managed_backup",
+      "name": "Managed Backup Service",
+      "price": 50.00,
+      "billingCycle": "monthly",
+      "description": "Automated backup management",
+      "type": "backup"
+    }
+  ]
+}

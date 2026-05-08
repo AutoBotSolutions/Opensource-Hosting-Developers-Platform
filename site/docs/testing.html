@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing Procedures Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive testing procedures guide for HostingCo system including unit testing, integration testing, end-to-end testing, and quality assurance processes">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="testing.html" class="docs-nav-link active">Testing Procedures</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Testing Procedures Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers all testing procedures for the HostingCo system, including unit testing, integration testing, end-to-end testing, and quality assurance processes.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="testing-overview" class="docs-section-title">Testing Overview</h2>
+                        <p>The HostingCo system employs a multi-layered testing strategy to ensure code quality, functionality, and reliability across all components.</p>
+                        
+                        <h3 class="docs-subsection-title">Testing Pyramid</h3>
+                        <div class="alert alert-info">
+                            <strong>Unit Tests:</strong> Individual function and component testing<br>
+                            <strong>Integration Tests:</strong> API endpoint and database interaction testing<br>
+                            <strong>End-to-End Tests:</strong> Full application workflow testing<br>
+                            <strong>Performance Tests:</strong> Load testing and performance benchmarking<br>
+                            <strong>Security Tests:</strong> Vulnerability scanning and security validation
+                        </div>
+
+                        <h3 class="docs-subsection-title">Automated Testing Scripts</h3>
+                        <pre><code class="language-bash"># Run all tests with coverage
+./scripts/test.sh all --coverage --report
+
+# Run specific test suites
+./scripts/test.sh backend
+./scripts/test.sh frontend
+./scripts/test.sh shared
+
+# Watch mode for development
+./scripts/test-watch.sh all</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="unit-testing" class="docs-section-title">🔬 Unit Testing</h2>
+                        
+                        <h3 class="docs-subsection-title">Backend Unit Tests</h3>
+                        <pre><code class="language-typescript">// Example: UserService.test.ts
+import { UserService } from '../services/UserService';
+import { User } from '../types/User';
+
+describe('UserService', () => {
+  beforeEach(async () => {
+    // Setup test database
+    await setupTestDatabase();
+  });
+
+  afterEach(async () => {
+    // Cleanup test database
+    await cleanupTestDatabase();
+  });
+
+  describe('createUser', () => {
+    it('should create a new user with valid data', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'password123'
+      };
+
+      const user = await UserService.createUser(userData);
+
+      expect(user).toBeDefined();
+      expect(user.email).toBe(userData.email);
+      expect(user.name).toBe(userData.name);
+      expect(user.id).toBeDefined();
+    });
+
+    it('should throw error for duplicate email', async () => {
+      const userData = {
+        email: 'existing@example.com',
+        name: 'Test User',
+        password: 'password123'
+      };
+
+      await expect(UserService.createUser(userData))
+        .rejects.toThrow('Email already exists');
+    });
+
+    it('should hash password before saving', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'password123'
+      };
+
+      const user = await UserService.createUser(userData);
+
+      expect(user.passwordHash).not.toBe(userData.password);
+      expect(user.passwordHash).toMatch(/^\$2[aby]\$\d+\$/);
+    });
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Frontend Unit Tests</h3>
+                        <pre><code class="language-typescript">// Example: UserList.test.tsx
+import React from 'react';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { UserList } from '../components/UserList';
+import { User } from '../types/User';
+
+const mockUsers: User[] = [
+  { id: '1', email: 'user1@example.com', name: 'User One' },
+  { id: '2', email: 'user2@example.com', name: 'User Two' }
+];
+
+describe('UserList', () => {
+  it('renders user list correctly', () => {
+    render(&lt;UserList users={mockUsers} /&gt;);
+    
+    expect(screen.getByText('User One')).toBeInTheDocument();
+    expect(screen.getByText('User Two')).toBeInTheDocument();
+    expect(screen.getByText('user1@example.com')).toBeInTheDocument();
+    expect(screen.getByText('user2@example.com')).toBeInTheDocument();
+  });
+
+  it('calls onUserSelect when user is clicked', () => {
+    const mockOnUserSelect = jest.fn();
+    render(&lt;UserList users={mockUsers} onUserSelect={mockOnUserSelect} /&gt;);
+    
+    fireEvent.click(screen.getByText('User One'));
+    
+    expect(mockOnUserSelect).toHaveBeenCalledWith(mockUsers[0]);
+  });
+
+  it('shows empty state when no users', () => {
+    render(&lt;UserList users={[]} /&gt;);
+    
+    expect(screen.getByText('No users found')).toBeInTheDocument();
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Test Utilities</h3>
+                        <pre><code class="language-typescript">// test-utils.ts
+import { render } from '@testing-library/react';
+import { BrowserRouter } from 'react-router-dom';
+
+export const renderWithRouter = (component: React.ReactElement) => {
+  return render(
+    &lt;BrowserRouter&gt;
+      {component}
+    &lt;/BrowserRouter&gt;
+  );
+};
+
+export const createMockUser = (overrides: Partial&lt;User&gt; = {}): User => ({
+  id: 'test-id',
+  email: 'test@example.com',
+  name: 'Test User',
+  ...overrides
+});</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="integration-testing" class="docs-section-title">🔗 Integration Testing</h2>
+                        
+                        <h3 class="docs-subsection-title">API Integration Tests</h3>
+                        <pre><code class="language-typescript">// Example: user.integration.test.ts
+import request from 'supertest';
+import { app } from '../app';
+import { setupTestDatabase, cleanupTestDatabase } from '../test-utils';
+
+describe('User API Integration Tests', () => {
+  beforeAll(async () => {
+    await setupTestDatabase();
+  });
+
+  afterAll(async () => {
+    await cleanupTestDatabase();
+  });
+
+  describe('POST /api/users', () => {
+    it('should create a new user', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User',
+        password: 'password123'
+      };
+
+      const response = await request(app)
+        .post('/api/users')
+        .send(userData)
+        .expect(201);
+
+      expect(response.body).toMatchObject({
+        email: userData.email,
+        name: userData.name
+      });
+      expect(response.body.passwordHash).toBeUndefined();
+    });
+
+    it('should return 400 for invalid data', async () => {
+      const invalidData = {
+        email: 'invalid-email',
+        name: '',
+        password: '123'
+      };
+
+      const response = await request(app)
+        .post('/api/users')
+        .send(invalidData)
+        .expect(400);
+
+      expect(response.body.errors).toBeDefined();
+    });
+  });
+
+  describe('GET /api/users', () => {
+    it('should return list of users', async () => {
+      const response = await request(app)
+        .get('/api/users')
+        .expect(200);
+
+      expect(Array.isArray(response.body)).toBe(true);
+      expect(response.body.length).toBeGreaterThan(0);
+    });
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Integration Tests</h3>
+                        <pre><code class="language-typescript">// Example: database.integration.test.ts
+import { knex } from '../database';
+import { UserService } from '../services/UserService';
+
+describe('Database Integration Tests', () => {
+  beforeEach(async () => {
+    await knex('users').del();
+  });
+
+  describe('User Database Operations', () => {
+    it('should persist user to database', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User',
+        passwordHash: 'hashed-password'
+      };
+
+      const [user] = await knex('users').insert(userData).returning('*');
+      
+      expect(user.id).toBeDefined();
+      expect(user.email).toBe(userData.email);
+      
+      const retrieved = await knex('users').where('id', user.id).first();
+      expect(retrieved).toMatchObject(userData);
+    });
+
+    it('should handle database constraints', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User',
+        passwordHash: 'hashed-password'
+      };
+
+      await knex('users').insert(userData);
+
+      await expect(knex('users').insert(userData))
+        .rejects.toThrow();
+    });
+  });
+});</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="end-to-end-testing" class="docs-section-title">🎭 End-to-End Testing</h2>
+                        
+                        <h3 class="docs-subsection-title">E2E Test Setup</h3>
+                        <pre><code class="language-typescript">// e2e/setup.ts
+import { chromium, Browser, Page } from 'playwright';
+
+export interface TestContext {
+  browser: Browser;
+  page: Page;
+}
+
+export const setupE2ETest = async (): Promise&lt;TestContext&gt; => {
+  const browser = await chromium.launch({
+    headless: process.env.CI === 'true'
+  });
+  const page = await browser.newPage();
+  
+  return { browser, page };
+};
+
+export const teardownE2ETest = async (context: TestContext): Promise&lt;void&gt; => {
+  await context.browser.close();
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">User Workflow Tests</h3>
+                        <pre><code class="language-typescript">// e2e/user-workflow.spec.ts
+import { test, expect } from '@playwright/test';
+import { setupE2ETest, teardownE2ETest } from './setup';
+
+test.describe('User Registration and Login', () => {
+  let context: TestContext;
+
+  test.beforeAll(async () => {
+    context = await setupE2ETest();
+  });
+
+  test.afterAll(async () => {
+    await teardownE2ETest(context);
+  });
+
+  test('should register new user and login', async () => {
+    const { page } = context;
+
+    // Navigate to registration page
+    await page.goto('/register');
+
+    // Fill registration form
+    await page.fill('[data-testid=email]', 'test@example.com');
+    await page.fill('[data-testid=name]', 'Test User');
+    await page.fill('[data-testid=password]', 'password123');
+    await page.fill('[data-testid=confirmPassword]', 'password123');
+
+    // Submit form
+    await page.click('[data-testid=register-button]');
+
+    // Should redirect to login
+    await expect(page).toHaveURL('/login');
+
+    // Fill login form
+    await page.fill('[data-testid=email]', 'test@example.com');
+    await page.fill('[data-testid=password]', 'password123');
+
+    // Submit login
+    await page.click('[data-testid=login-button]');
+
+    // Should redirect to dashboard
+    await expect(page).toHaveURL('/dashboard');
+    await expect(page.locator('[data-testid=welcome-message]')).toContainText('Test User');
+  });
+
+  test('should show error for invalid login', async () => {
+    const { page } = context;
+
+    await page.goto('/login');
+    
+    await page.fill('[data-testid=email]', 'test@example.com');
+    await page.fill('[data-testid=password]', 'wrongpassword');
+    
+    await page.click('[data-testid=login-button]');
+    
+    await expect(page.locator('[data-testid=error-message]')).toContainText('Invalid credentials');
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Admin Workflow Tests</h3>
+                        <pre><code class="language-typescript">// e2e/admin-workflow.spec.ts
+import { test, expect } from '@playwright/test';
+
+test.describe('Admin User Management', () => {
+  test('should allow admin to manage users', async ({ page }) => {
+    // Login as admin
+    await page.goto('/login');
+    await page.fill('[data-testid=email]', 'admin@example.com');
+    await page.fill('[data-testid=password]', 'admin123');
+    await page.click('[data-testid=login-button]');
+
+    // Navigate to admin panel
+    await page.click('[data-testid=admin-menu]');
+    await page.click('[data-testid=user-management]');
+
+    // Verify user list loads
+    await expect(page.locator('[data-testid=user-list]')).toBeVisible();
+    
+    // Create new user
+    await page.click('[data-testid=add-user-button]');
+    await page.fill('[data-testid=user-email]', 'newuser@example.com');
+    await page.fill('[data-testid=user-name]', 'New User');
+    await page.click('[data-testid=save-user-button]');
+
+    // Verify user was created
+    await expect(page.locator('text=New User')).toBeVisible();
+  });
+});</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="performance-testing" class="docs-section-title">Performance Testing</h2>
+                        
+                        <h3 class="docs-subsection-title">Load Testing</h3>
+                        <pre><code class="language-typescript">// performance/load-test.ts
+import { check, sleep } from 'k6';
+import http from 'k6/http';
+
+export const options = {
+  stages: [
+    { duration: '2m', target: 100 }, // Ramp up to 100 users
+    { duration: '5m', target: 100 }, // Stay at 100 users
+    { duration: '2m', target: 0 },   // Ramp down to 0 users
+  ],
+  thresholds: {
+    http_req_duration: ['p(95)&lt;500'], // 95% of requests under 500ms
+    http_req_failed: ['rate&lt;0.1'],    // Less than 10% failures
+  },
+};
+
+export default function () {
+  const response = http.get('http://localhost:3003/api/health');
+  
+  check(response, {
+    'status is 200': (r) => r.status === 200,
+    'response time &lt; 500ms': (r) => r.timings.duration &lt; 500,
+  });
+  
+  sleep(1);
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Performance Monitoring</h3>
+                        <pre><code class="language-bash"># Run performance tests
+npm run test:performance
+
+# Run with specific scenarios
+npm run test:performance -- --scenario=api-load
+
+# Generate performance report
+npm run test:performance -- --report</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Performance</h3>
+                        <pre><code class="language-typescript">// performance/db-performance.test.ts
+import { performance } from 'perf_hooks';
+
+describe('Database Performance Tests', () => {
+  it('should handle concurrent user creation', async () => {
+    const startTime = performance.now();
+    
+    const promises = Array.from({ length: 100 }, () =>
+      UserService.createUser({
+        email: `user${Math.random()}@example.com`,
+        name: 'Test User',
+        password: 'password123'
+      })
+    );
+
+    await Promise.all(promises);
+    
+    const endTime = performance.now();
+    const duration = endTime - startTime;
+    
+    expect(duration).toBeLessThan(5000); // Should complete in under 5 seconds
+  });
+});</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="test-configuration" class="docs-section-title">Test Configuration</h2>
+                        
+                        <h3 class="docs-subsection-title">Jest Configuration</h3>
+                        <pre><code class="language-json">// jest.config.js
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['&lt;rootDir&gt;/tests'],
+  testMatch: [
+    '**/__tests__/**/*.ts',
+    '**/?(*.)+(spec|test).ts'
+  ],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.d.ts',
+    '!src/index.ts'
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  },
+  setupFilesAfterEnv: ['&lt;rootDir&gt;/tests/setup.ts'],
+  testTimeout: 30000
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Playwright Configuration</h3>
+                        <pre><code class="language-json">// playwright.config.ts
+import { defineConfig } from '@playwright/test';
+
+export default defineConfig({
+  testDir: './tests/e2e',
+  fullyParallel: true,
+  forbidOnly: !!process.env.CI,
+  retries: process.env.CI ? 2 : 0,
+  workers: process.env.CI ? 1 : undefined,
+  reporter: 'html',
+  use: {
+    baseURL: 'http://localhost:3000',
+    trace: 'on-first-retry',
+  },
+  projects: [
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'] },
+    },
+    {
+      name: 'firefox',
+      use: { ...devices['Desktop Firefox'] },
+    },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'] },
+    },
+  ],
+  webServer: {
+    command: 'npm run dev',
+    url: 'http://localhost:3000',
+    reuseExistingServer: !process.env.CI,
+  },
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Test Scripts</h3>
+                        <pre><code class="language-json">// package.json scripts
+{
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "test:unit": "jest tests/unit",
+    "test:integration": "jest tests/integration",
+    "test:e2e": "playwright test",
+    "test:e2e:ui": "playwright test --ui",
+    "test:performance": "k6 run tests/performance/load-test.js",
+    "test:all": "npm run test:unit && npm run test:integration && npm run test:e2e"
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="continuous-integration" class="docs-section-title">Continuous Integration</h2>
+                        
+                        <h3 class="docs-subsection-title">GitHub Actions</h3>
+                        <pre><code class="language-yaml"># .github/workflows/test.yml
+name: Tests
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    services:
+      postgres:
+        image: postgres:15
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_DB: hostingco_test
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+      redis:
+        image: redis:7
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 6379:6379
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Run unit tests
+      run: npm run test:unit
+
+    - name: Run integration tests
+      run: npm run test:integration
+      env:
+        DATABASE_URL: postgresql://postgres:postgres@localhost:5432/hostingco_test
+        REDIS_URL: redis://localhost:6379
+
+    - name: Install Playwright
+      run: npx playwright install --with-deps
+
+    - name: Build application
+      run: npm run build
+
+    - name: Run E2E tests
+      run: npm run test:e2e
+
+    - name: Upload coverage reports
+      uses: codecov/codecov-action@v3
+      with:
+        file: ./coverage/lcov.info</code></pre>
+
+                        <h3 class="docs-subsection-title">Quality Gates</h3>
+                        <div class="alert alert-warning">
+                            <strong>Coverage Threshold:</strong> 80% minimum coverage<br>
+                            <strong>Performance:</strong> 95% of requests &lt; 500ms<br>
+                            <strong>Security:</strong> No high-severity vulnerabilities<br>
+                            <strong>E2E Tests:</strong> All critical paths tested
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="test-best-practices" class="docs-section-title">Test Best Practices</h2>
+                        
+                        <h3 class="docs-subsection-title">Writing Good Tests</h3>
+                        <div class="alert alert-success">
+                            <strong>AAA Pattern:</strong> Arrange, Act, Assert<br>
+                            <strong>Descriptive Names:</strong> Clear test descriptions<br>
+                            <strong>Single Responsibility:</strong> One assertion per test<br>
+                            <strong>Independent Tests:</strong> Tests should not depend on each other
+                        </div>
+
+                        <h3 class="docs-subsection-title">Test Data Management</h3>
+                        <pre><code class="language-typescript">// test-data/factory.ts
+import { faker } from '@faker-js/faker';
+import { User } from '../types/User';
+
+export const UserFactory = {
+  create: (overrides: Partial&lt;User&gt; = {}): User => ({
+    id: faker.datatype.uuid(),
+    email: faker.internet.email(),
+    name: faker.person.fullName(),
+    createdAt: new Date(),
+    updatedAt: new Date(),
+    ...overrides
+  }),
+
+  createMany: (count: number, overrides: Partial&lt;User&gt; = {}): User[] =>
+    Array.from({ length: count }, () => UserFactory.create(overrides))
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Mocking and Stubbing</h3>
+                        <pre><code class="language-typescript">// Example of mocking external service
+import { UserService } from '../services/UserService';
+import { EmailService } from '../services/EmailService';
+
+jest.mock('../services/EmailService');
+
+describe('UserService with mocked EmailService', () => {
+  it('should send welcome email when creating user', async () => {
+    const mockSendEmail = jest.mocked(EmailService.sendWelcomeEmail);
+    mockSendEmail.mockResolvedValue();
+
+    await UserService.createUser({
+      email: 'test@example.com',
+      name: 'Test User',
+      password: 'password123'
+    });
+
+    expect(mockSendEmail).toHaveBeenCalledWith('test@example.com', 'Test User');
+  });
+});</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

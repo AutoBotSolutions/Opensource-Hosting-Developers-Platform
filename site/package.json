@@ -1,0 +1,28 @@
+{
+  "name": "hostingco-site",
+  "version": "1.0.0",
+  "description": "HostingCo documentation and marketing site",
+  "main": "index.html",
+  "scripts": {
+    "build": "npm run build:css && npm run build:html",
+    "build:css": "echo 'CSS already optimized' && cp -r assets/css dist/ 2>/dev/null || mkdir -p dist/assets/css && cp -r assets/css dist/assets/",
+    "build:html": "echo 'HTML already optimized' && cp -r *.html docs legal assets dist/ 2>/dev/null || mkdir -p dist && cp -r *.html docs legal assets dist/ || true",
+    "dev": "echo 'Static site - no dev server needed'",
+    "preview": "python3 -m http.server 3000 --directory dist",
+    "lint": "echo 'No linting configured for static site'",
+    "test": "echo 'No tests configured for static site'"
+  },
+  "keywords": [
+    "hosting",
+    "documentation",
+    "static-site",
+    "github-pages"
+  ],
+  "author": "HostingCo Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  }
+}

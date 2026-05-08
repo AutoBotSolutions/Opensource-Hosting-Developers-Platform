@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Troubleshooting Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive troubleshooting guide for HostingCo system including common issues, debugging steps, and problem resolution">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="data-management.html" class="docs-nav-link">Data Management</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link active">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Troubleshooting Guide</h1>
+                    <p class="docs-description">Comprehensive troubleshooting guide for HostingCo system including common issues, debugging steps, and problem resolution.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="common-issues" class="docs-section-title">Common Issues</h2>
+                        
+                        <h3 class="docs-subsection-title">Server Won't Start</h3>
+                        <div class="alert alert-danger">
+                            <strong>Symptoms:</strong> Server fails to start or crashes immediately<br>
+                            <strong>Causes:</strong> Port conflicts, missing dependencies, configuration errors
+                        </div>
+                        
+                        <h4 class="docs-subsection-title">Solution Steps:</h4>
+                        <pre><code class="language-bash"># 1. Check for port conflicts
+lsof -i :3003  # Backend
+lsof -i :3000  # Frontend
+
+# 2. Kill conflicting processes
+kill -9 &lt;PID&gt;
+
+# 3. Reinstall dependencies
+npm run install:all
+
+# 4. Check configuration
+npm run config:validate</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Connection Issues</h3>
+                        <div class="alert alert-warning">
+                            <strong>Symptoms:</strong> Database connection timeouts, authentication errors<br>
+                            <strong>Causes:</strong> Incorrect credentials, database not running, network issues
+                        </div>
+                        
+                        <h4 class="docs-subsection-title">Solution Steps:</h4>
+                        <pre><code class="language-bash"># 1. Check database status
+sudo systemctl status postgresql
+
+# 2. Test connection
+psql -h localhost -U postgres
+
+# 3. Check environment variables
+echo $DATABASE_URL
+
+# 4. Reset database connection
+npm run db:reset</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="debugging-tools" class="docs-section-title">🐛 Debugging Tools</h2>
+                        
+                        <h3 class="docs-subsection-title">Built-in Debug Commands</h3>
+                        <pre><code class="language-bash"># Enable debug mode
+DEBUG=hostingco:* npm run dev
+
+# Check system health
+npm run health:all
+
+# Run diagnostics
+npm run diagnose
+
+# View error logs
+npm run logs:errors</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Debugging</h3>
+                        <pre><code class="language-bash"># Check database connections
+npm run db:status
+
+# Run database diagnostics
+npm run db:diagnose
+
+# Check migration status
+npm run migrate:status</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="performance-issues" class="docs-section-title">Performance Issues</h2>
+                        
+                        <h3 class="docs-subsection-title">Slow Response Times</h3>
+                        <div class="alert alert-info">
+                            <strong>Common Causes:</strong> Database queries, memory leaks, inefficient code
+                        </div>
+                        
+                        <h4 class="docs-subsection-title">Performance Analysis:</h4>
+                        <pre><code class="language-bash"># Profile application
+npm run profile:performance
+
+# Check memory usage
+npm run health:memory
+
+# Analyze database queries
+npm run db:profile</code></pre>
+
+                        <h3 class="docs-subsection-title">Memory Issues</h3>
+                        <pre><code class="language-bash"># Check memory usage
+free -h
+
+# Monitor Node.js memory
+node --inspect app.js
+
+# Clear cache
+npm run cache:clear</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="authentication-issues" class="docs-subsection-title">🔐 Authentication Issues</h2>
+                        
+                        <h3 class="docs-subsection-title">Login Problems</h3>
+                        <div class="alert alert-warning">
+                            <strong>Symptoms:</strong> Unable to login, token errors, session issues
+                        </div>
+                        
+                        <h4 class="docs-subsection-title">Troubleshooting Steps:</h4>
+                        <pre><code class="language-bash"># 1. Check JWT configuration
+npm run config:jwt
+
+# 2. Reset admin password
+npm run auth:reset-admin
+
+# 3. Clear sessions
+npm run auth:clear-sessions
+
+# 4. Test authentication
+npm run auth:test</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="getting-help" class="docs-section-title">Getting Help</h2>
+                        
+                        <h3 class="docs-subsection-title">Support Channels</h3>
+                        <div class="alert alert-success">
+                            <strong>Documentation:</strong> Check this guide first<br>
+                            <strong>GitHub Issues:</strong> Report bugs and feature requests<br>
+                            <strong>Community Forum:</strong> Get help from other users<br>
+                            <strong>Email Support:</strong> support@hostingco.com
+                        </div>
+
+                        <h3 class="docs-subsection-title">Bug Report Template</h3>
+                        <pre><code class="language-markdown">## Bug Description
+Brief description of the issue
+
+## Steps to Reproduce
+1. Go to...
+2. Click on...
+3. See error
+
+## Expected Behavior
+What should happen
+
+## Actual Behavior
+What actually happened
+
+## Environment
+- OS: [e.g. Ubuntu 20.04]
+- Node.js version: [e.g. 20.19.2]
+- Browser: [e.g. Chrome 120]
+
+## Additional Context
+Any other relevant information</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

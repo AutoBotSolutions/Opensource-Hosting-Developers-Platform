@@ -1,0 +1,109 @@
+name: Backend Deployment
+
+on:
+  push:
+    branches: [ main, develop ]
+    paths:
+      - 'backend/**'
+      - 'shared/**'
+      - '.github/workflows/backend-deploy.yml'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'backend/**'
+      - 'shared/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: |
+          backend/package-lock.json
+          shared/package-lock.json
+    
+    - name: Install dependencies
+      run: |
+        cd backend && npm ci
+        cd ../shared && npm ci
+    
+    - name: Run linting
+      run: |
+        cd backend && npm run lint
+        cd ../shared && npm run lint
+    
+    - name: Run tests
+      run: |
+        cd backend && npm test
+        cd ../shared && npm test
+
+  build:
+    needs: test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        cache-dependency-path: |
+          backend/package-lock.json
+          shared/package-lock.json
+    
+    - name: Install dependencies
+      run: |
+        cd backend && npm ci
+        cd ../shared && npm ci
+    
+    - name: Build backend
+      run: |
+        cd backend && npm run build
+        cd ../shared && npm run build
+    
+    - name: Build Docker image
+      run: |
+        cd backend
+        docker build -t hostingco-backend:${{ github.sha }} .
+    
+    - name: Upload build artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: backend-dist
+        path: |
+          backend/dist/
+          shared/dist/
+        retention-days: 30
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    
+    steps:
+    - uses: actions/checkout@v4
+    
+    - name: Download build artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: backend-dist
+    
+    - name: Deploy to production
+      run: |
+        echo "Deploying backend to production..."
+        # Add your deployment commands here
+        # This could involve:
+        # - Deploying to a cloud provider (AWS, Google Cloud, Azure)
+        # - Deploying to a VPS
+        # - Deploying to a container registry
+        # Example for Docker deployment:
+        # docker push hostingco-backend:${{ github.sha }}

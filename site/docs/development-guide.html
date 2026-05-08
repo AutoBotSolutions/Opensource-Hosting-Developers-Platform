@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Development Guide - HostingCo</title>
+    <meta name="description" content="Comprehensive development guide for HostingCo system including environment setup, coding standards, and best practices">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="development-guide.html" class="docs-nav-link active">Development Guide</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Development Guide</h1>
+                    <p class="docs-description">This comprehensive guide covers development best practices, coding standards, and workflows for the HostingCo system.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="development-environment" class="docs-section-title">Development Environment Setup</h2>
+                        
+                        <h3 class="docs-subsection-title">Prerequisites</h3>
+                        <div class="alert alert-info">
+                            <strong>Node.js 18+ and npm 8+</strong><br>
+                            <strong>PostgreSQL 15+</strong><br>
+                            <strong>Redis 7+</strong><br>
+                            <strong>Git</strong><br>
+                            <strong>VS Code (recommended)</strong>
+                        </div>
+
+                        <h3 class="docs-subsection-title">Local Development Setup</h3>
+                        
+                        <h4 class="docs-subsection-title">1. Clone Repository</h4>
+                        <pre><code class="language-bash">git clone https://github.com/your-org/hostingco-system.git
+cd hostingco-system</code></pre>
+
+                        <h4 class="docs-subsection-title">2. Install Dependencies</h4>
+                        <pre><code class="language-bash"># Use the automated setup script (recommended)
+./scripts/setup.sh development
+
+# Or install manually
+npm run install:all
+
+# Or install individually
+npm install
+cd backend && npm install
+cd ../frontend && npm install
+cd ../shared && npm install</code></pre>
+
+                        <h4 class="docs-subsection-title">3. Environment Configuration</h4>
+                        <pre><code class="language-bash"># Copy environment template
+cp .env.example .env
+
+# Edit environment variables
+nano .env</code></pre>
+
+                        <h4 class="docs-subsection-title">4. Database Setup</h4>
+                        <pre><code class="language-bash"># Create database
+createdb hostingco_dev
+
+# Run migrations
+npm run migrate:latest
+
+# Seed database
+npm run seed:dev</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="development-workflow" class="docs-section-title">Development Workflow</h2>
+                        
+                        <h3 class="docs-subsection-title">Daily Development</h3>
+                        <pre><code class="language-bash"># Start development servers
+npm run dev
+
+# Or start individually
+npm run dev:backend  # Backend on port 3003
+npm run dev:frontend # Frontend on port 3000</code></pre>
+
+                        <h3 class="docs-subsection-title">Testing Workflow</h3>
+                        <pre><code class="language-bash"># Run all tests
+npm test
+
+# Run tests in watch mode
+npm run test:watch
+
+# Run tests with coverage
+npm run test:coverage
+
+# Run specific test suites
+npm run test:unit
+npm run test:integration
+npm run test:e2e</code></pre>
+
+                        <h3 class="docs-subsection-title">Building for Production</h3>
+                        <pre><code class="language-bash"># Build all packages
+npm run build
+
+# Build specific packages
+npm run build:frontend
+npm run build:backend
+
+# Build for production
+npm run build:prod</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="coding-standards" class="docs-section-title">📝 Coding Standards</h2>
+                        
+                        <h3 class="docs-subsection-title">TypeScript Configuration</h3>
+                        <pre><code class="language-json">// tsconfig.json
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "commonjs",
+    "lib": ["ES2020"],
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">ESLint Configuration</h3>
+                        <pre><code class="language-json">// .eslintrc.json
+{
+  "extends": [
+    "@typescript-eslint/recommended",
+    "prettier"
+  ],
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/explicit-function-return-type": "warn",
+    "prefer-const": "error",
+    "no-var": "error"
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Code Style Guidelines</h3>
+                        <div class="alert alert-warning">
+                            <strong>Functions:</strong> Use arrow functions for callbacks<br>
+                            <strong>Variables:</strong> Use const by default, let when needed<br>
+                            <strong>Classes:</strong> Use classes for complex objects<br>
+                            <strong>Imports:</strong> Use ES6 import/export syntax<br>
+                            <strong>Comments:</strong> Document complex logic and APIs
+                        </div>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="project-structure" class="docs-section-title">📁 Project Structure</h2>
+                        
+                        <h3 class="docs-subsection-title">Monorepo Organization</h3>
+                        <pre><code class="language-ascii">hostingco-system/
+├── backend/                 # Node.js backend
+│   ├── src/
+│   │   ├── controllers/      # Route handlers
+│   │   ├── middleware/       # Express middleware
+│   │   ├── models/          # Database models
+│   │   ├── routes/          # API routes
+│   │   ├── services/        # Business logic
+│   │   └── utils/           # Utility functions
+│   ├── tests/               # Backend tests
+│   └── package.json
+├── frontend/                # React frontend
+│   ├── src/
+│   │   ├── components/      # React components
+│   │   ├── hooks/           # Custom hooks
+│   │   ├── pages/           # Page components
+│   │   ├── services/        # API services
+│   │   ├── utils/           # Utility functions
+│   │   └── styles/          # CSS/SCSS files
+│   ├── public/              # Static assets
+│   └── package.json
+├── shared/                  # Shared code
+│   ├── src/
+│   │   ├── types/           # TypeScript types
+│   │   └── utils/           # Shared utilities
+│   └── package.json
+├── scripts/                 # Automation scripts
+├── docs/                    # Documentation
+└── package.json            # Root package.json</code></pre>
+
+                        <h3 class="docs-subsection-title">Package Management</h3>
+                        <pre><code class="language-json">// Root package.json
+{
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend",
+    "shared"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "test": "npm run test --workspaces",
+    "build": "npm run build --workspaces",
+    "clean": "npm run clean --workspaces"
+  }
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-development" class="docs-section-title">Database Development</h2>
+                        
+                        <h3 class="docs-subsection-title">Migration Workflow</h3>
+                        <pre><code class="language-bash"># Create new migration
+npm run migrate:create add_user_table
+
+# Run migrations
+npm run migrate:latest
+
+# Rollback migration
+npm run migrate:rollback
+
+# Check migration status
+npm run migrate:status</code></pre>
+
+                        <h3 class="docs-subsection-title">Database Schema</h3>
+                        <pre><code class="language-typescript">// Example model
+import { knex } from '../database';
+
+export class User {
+  static async findById(id: string) {
+    return knex('users').where('id', id).first();
+  }
+
+  static async create(userData: CreateUserDto) {
+    const [user] = await knex('users').insert(userData).returning('*');
+    return user;
+  }
+
+  static async update(id: string, updates: Partial&lt;User&gt;) {
+    return knex('users').where('id', id).update(updates);
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Seeding Data</h3>
+                        <pre><code class="language-bash"># Seed development data
+npm run seed:dev
+
+# Seed specific data
+npm run seed:users
+npm run seed:servers
+
+# Reset and reseed
+npm run seed:reset</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="api-development" class="docs-section-title">🔌 API Development</h2>
+                        
+                        <h3 class="docs-subsection-title">Route Structure</h3>
+                        <pre><code class="language-typescript">// Example controller
+import { Request, Response } from 'express';
+import { UserService } from '../services/UserService';
+
+export class UserController {
+  static async create(req: Request, res: Response) {
+    try {
+      const user = await UserService.create(req.body);
+      res.status(201).json(user);
+    } catch (error) {
+      res.status(400).json({ error: error.message });
+    }
+  }
+
+  static async getAll(req: Request, res: Response) {
+    try {
+      const users = await UserService.getAll();
+      res.json(users);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  }
+}</code></pre>
+
+                        <h3 class="docs-subsection-title">Middleware</h3>
+                        <pre><code class="language-typescript">// Authentication middleware
+export const authenticate = async (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const token = req.headers.authorization?.replace('Bearer ', '');
+    const user = await UserService.verifyToken(token);
+    req.user = user;
+    next();
+  } catch (error) {
+    res.status(401).json({ error: 'Unauthorized' });
+  }
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Error Handling</h3>
+                        <pre><code class="language-typescript">// Global error handler
+export const errorHandler = (error: Error, req: Request, res: Response, next: NextFunction) => {
+  console.error(error);
+  
+  if (error instanceof ValidationError) {
+    return res.status(400).json({ error: error.message });
+  }
+  
+  if (error instanceof AuthenticationError) {
+    return res.status(401).json({ error: error.message });
+  }
+  
+  res.status(500).json({ error: 'Internal server error' });
+};</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="frontend-development" class="docs-section-title">⚛️ Frontend Development</h2>
+                        
+                        <h3 class="docs-subsection-title">Component Structure</h3>
+                        <pre><code class="language-typescript">// Example component
+import React, { useState, useEffect } from 'react';
+import { User } from '../types';
+
+interface UserListProps {
+  users: User[];
+  onUserSelect: (user: User) => void;
+}
+
+export const UserList: React.FC&lt;UserListProps&gt; = ({ users, onUserSelect }) => {
+  const [selectedUser, setSelectedUser] = useState&lt;User | null&gt;(null);
+
+  return (
+    &lt;div className="user-list"&gt;
+      {users.map(user => (
+        &lt;div
+          key={user.id}
+          className={`user-item ${selectedUser?.id === user.id ? 'selected' : ''}`}
+          onClick={() => {
+            setSelectedUser(user);
+            onUserSelect(user);
+          }}
+        &gt;
+          {user.name}
+        &lt;/div&gt;
+      ))}
+    &lt;/div&gt;
+  );
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">State Management</h3>
+                        <pre><code class="language-typescript">// Custom hook example
+import { useState, useEffect } from 'react';
+import { User } from '../types';
+
+export const useUsers = () => {
+  const [users, setUsers] = useState&lt;User[]&gt;([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState&lt;string | null&gt;(null);
+
+  useEffect(() => {
+    const fetchUsers = async () => {
+      try {
+        const response = await fetch('/api/users');
+        const data = await response.json();
+        setUsers(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchUsers();
+  }, []);
+
+  return { users, loading, error };
+};</code></pre>
+
+                        <h3 class="docs-subsection-title">Styling</h3>
+                        <pre><code class="language-css">/* Component-specific styles */
+.user-list {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.user-item {
+  padding: 1rem;
+  border: 1px solid var(--border-primary);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.user-item:hover {
+  background-color: var(--bg-tertiary);
+  transform: translateY(-1px);
+}
+
+.user-item.selected {
+  background-color: var(--primary-color);
+  color: var(--text-inverse);
+}</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="testing-strategy" class="docs-section-title">Testing Strategy</h2>
+                        
+                        <h3 class="docs-subsection-title">Test Organization</h3>
+                        <pre><code class="language-ascii">tests/
+├── unit/                   # Unit tests
+│   ├── controllers/
+│   ├── services/
+│   └── utils/
+├── integration/            # Integration tests
+│   ├── api/
+│   └── database/
+├── e2e/                    # End-to-end tests
+│   ├── user-flows/
+│   └── admin-flows/
+└── fixtures/               # Test data</code></pre>
+
+                        <h3 class="docs-subsection-title">Test Examples</h3>
+                        <pre><code class="language-typescript">// Unit test example
+import { UserService } from '../services/UserService';
+
+describe('UserService', () => {
+  describe('create', () => {
+    it('should create a new user', async () => {
+      const userData = {
+        email: 'test@example.com',
+        name: 'Test User'
+      };
+
+      const user = await UserService.create(userData);
+
+      expect(user).toBeDefined();
+      expect(user.email).toBe(userData.email);
+      expect(user.name).toBe(userData.name);
+    });
+
+    it('should throw error for duplicate email', async () => {
+      const userData = {
+        email: 'existing@example.com',
+        name: 'Test User'
+      };
+
+      await expect(UserService.create(userData))
+        .rejects.toThrow('Email already exists');
+    });
+  });
+});</code></pre>
+
+                        <h3 class="docs-subsection-title">Test Configuration</h3>
+                        <pre><code class="language-json">// jest.config.js
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  roots: ['&lt;rootDir&gt;/tests'],
+  testMatch: ['**/__tests__/**/*.ts', '**/?(*.)+(spec|test).ts'],
+  collectCoverageFrom: [
+    'src/**/*.ts',
+    '!src/**/*.d.ts',
+    '!src/index.ts'
+  ],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  }
+};</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="debugging" class="docs-section-title">🐛 Debugging</h2>
+                        
+                        <h3 class="docs-subsection-title">Backend Debugging</h3>
+                        <pre><code class="language-bash"># Start backend with debugging
+npm run dev:debug
+
+# Or with VS Code launch configuration
+node --inspect-brk dist/index.js</code></pre>
+
+                        <h3 class="docs-subsection-title">Frontend Debugging</h3>
+                        <pre><code class="language-bash"># Start frontend with debugging
+npm run dev:debug
+
+# Or with Chrome DevTools
+# Open Chrome DevTools and use the React DevTools extension</code></pre>
+
+                        <h3 class="docs-subsection-title">VS Code Configuration</h3>
+                        <pre><code class="language-json">// .vscode/launch.json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug Backend",
+      "type": "node",
+      "request": "launch",
+      "program": "${workspaceFolder}/backend/dist/index.js",
+      "outFiles": ["${workspaceFolder}/backend/dist/**/*.js"],
+      "env": {
+        "NODE_ENV": "development"
+      }
+    },
+    {
+      "name": "Debug Frontend",
+      "type": "chrome",
+      "request": "launch",
+      "url": "http://localhost:3000",
+      "webRoot": "${workspaceFolder}/frontend/src"
+    }
+  ]
+}</code></pre>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>

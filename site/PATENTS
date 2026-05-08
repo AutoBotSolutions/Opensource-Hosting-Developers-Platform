@@ -1,0 +1,78 @@
+Patent Grant
+
+HostingCo System ("HostingCo") hereby grants to each recipient of the HostingCo 
+software a perpetual, worldwide, non-exclusive, no-charge, royalty-free, irrevocable 
+patent license to make, have made, use, offer to sell, sell, import, and otherwise 
+transfer the HostingCo software, where such license applies only to those patent 
+claims licensable by HostingCo that are necessarily infringed by their 
+Contribution(s) alone or by combination of their Contribution(s) with the HostingCo 
+software to which the Contribution was submitted.
+
+Patent License Terms
+
+1. Definitions
+   - "Contribution" means any original work of authorship, including any 
+     modifications or additions to the HostingCo software, submitted by HostingCo 
+     to this repository.
+   - "Patent Claim" means any patent claim, now owned or hereafter acquired, 
+     including without limitation, method, process, and apparatus claims.
+   - "HostingCo Software" means the HostingCo hosting management system and all 
+     related components.
+
+2. Grant of Patent License
+   Subject to the terms and conditions of this license, HostingCo hereby grants 
+   to each recipient a perpetual, worldwide, non-exclusive, no-charge, 
+   royalty-free, irrevocable (except as stated in this section) patent license 
+   to make, have made, use, offer to sell, sell, import, and otherwise transfer 
+   the HostingCo software.
+
+3. Defensive Termination
+   If any patent litigation is brought against any entity alleging that the 
+   HostingCo software or a Contribution incorporated within the HostingCo 
+   software constitutes direct or contributory patent infringement, then any 
+   patent licenses granted to that entity under this license shall terminate as 
+   of the date such litigation is filed.
+
+4. No Trademark License
+   This license does not grant any rights to use the trademarks, service marks, 
+   or trade names of HostingCo, except as necessary for the reasonable use of 
+   the HostingCo software.
+
+5. No Other Rights
+   Except as expressly stated in this license, no other patent rights or 
+   licenses are granted by implication, estoppel, or otherwise.
+
+Patent Claims Covered
+
+This patent license covers patent claims related to:
+- Hosting management system architecture
+- Automated server provisioning and deployment
+- Real-time monitoring and alerting systems
+- Customer support ticket management
+- Billing and payment processing integration
+- Multi-tenant user management systems
+- Database schema and data management
+- API design and implementation
+- Security authentication and authorization systems
+- Configuration management systems
+
+Third-Party Patent Rights
+
+This patent license does not grant any rights to third-party patents. Users are 
+responsible for ensuring their use of the HostingCo software does not infringe 
+on any third-party patent rights.
+
+Contact Information
+
+For questions about this patent license or to report potential patent 
+infringement, please contact:
+
+HostingCo Legal Department
+Email: legal@hostingco.com
+GitHub: https://github.com/hostingco/hostingco-system/issues
+
+---
+
+This patent license is provided as part of the MIT License for the HostingCo 
+system and is intended to provide additional clarity regarding patent rights 
+for contributors and users of the software.

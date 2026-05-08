@@ -1,0 +1,150 @@
+[
+  {
+    "id": "server_001",
+    "name": "web-server-01",
+    "userId": "user_001",
+    "plan": "pro",
+    "location": "us-east-1",
+    "status": "active",
+    "ip": "192.168.1.101",
+    "hostname": "web-server-01.acme.com",
+    "specs": {
+      "cpu": 4,
+      "ram": "8GB",
+      "storage": "100GB",
+      "bandwidth": "2TB"
+    },
+    "uptime": 99.9,
+    "load": [0.2, 0.3, 0.1],
+    "settings": {
+      "hostname": "web-server-01",
+      "firewall": true,
+      "backups": true,
+      "monitoring": true,
+      "ssl": true
+    },
+    "statistics": {
+      "cpuUsage": 25.5,
+      "memoryUsage": 60.2,
+      "diskUsage": 45.8,
+      "networkIn": 1024.5,
+      "networkOut": 2048.3,
+      "processes": 45,
+      "connections": 120
+    },
+    "createdAt": "2026-03-01T10:00:00.000Z",
+    "updatedAt": "2026-05-08T03:14:24.942Z",
+    "lastBackup": "2026-05-08T02:00:00.000Z"
+  },
+  {
+    "id": "server_002",
+    "name": "db-server-01",
+    "userId": "user_001",
+    "plan": "enterprise",
+    "location": "us-west-1",
+    "status": "active",
+    "ip": "192.168.1.102",
+    "hostname": "db-server-01.acme.com",
+    "specs": {
+      "cpu": 8,
+      "ram": "16GB",
+      "storage": "200GB",
+      "bandwidth": "5TB"
+    },
+    "uptime": 99.8,
+    "load": [0.4, 0.5, 0.3],
+    "settings": {
+      "hostname": "db-server-01",
+      "firewall": true,
+      "backups": true,
+      "monitoring": true,
+      "ssl": true
+    },
+    "statistics": {
+      "cpuUsage": 45.2,
+      "memoryUsage": 78.5,
+      "diskUsage": 62.1,
+      "networkIn": 2048.7,
+      "networkOut": 1536.2,
+      "processes": 67,
+      "connections": 89
+    },
+    "createdAt": "2026-02-15T14:30:00.000Z",
+    "updatedAt": "2026-05-08T03:14:24.942Z",
+    "lastBackup": "2026-05-08T01:30:00.000Z"
+  },
+  {
+    "id": "server_003",
+    "name": "test-server-01",
+    "userId": "user_001",
+    "plan": "basic",
+    "location": "eu-central-1",
+    "status": "inactive",
+    "ip": "192.168.1.103",
+    "hostname": "test-server-01.acme.com",
+    "specs": {
+      "cpu": 2,
+      "ram": "4GB",
+      "storage": "50GB",
+      "bandwidth": "1TB"
+    },
+    "uptime": 0,
+    "load": [0, 0, 0],
+    "settings": {
+      "hostname": "test-server-01",
+      "firewall": false,
+      "backups": false,
+      "monitoring": false,
+      "ssl": false
+    },
+    "statistics": {
+      "cpuUsage": 0,
+      "memoryUsage": 0,
+      "diskUsage": 0,
+      "networkIn": 0,
+      "networkOut": 0,
+      "processes": 0,
+      "connections": 0
+    },
+    "createdAt": "2026-04-10T09:15:00.000Z",
+    "updatedAt": "2026-05-01T10:30:00.000Z",
+    "lastBackup": null
+  },
+  {
+    "id": "server_004",
+    "name": "backup-server-01",
+    "userId": "admin_001",
+    "plan": "enterprise",
+    "location": "us-east-1",
+    "status": "active",
+    "ip": "192.168.1.104",
+    "hostname": "backup-server-01.hostingco.com",
+    "specs": {
+      "cpu": 8,
+      "ram": "32GB",
+      "storage": "1TB",
+      "bandwidth": "10TB"
+    },
+    "uptime": 99.95,
+    "load": [0.1, 0.2, 0.15],
+    "settings": {
+      "hostname": "backup-server-01",
+      "firewall": true,
+      "backups": true,
+      "monitoring": true,
+      "ssl": true
+    },
+    "statistics": {
+      "cpuUsage": 15.3,
+      "memoryUsage": 45.7,
+      "diskUsage": 78.9,
+      "networkIn": 5123.4,
+      "networkOut": 3098.7,
+      "processes": 23,
+      "connections": 56
+    },
+    "createdAt": "2026-01-05T08:00:00.000Z",
+    "updatedAt": "2026-05-08T03:14:24.942Z",
+    "lastBackup": "2026-05-08T02:30:00.000Z"
+  }
+]

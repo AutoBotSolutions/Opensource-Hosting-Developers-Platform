@@ -1,0 +1,177 @@
+{
+  "traffic": {
+    "daily": [
+      {"date": "2026-05-01", "visitors": 2341, "pageViews": 8456, "bounceRate": 31.2, "avgSessionDuration": 276},
+      {"date": "2026-05-02", "visitors": 2567, "pageViews": 9234, "bounceRate": 29.8, "avgSessionDuration": 289},
+      {"date": "2026-05-03", "visitors": 2890, "pageViews": 10567, "bounceRate": 30.1, "avgSessionDuration": 295},
+      {"date": "2026-05-04", "visitors": 3123, "pageViews": 11234, "bounceRate": 28.9, "avgSessionDuration": 312},
+      {"date": "2026-05-05", "visitors": 2987, "pageViews": 10890, "bounceRate": 32.4, "avgSessionDuration": 267},
+      {"date": "2026-05-06", "visitors": 3456, "pageViews": 12543, "bounceRate": 30.7, "avgSessionDuration": 284},
+      {"date": "2026-05-07", "visitors": 3234, "pageViews": 11892, "bounceRate": 31.9, "avgSessionDuration": 271},
+      {"date": "2026-05-08", "visitors": 3567, "pageViews": 12987, "bounceRate": 29.3, "avgSessionDuration": 298}
+    ],
+    "weekly": [
+      {"week": "2026-W18", "visitors": 15678, "pageViews": 56789, "bounceRate": 30.5, "avgSessionDuration": 284},
+      {"week": "2026-W19", "visitors": 18923, "pageViews": 68456, "bounceRate": 29.8, "avgSessionDuration": 291}
+    ],
+    "monthly": [
+      {"month": "2026-03", "visitors": 67890, "pageViews": 245678, "bounceRate": 31.2, "avgSessionDuration": 276},
+      {"month": "2026-04", "visitors": 72345, "pageViews": 267890, "bounceRate": 30.1, "avgSessionDuration": 289},
+      {"month": "2026-05", "visitors": 78934, "pageViews": 312456, "bounceRate": 30.7, "avgSessionDuration": 284}
+    ]
+  },
+  "revenue": {
+    "daily": [
+      {"date": "2026-05-01", "revenue": 456.78, "transactions": 23},
+      {"date": "2026-05-02", "revenue": 678.90, "transactions": 31},
+      {"date": "2026-05-03", "revenue": 523.45, "transactions": 26},
+      {"date": "2026-05-04", "revenue": 789.12, "transactions": 34},
+      {"date": "2026-05-05", "revenue": 890.34, "transactions": 38},
+      {"date": "2026-05-06", "revenue": 1234.56, "transactions": 45},
+      {"date": "2026-05-07", "revenue": 987.65, "transactions": 42},
+      {"date": "2026-05-08", "revenue": 1456.78, "transactions": 51}
+    ],
+    "monthly": [
+      {"month": "2026-01", "revenue": 12345.67, "transactions": 567},
+      {"month": "2026-02", "revenue": 14567.89, "transactions": 623},
+      {"month": "2026-03", "revenue": 16789.01, "transactions": 678},
+      {"month": "2026-04", "revenue": 18901.23, "transactions": 734},
+      {"month": "2026-05", "revenue": 21234.56, "transactions": 789}
+    ],
+    "byPlan": {
+      "basic": {"revenue": 5678.90, "count": 189},
+      "pro": {"revenue": 12345.67, "count": 234},
+      "enterprise": {"revenue": 3210.99, "count": 45}
+    },
+    "byCountry": [
+      {"country": "United States", "revenue": 15678.90, "percentage": 73.8},
+      {"country": "United Kingdom", "revenue": 3456.78, "percentage": 16.3},
+      {"country": "Germany", "revenue": 1234.56, "percentage": 5.8},
+      {"country": "Canada", "revenue": 567.89, "percentage": 2.7},
+      {"country": "Australia", "revenue": 234.56, "percentage": 1.1},
+      {"country": "Other", "revenue": 89.01, "percentage": 0.3}
+    ]
+  },
+  "servers": {
+    "utilization": {
+      "cpu": [
+        {"date": "2026-05-08T00:00:00Z", "usage": 45.2},
+        {"date": "2026-05-08T04:00:00Z", "usage": 52.8},
+        {"date": "2026-05-08T08:00:00Z", "usage": 67.3},
+        {"date": "2026-05-08T12:00:00Z", "usage": 78.9},
+        {"date": "2026-05-08T16:00:00Z", "usage": 71.4},
+        {"date": "2026-05-08T20:00:00Z", "usage": 58.7},
+        {"date": "2026-05-09T00:00:00Z", "usage": 42.1}
+      ],
+      "memory": [
+        {"date": "2026-05-08T00:00:00Z", "usage": 56.7},
+        {"date": "2026-05-08T04:00:00Z", "usage": 61.2},
+        {"date": "2026-05-08T08:00:00Z", "usage": 73.4},
+        {"date": "2026-05-08T12:00:00Z", "usage": 81.9},
+        {"date": "2026-05-08T16:00:00Z", "usage": 76.5},
+        {"date": "2026-05-08T20:00:00Z", "usage": 64.8},
+        {"date": "2026-05-09T00:00:00Z", "usage": 53.2}
+      ],
+      "disk": [
+        {"date": "2026-05-08T00:00:00Z", "usage": 62.3},
+        {"date": "2026-05-08T06:00:00Z", "usage": 63.1},
+        {"date": "2026-05-08T12:00:00Z", "usage": 64.8},
+        {"date": "2026-05-08T18:00:00Z", "usage": 65.2},
+        {"date": "2026-05-09T00:00:00Z", "usage": 65.7}
+      ]
+    },
+    "performance": {
+      "responseTime": [
+        {"date": "2026-05-08T00:00:00Z", "avg": 123, "p95": 234, "p99": 456},
+        {"date": "2026-05-08T04:00:00Z", "avg": 134, "p95": 245, "p99": 467},
+        {"date": "2026-05-08T08:00:00Z", "avg": 156, "p95": 278, "p99": 512},
+        {"date": "2026-05-08T12:00:00Z", "avg": 189, "p95": 312, "p99": 589},
+        {"date": "2026-05-08T16:00:00Z", "avg": 167, "p95": 289, "p99": 534},
+        {"date": "2026-05-08T20:00:00Z", "avg": 145, "p95": 256, "p99": 478},
+        {"date": "2026-05-09T00:00:00Z", "avg": 128, "p95": 234, "p99": 445}
+      ],
+      "uptime": [
+        {"server": "web-server-01", "uptime": 99.9, "downtime": 8.7},
+        {"server": "db-server-01", "uptime": 99.8, "downtime": 17.5},
+        {"server": "backup-server-01", "uptime": 99.95, "downtime": 4.4},
+        {"server": "test-server-01", "uptime": 0, "downtime": 0}
+      ]
+    }
+  },
+  "users": {
+    "acquisition": {
+      "daily": [
+        {"date": "2026-05-01", "newUsers": 12, "sources": {"organic": 5, "referral": 3, "direct": 2, "paid": 2}},
+        {"date": "2026-05-02", "newUsers": 15, "sources": {"organic": 7, "referral": 4, "direct": 2, "paid": 2}},
+        {"date": "2026-05-03", "newUsers": 18, "sources": {"organic": 8, "referral": 5, "direct": 3, "paid": 2}},
+        {"date": "2026-05-04", "newUsers": 14, "sources": {"organic": 6, "referral": 4, "direct": 2, "paid": 2}},
+        {"date": "2026-05-05", "newUsers": 21, "sources": {"organic": 9, "referral": 6, "direct": 3, "paid": 3}},
+        {"date": "2026-05-06", "newUsers": 23, "sources": {"organic": 10, "referral": 7, "direct": 3, "paid": 3}},
+        {"date": "2026-05-07", "newUsers": 19, "sources": {"organic": 8, "referral": 6, "direct": 3, "paid": 2}},
+        {"date": "2026-05-08", "newUsers": 25, "sources": {"organic": 11, "referral": 8, "direct": 3, "paid": 3}}
+      ],
+      "sources": {
+        "organic": {"count": 64, "percentage": 45.7},
+        "referral": {"count": 43, "percentage": 30.7},
+        "direct": {"count": 21, "percentage": 15.0},
+        "paid": {"count": 19, "percentage": 13.6}
+      }
+    },
+    "retention": {
+      "cohorts": [
+        {"cohort": "2026-01", "day1": 100, "day7": 85, "day30": 72, "day90": 58},
+        {"cohort": "2026-02", "day1": 100, "day7": 87, "day30": 74, "day90": 61},
+        {"cohort": "2026-03", "day1": 100, "day7": 89, "day30": 76, "day90": 63},
+        {"cohort": "2026-04", "day1": 100, "day7": 91, "day30": 78, "day90": 65},
+        {"cohort": "2026-05", "day1": 100, "day7": 92, "day30": 0, "day90": 0}
+      ]
+    },
+    "engagement": {
+      "dailyActive": [
+        {"date": "2026-05-01", "users": 89},
+        {"date": "2026-05-02", "users": 92},
+        {"date": "2026-05-03", "users": 95},
+        {"date": "2026-05-04", "users": 98},
+        {"date": "2026-05-05", "users": 102},
+        {"date": "2026-05-06", "users": 108},
+        {"date": "2026-05-07", "users": 105},
+        {"date": "2026-05-08", "users": 112}
+      ],
+      "monthlyActive": [
+        {"month": "2026-01", "users": 234},
+        {"month": "2026-02", "users": 245},
+        {"month": "2026-03", "users": 256},
+        {"month": "2026-04", "users": 267},
+        {"month": "2026-05", "users": 278}
+      ]
+    }
+  },
+  "support": {
+    "tickets": {
+      "volume": [
+        {"date": "2026-05-01", "created": 8, "resolved": 6, "open": 2},
+        {"date": "2026-05-02", "created": 12, "resolved": 9, "open": 5},
+        {"date": "2026-05-03", "created": 6, "resolved": 8, "open": 3},
+        {"date": "2026-05-04", "created": 15, "resolved": 12, "open": 6},
+        {"date": "2026-05-05", "created": 9, "resolved": 7, "open": 8},
+        {"date": "2026-05-06", "created": 11, "resolved": 10, "open": 9},
+        {"date": "2026-05-07", "created": 7, "resolved": 6, "open": 10},
+        {"date": "2026-05-08", "created": 5, "resolved": 3, "open": 12}
+      ],
+      "categories": [
+        {"category": "Technical", "count": 89, "avgResolutionTime": 4.2},
+        {"category": "Billing", "count": 45, "avgResolutionTime": 2.1},
+        {"category": "Domain", "count": 23, "avgResolutionTime": 6.8},
+        {"category": "Account", "count": 34, "avgResolutionTime": 1.5},
+        {"category": "General", "count": 43, "avgResolutionTime": 3.1}
+      ],
+      "satisfaction": [
+        {"month": "2026-01", "rating": 4.5, "responses": 156},
+        {"month": "2026-02", "rating": 4.6, "responses": 178},
+        {"month": "2026-03", "rating": 4.4, "responses": 189},
+        {"month": "2026-04", "rating": 4.7, "responses": 201},
+        {"month": "2026-05", "rating": 4.6, "responses": 89}
+      ]
+    }
+  }
+}

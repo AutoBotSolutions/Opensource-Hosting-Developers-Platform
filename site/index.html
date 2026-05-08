@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HostingCo - Advanced Hosting Management System</title>
+    <meta name="description" content="Complete hosting management system with automated deployment, monitoring, and customer support">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="docs/quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="docs/api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="docs/installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="docs/architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="docs/data-management.html">Data Management</a></li>
+                                <li><a href="docs/system-operations.html">System Operations</a></li>
+                                <li><a href="docs/security.html">Security</a></li>
+                                <li><a href="docs/deployment.html">Deployment</a></li>
+                                <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="docs/database.html">Database Design</a></li>
+                                <li><a href="docs/configuration.html">Configuration</a></li>
+                                <li><a href="docs/maintenance.html">Maintenance</a></li>
+                                <li><a href="docs/backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="docs/billing.html">Billing System</a></li>
+                                <li><a href="docs/support.html">Support System</a></li>
+                                <li><a href="docs/automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="docs/contributing.html">Contributing</a></li>
+                                <li><a href="docs/development-guide.html">Development Guide</a></li>
+                                <li><a href="docs/development.html">Development Servers</a></li>
+                                <li><a href="docs/testing.html">Testing Procedures</a></li>
+                                <li><a href="docs/user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">Theme</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+        <div class="search-container">
+            <div class="search-input-wrapper">
+                <span class="search-icon">Search</span>
+                <input type="text" id="searchInput" placeholder="Search documentation..." autocomplete="off">
+                <button class="search-close" id="searchClose">×</button>
+            </div>
+            <div class="search-results" id="searchResults"></div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-text">Advanced Hosting Management</span>
+                </div>
+                <h1 class="hero-title">HostingCo System</h1>
+                <p class="hero-description">
+                    Complete hosting management system with automated deployment, real-time monitoring, 
+                    customer support, and comprehensive billing solutions. Built with modern technologies 
+                    for scalability and reliability.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">99.9%</div>
+                        <div class="stat-label">Uptime</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">3</div>
+                        <div class="stat-label">Hosting Plans</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Support</div>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="docs/quick-start.html" class="btn btn-primary">Get Started</a>
+                    <a href="docs/api-reference.html" class="btn btn-secondary">View API</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-diagram">
+                    <div class="diagram-node backend">
+                        <div class="node-label">Backend</div>
+                        <div class="node-tech">Node.js + Express</div>
+                    </div>
+                    <div class="diagram-node frontend">
+                        <div class="node-label">Frontend</div>
+                        <div class="node-tech">React + TypeScript</div>
+                    </div>
+                    <div class="diagram-node database">
+                        <div class="node-label">Database</div>
+                        <div class="node-tech">PostgreSQL</div>
+                    </div>
+                    <div class="diagram-node cache">
+                        <div class="node-label">Cache</div>
+                        <div class="node-tech">Redis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-description">Everything you need to manage a modern hosting infrastructure</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">Server</span>
+                    </div>
+                    <h3 class="feature-title">Server Management</h3>
+                    <p class="feature-description">
+                        Complete server lifecycle management with automated provisioning, monitoring, 
+                        and power control for all hosting plans.
+                    </p>
+                    <a href="docs/system-operations.html" class="feature-link">Learn more →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">Billing</span>
+                    </div>
+                    <h3 class="feature-title">Billing System</h3>
+                    <p class="feature-description">
+                        Automated invoicing, payment processing, and comprehensive financial 
+                        management with multiple payment methods.
+                    </p>
+                    <a href="docs/billing.html" class="feature-link">Learn more →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">Support</span>
+                    </div>
+                    <h3 class="feature-title">Customer Support</h3>
+                    <p class="feature-description">
+                        Integrated ticket system with real-time messaging, priority management, 
+                        and comprehensive support analytics.
+                    </p>
+                    <a href="docs/support.html" class="feature-link">Learn more →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🔒</span>
+                    </div>
+                    <h3 class="feature-title">Security</h3>
+                    <p class="feature-description">
+                        Enterprise-grade security with JWT authentication, rate limiting, 
+                        DDoS protection, and comprehensive audit logging.
+                    </p>
+                    <a href="docs/security.html" class="feature-link">Learn more →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">Analytics</span>
+                    </div>
+                    <h3 class="feature-title">Real-time Monitoring</h3>
+                    <p class="feature-description">
+                        Live dashboard with server statistics, performance metrics, 
+                        and automated alerting for proactive management.
+                    </p>
+                    <a href="docs/architecture.html" class="feature-link">Learn more →</a>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="feature-emoji">🔌</span>
+                    </div>
+                    <h3 class="feature-title">API Management</h3>
+                    <p class="feature-description">
+                        RESTful API with comprehensive documentation, rate limiting, 
+                        and developer-friendly integration tools.
+                    </p>
+                    <a href="docs/api-reference.html" class="feature-link">Learn more →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Modern Technology Stack</h2>
+                <p class="section-description">Built with industry-leading technologies for performance and scalability</p>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Frontend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon react"></div>
+                            <span>React 18</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon typescript"></div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon vite"></div>
+                            <span>Vite</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon tailwind"></div>
+                            <span>Tailwind CSS</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Backend</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon nodejs"></div>
+                            <span>Node.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon express"></div>
+                            <span>Express</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon typescript"></div>
+                            <span>TypeScript</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon jwt"></div>
+                            <span>JWT Auth</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Database</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon postgresql"></div>
+                            <span>PostgreSQL</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon redis"></div>
+                            <span>Redis</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon knex"></div>
+                            <span>Knex.js</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon migrations"></div>
+                            <span>Migrations</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="tech-category">
+                    <h3 class="tech-category-title">Infrastructure</h3>
+                    <div class="tech-items">
+                        <div class="tech-item">
+                            <div class="tech-icon docker"></div>
+                            <span>Docker</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon nginx"></div>
+                            <span>Nginx</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon github"></div>
+                            <span>GitHub Actions</span>
+                        </div>
+                        <div class="tech-item">
+                            <div class="tech-icon ssl"></div>
+                            <span>SSL/TLS</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Start Section -->
+    <section class="quick-start">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Quick Start Guide</h2>
+                <p class="section-description">Get HostingCo running in minutes</p>
+            </div>
+            <div class="quick-start-content">
+                <div class="quick-steps">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h4>Clone Repository</h4>
+                            <code>git clone https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform.git</code>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h4>Install Dependencies</h4>
+                            <code>npm run install:all</code>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h4>Start Development</h4>
+                            <code>npm run dev</code>
+                        </div>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h4>Access Application</h4>
+                            <code>Frontend: http://localhost:3000</code><br>
+                            <code>Backend: http://localhost:3003</code>
+                        </div>
+                    </div>
+                </div>
+                <div class="quick-start-cta">
+                    <p>Need detailed instructions?</p>
+                    <a href="docs/quick-start.html" class="btn btn-primary">View Full Guide</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comprehensive Documentation Hub -->
+    <section class="documentation-hub">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Documentation Hub</h2>
+                <p class="section-description">Everything you need to master HostingCo - organized by category</p>
+            </div>
+            
+            <!-- Getting Started Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Start</span>
+                    </div>
+                    <h3 class="category-title">Getting Started</h3>
+                    <p class="category-description">New to HostingCo? Start here</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Guide</span>
+                        </div>
+                        <h4 class="doc-title">Quick Start Guide</h4>
+                        <p class="doc-description">Get up and running in minutes</p>
+                        <a href="docs/quick-start.html" class="doc-link">Start Now →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Config</span>
+                        </div>
+                        <h4 class="doc-title">Installation Guide</h4>
+                        <p class="doc-description">Complete setup instructions</p>
+                        <a href="docs/installation.html" class="doc-link">Install →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Users</span>
+                        </div>
+                        <h4 class="doc-title">Contributing</h4>
+                        <p class="doc-description">How to contribute to the project</p>
+                        <a href="docs/contributing.html" class="doc-link">Contribute →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Development Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Dev</span>
+                    </div>
+                    <h3 class="category-title">Development</h3>
+                    <p class="category-description">Development tools and guides</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Docs</span>
+                        </div>
+                        <h4 class="doc-title">Development Guide</h4>
+                        <p class="doc-description">Development best practices</p>
+                        <a href="docs/development-guide.html" class="doc-link">Dev Guide →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Tools</span>
+                        </div>
+                        <h4 class="doc-title">Automation Scripts</h4>
+                        <p class="doc-description">Complete automation reference</p>
+                        <a href="docs/automation-scripts.html" class="doc-link">Scripts →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Dev</span>
+                        </div>
+                        <h4 class="doc-title">Development Servers</h4>
+                        <p class="doc-description">Development environment setup</p>
+                        <a href="docs/development.html" class="doc-link">Dev Servers →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Arch</span>
+                    </div>
+                    <h3 class="category-title">Architecture</h3>
+                    <p class="category-description">System architecture and design</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Arch</span>
+                        </div>
+                        <h4 class="doc-title">System Architecture</h4>
+                        <p class="doc-description">System design principles</p>
+                        <a href="docs/architecture.html" class="doc-link">Architecture →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">DB</span>
+                        </div>
+                        <h4 class="doc-title">Database Design</h4>
+                        <p class="doc-description">Database schema and design</p>
+                        <a href="docs/database.html" class="doc-link">Database →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- API Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">API</span>
+                    </div>
+                    <h3 class="category-title">API & Integration</h3>
+                    <p class="category-description">API documentation and integration</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">API</span>
+                        </div>
+                        <h4 class="doc-title">API Reference</h4>
+                        <p class="doc-description">Complete API documentation</p>
+                        <a href="docs/api-reference.html" class="doc-link">API Docs →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Operations Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Ops</span>
+                    </div>
+                    <h3 class="category-title">Operations</h3>
+                    <p class="category-description">System operations and maintenance</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Ops</span>
+                        </div>
+                        <h4 class="doc-title">System Operations</h4>
+                        <p class="doc-description">Day-to-day operations</p>
+                        <a href="docs/system-operations.html" class="doc-link">Operations →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Deploy</span>
+                        </div>
+                        <h4 class="doc-title">Deployment</h4>
+                        <p class="doc-description">Deployment strategies and guides</p>
+                        <a href="docs/deployment.html" class="doc-link">Deployment →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Security</span>
+                        </div>
+                        <h4 class="doc-title">Security</h4>
+                        <p class="doc-description">Security best practices</p>
+                        <a href="docs/security.html" class="doc-link">Security →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Backup</span>
+                        </div>
+                        <h4 class="doc-title">Backup & Recovery</h4>
+                        <p class="doc-description">Backup and recovery procedures</p>
+                        <a href="docs/backup-recovery.html" class="doc-link">Backup →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Tools</span>
+                        </div>
+                        <h4 class="doc-title">Maintenance</h4>
+                        <p class="doc-description">System maintenance procedures</p>
+                        <a href="docs/maintenance.html" class="doc-link">Maintenance →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Test</span>
+                        </div>
+                        <h4 class="doc-title">Testing</h4>
+                        <p class="doc-description">Testing procedures and guidelines</p>
+                        <a href="docs/testing.html" class="doc-link">Testing →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Tools</span>
+                        </div>
+                        <h4 class="doc-title">Troubleshooting</h4>
+                        <p class="doc-description">Common issues and solutions</p>
+                        <a href="docs/troubleshooting.html" class="doc-link">Troubleshooting →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Business Systems Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Biz</span>
+                    </div>
+                    <h3 class="category-title">Business Systems</h3>
+                    <p class="category-description">Business and support systems</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Pay</span>
+                        </div>
+                        <h4 class="doc-title">Billing System</h4>
+                        <p class="doc-description">Payment processing and billing</p>
+                        <a href="docs/billing.html" class="doc-link">Billing →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Chat</span>
+                        </div>
+                        <h4 class="doc-title">Support System</h4>
+                        <p class="doc-description">Customer support and tickets</p>
+                        <a href="docs/support.html" class="doc-link">Support →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Users</span>
+                        </div>
+                        <h4 class="doc-title">User Management</h4>
+                        <p class="doc-description">User accounts and permissions</p>
+                        <a href="docs/user-management.html" class="doc-link">Users →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Data</span>
+                        </div>
+                        <h4 class="doc-title">Data Management</h4>
+                        <p class="doc-description">Data handling and storage</p>
+                        <a href="docs/data-management.html" class="doc-link">Data →</a>
+                    </div>
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Legal</span>
+                        </div>
+                        <h4 class="doc-title">Legal</h4>
+                        <p class="doc-description">Legal information and policies</p>
+                        <a href="docs/legal.html" class="doc-link">Legal →</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Configuration Section -->
+            <div class="doc-category">
+                <div class="category-header">
+                    <div class="category-icon">
+                        <span class="category-emoji">Config</span>
+                    </div>
+                    <h3 class="category-title">Configuration</h3>
+                    <p class="category-description">System configuration and setup</p>
+                </div>
+                <div class="doc-grid">
+                    <div class="doc-card">
+                        <div class="doc-icon">
+                            <span class="doc-emoji">Tools</span>
+                        </div>
+                        <h4 class="doc-title">Configuration</h4>
+                        <p class="doc-description">System configuration guide</p>
+                        <a href="docs/configuration.html" class="doc-link">Config →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sitemap Section -->
+    <section class="sitemap">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Complete Sitemap</h2>
+                <p class="section-description">Quick navigation to all documentation and resources</p>
+            </div>
+            <div class="sitemap-grid">
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Getting Started</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/quick-start.html">Quick Start Guide</a></li>
+                        <li><a href="docs/installation.html">Installation Guide</a></li>
+                        <li><a href="docs/contributing.html">Contributing Guidelines</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Development</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/development-guide.html">Development Guide</a></li>
+                        <li><a href="docs/development.html">Development Servers</a></li>
+                        <li><a href="docs/automation-scripts.html">Automation Scripts</a></li>
+                        <li><a href="docs/testing.html">Testing Procedures</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Architecture</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/architecture.html">System Architecture</a></li>
+                        <li><a href="docs/database.html">Database Design</a></li>
+                        <li><a href="docs/api-reference.html">API Reference</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Operations</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/system-operations.html">System Operations</a></li>
+                        <li><a href="docs/deployment.html">Deployment Guide</a></li>
+                        <li><a href="docs/security.html">Security</a></li>
+                        <li><a href="docs/maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Business</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/billing.html">Billing System</a></li>
+                        <li><a href="docs/support.html">Support System</a></li>
+                        <li><a href="docs/user-management.html">User Management</a></li>
+                        <li><a href="docs/data-management.html">Data Management</a></li>
+                    </ul>
+                </div>
+                <div class="sitemap-category">
+                    <h3 class="sitemap-title">Resources</h3>
+                    <ul class="sitemap-links">
+                        <li><a href="docs/backup-recovery.html">Backup & Recovery</a></li>
+                        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+                        <li><a href="docs/configuration.html">Configuration</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <span class="brand-text">HostingCo</span>
+                    </div>
+                    <p class="footer-description">
+                        Advanced hosting management system built for modern infrastructure.
+                    </p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/quick-start.html">Quick Start</a></li>
+                        <li><a href="docs/installation.html">Installation</a></li>
+                        <li><a href="docs/contributing.html">Contributing</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Development</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/development-guide.html">Development Guide</a></li>
+                        <li><a href="docs/development.html">Development Servers</a></li>
+                        <li><a href="docs/automation-scripts.html">Automation Scripts</a></li>
+                        <li><a href="docs/testing.html">Testing Procedures</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Architecture</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/architecture.html">System Architecture</a></li>
+                        <li><a href="docs/database.html">Database Design</a></li>
+                        <li><a href="docs/api-reference.html">API Reference</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Operations</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/system-operations.html">System Operations</a></li>
+                        <li><a href="docs/deployment.html">Deployment</a></li>
+                        <li><a href="docs/security.html">Security</a></li>
+                        <li><a href="docs/maintenance.html">Maintenance</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Business</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/billing.html">Billing System</a></li>
+                        <li><a href="docs/support.html">Support System</a></li>
+                        <li><a href="docs/user-management.html">User Management</a></li>
+                        <li><a href="docs/data-management.html">Data Management</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/backup-recovery.html">Backup & Recovery</a></li>
+                        <li><a href="docs/troubleshooting.html">Troubleshooting</a></li>
+                        <li><a href="docs/configuration.html">Configuration</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="docs/legal.html">Legal Information</a></li>
+                        <li><a href="LICENSE" target="_blank">License</a></li>
+                        <li><a href="PATENTS" target="_blank">Patents</a></li>
+                        <li><a href="NOTICE" target="_blank">Third-Party Notices</a></li>
+                        <li><a href="CONTRIBUTORS.md" target="_blank">Contributors</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4 class="footer-title">System Status</h4>
+                    <div class="status-indicators">
+                        <div class="status-item">
+                            <div class="status-dot online"></div>
+                            <span>Frontend: Online</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-dot online"></div>
+                            <span>Backend API: Online</span>
+                        </div>
+                        <div class="status-item">
+                            <div class="status-dot online"></div>
+                            <span>Documentation: Updated</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-copyright">
+                    <p>&copy; 2026 HostingCo System. Built with modern web technologies.</p>
+                </div>
+                <div class="footer-links-bottom">
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/blob/main/LICENSE" target="_blank">License</a>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/issues" target="_blank">Issues</a>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform/releases" target="_blank">Releases</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/search.js"></script>
+    <script src="assets/js/navigation.js"></script>
+</body>
+</html>

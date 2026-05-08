@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automation Scripts Reference - HostingCo</title>
+    <meta name="description" content="Comprehensive automation scripts reference for HostingCo system including database, development, deployment, and maintenance scripts">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/components.css">
+    <link rel="stylesheet" href="../assets/css/documentation.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../assets/images/favicon.svg">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="site-header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="../index.html" class="brand-link">
+                        <span class="brand-text">HostingCo</span>
+                    </a>
+                </div>
+                
+                <div class="nav-menu">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Home</a></li>
+                        <li><a href="quick-start.html" class="nav-link">Quick Start</a></li>
+                        <li><a href="api-reference.html" class="nav-link">API</a></li>
+                        <li><a href="installation.html" class="nav-link">Installation</a></li>
+                        <li><a href="architecture.html" class="nav-link">Architecture</a></li>
+                        <li class="nav-dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">More ▼</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="data-management.html">Data Management</a></li>
+                                <li><a href="system-operations.html">System Operations</a></li>
+                                <li><a href="security.html">Security</a></li>
+                                <li><a href="deployment.html">Deployment</a></li>
+                                <li><a href="troubleshooting.html">Troubleshooting</a></li>
+                                <li><a href="database.html">Database Design</a></li>
+                                <li><a href="configuration.html">Configuration</a></li>
+                                <li><a href="maintenance.html">Maintenance</a></li>
+                                <li><a href="backup-recovery.html">Backup & Recovery</a></li>
+                                <li><a href="billing.html">Billing System</a></li>
+                                <li><a href="support.html">Support System</a></li>
+                                <li><a href="automation-scripts.html">Automation Scripts</a></li>
+                                <li><a href="contributing.html">Contributing</a></li>
+                                <li><a href="development-guide.html">Development Guide</a></li>
+                                <li><a href="development.html">Development Servers</a></li>
+                                <li><a href="testing.html">Testing Procedures</a></li>
+                                <li><a href="user-management.html">User Management</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                        <span class="theme-icon">🌓</span>
+                    </button>
+                    <button class="search-toggle" id="searchToggle">
+                        <span class="search-icon">Search</span>
+                    </button>
+                    <a href="https://github.com/AutoBotSolutions/Opensource-Hosting-Developers-Platform" class="github-link" target="_blank">
+                        <span class="github-icon">GitHub</span>
+                    </a>
+                </div>
+                
+                <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Documentation Layout -->
+    <main class="docs-content">
+        <div class="docs-layout">
+            <!-- Sidebar -->
+            <aside class="docs-sidebar">
+                <h2 class="docs-sidebar-title">Documentation</h2>
+                <nav class="docs-nav">
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Getting Started</div>
+                        <div class="docs-nav-item">
+                            <a href="quick-start.html" class="docs-nav-link">Quick Start Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="installation.html" class="docs-nav-link">Installation Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="automation-scripts.html" class="docs-nav-link active">Automation Scripts</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">API Reference</div>
+                        <div class="docs-nav-item">
+                            <a href="api-reference.html" class="docs-nav-link">API Documentation</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Architecture</div>
+                        <div class="docs-nav-item">
+                            <a href="architecture.html" class="docs-nav-link">System Architecture</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="database.html" class="docs-nav-link">Database Design</a>
+                        </div>
+                    </div>
+                    
+                    <div class="docs-nav-section">
+                        <div class="docs-nav-section-title">Operations</div>
+                        <div class="docs-nav-item">
+                            <a href="system-operations.html" class="docs-nav-link">System Operations</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="deployment.html" class="docs-nav-link">Deployment Guide</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="security.html" class="docs-nav-link">Security</a>
+                        </div>
+                        <div class="docs-nav-item">
+                            <a href="troubleshooting.html" class="docs-nav-link">Troubleshooting</a>
+                        </div>
+                    </div>
+                </nav>
+            </aside>
+
+            <!-- Content -->
+            <div class="docs-main">
+                <div class="docs-header">
+                    <h1 class="docs-title">Automation Scripts Reference</h1>
+                    <p class="docs-description">This comprehensive reference covers all automation scripts available in the HostingCo system, providing detailed usage instructions, examples, and best practices.</p>
+                </div>
+
+                <div class="docs-content">
+                    <section class="docs-section">
+                        <h2 id="script-overview" class="docs-section-title">Script Overview</h2>
+                        <p>The HostingCo project includes a complete suite of automation scripts that handle every aspect of the development lifecycle, from initial setup to deployment and maintenance.</p>
+                        
+                        <h3 class="docs-subsection-title">Script Categories</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Scripts</th>
+                                    <th>Purpose</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Database</strong></td>
+                                    <td><code>db-migrate.sh</code>, <code>db-seed.sh</code>, <code>db-reset.sh</code></td>
+                                    <td>Database operations and management</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Development</strong></td>
+                                    <td><code>dev.sh</code>, <code>dev-backend.sh</code>, <code>dev-frontend.sh</code></td>
+                                    <td>Development server management</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Build & Deploy</strong></td>
+                                    <td><code>build.sh</code>, <code>deploy.sh</code></td>
+                                    <td>Application building and deployment</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Testing</strong></td>
+                                    <td><code>test.sh</code>, <code>test-watch.sh</code>, <code>test-coverage.sh</code></td>
+                                    <td>Test execution and coverage analysis</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Docker</strong></td>
+                                    <td><code>docker-build.sh</code>, <code>docker-up.sh</code>, <code>docker-down.sh</code></td>
+                                    <td>Docker container management</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Maintenance</strong></td>
+                                    <td><code>clean.sh</code>, <code>setup.sh</code>, <code>health-check.sh</code></td>
+                                    <td>System maintenance and monitoring</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="database-scripts" class="docs-section-title">Database Management Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">db-migrate.sh</h3>
+                        <p>Run database migrations for specific environments with safety checks and rollback capabilities.</p>
+                        
+                        <h4 class="docs-subsection-title">Usage</h4>
+                        <pre><code class="language-bash">./scripts/db-migrate.sh [environment]</code></pre>
+
+                        <h4 class="docs-subsection-title">Environments</h4>
+                        <div class="alert alert-info">
+                            <strong>development:</strong> Local development database<br>
+                            <strong>staging:</strong> Staging environment database<br>
+                            <strong>production:</strong> Production database (requires confirmation)
+                        </div>
+
+                        <h4 class="docs-subsection-title">Examples</h4>
+                        <pre><code class="language-bash"># Migrate development database
+./scripts/db-migrate.sh development
+
+# Migrate production database
+./scripts/db-migrate.sh production
+
+# Rollback last migration
+./scripts/db-migrate.sh production --rollback</code></pre>
+
+                        <h3 class="docs-subsection-title">db-seed.sh</h3>
+                        <p>Populate database with seed data for development and testing.</p>
+                        <pre><code class="language-bash"># Seed development database
+./scripts/db-seed.sh development
+
+# Seed specific data types
+./scripts/db-seed.sh development --users --servers</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="development-scripts" class="docs-section-title">Development Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">dev.sh</h3>
+                        <p>Start both frontend and backend development servers concurrently.</p>
+                        <pre><code class="language-bash"># Start all development servers
+./scripts/dev.sh
+
+# Start with specific environment
+./scripts/dev.sh --env=development
+
+# Start with hot reload
+./scripts/dev.sh --hot-reload</code></pre>
+
+                        <h3 class="docs-subsection-title">dev-backend.sh</h3>
+                        <p>Start only the backend development server.</p>
+                        <pre><code class="language-bash"># Start backend server
+./scripts/dev-backend.sh
+
+# Start with debug mode
+./scripts/dev-backend.sh --debug
+
+# Start with specific port
+./scripts/dev-backend.sh --port=3004</code></pre>
+
+                        <h3 class="docs-subsection-title">dev-frontend.sh</h3>
+                        <p>Start only the frontend development server.</p>
+                        <pre><code class="language-bash"># Start frontend server
+./scripts/dev-frontend.sh
+
+# Start with specific port
+./scripts/dev-frontend.sh --port=3001
+
+# Start with production build
+./scripts/dev-frontend.sh --build</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="build-deploy-scripts" class="docs-section-title">🔨 Build & Deploy Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">build.sh</h3>
+                        <p>Build the application for production deployment.</p>
+                        <pre><code class="language-bash"># Build for production
+./scripts/build.sh
+
+# Build with optimization
+./scripts/build.sh --optimize
+
+# Build specific packages
+./scripts/build.sh --frontend --backend</code></pre>
+
+                        <h3 class="docs-subsection-title">deploy.sh</h3>
+                        <p>Deploy the application to specified environment.</p>
+                        <pre><code class="language-bash"># Deploy to staging
+./scripts/deploy.sh staging
+
+# Deploy to production
+./scripts/deploy.sh production
+
+# Deploy with backup
+./scripts/deploy.sh production --backup</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="testing-scripts" class="docs-section-title">Testing Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">test.sh</h3>
+                        <p>Run all tests with comprehensive reporting.</p>
+                        <pre><code class="language-bash"># Run all tests
+./scripts/test.sh
+
+# Run specific test suites
+./scripts/test.sh --unit --integration
+
+# Run tests with coverage
+./scripts/test.sh --coverage</code></pre>
+
+                        <h3 class="docs-subsection-title">test-watch.sh</h3>
+                        <p>Run tests in watch mode for continuous testing.</p>
+                        <pre><code class="language-bash"># Watch for changes and run tests
+./scripts/test-watch.sh
+
+# Watch specific files
+./scripts/test-watch.sh --src --test</code></pre>
+
+                        <h3 class="docs-subsection-title">test-coverage.sh</h3>
+                        <p>Generate detailed test coverage reports.</p>
+                        <pre><code class="language-bash"># Generate coverage report
+./scripts/test-coverage.sh
+
+# Generate HTML coverage report
+./scripts/test-coverage.sh --html
+
+# Check coverage thresholds
+./scripts/test-coverage.sh --check-thresholds</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="docker-scripts" class="docs-section-title">Docker Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">docker-build.sh</h3>
+                        <p>Build Docker images for all services.</p>
+                        <pre><code class="language-bash"># Build all images
+./scripts/docker-build.sh
+
+# Build specific services
+./scripts/docker-build.sh --frontend --backend
+
+# Build with custom tag
+./scripts/docker-build.sh --tag=v1.0.0</code></pre>
+
+                        <h3 class="docs-subsection-title">docker-up.sh</h3>
+                        <p>Start Docker containers for development.</p>
+                        <pre><code class="language-bash"># Start all containers
+./scripts/docker-up.sh
+
+# Start specific services
+./scripts/docker-up.sh --db --redis
+
+# Start with detached mode
+./scripts/docker-up.sh --detach</code></pre>
+
+                        <h3 class="docs-subsection-title">docker-down.sh</h3>
+                        <p>Stop and remove Docker containers.</p>
+                        <pre><code class="language-bash"># Stop all containers
+./scripts/docker-down.sh
+
+# Remove volumes
+./scripts/docker-down.sh --volumes
+
+# Force remove
+./scripts/docker-down.sh --force</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="maintenance-scripts" class="docs-section-title">Maintenance Scripts</h2>
+                        
+                        <h3 class="docs-subsection-title">clean.sh</h3>
+                        <p>Clean up temporary files, logs, and build artifacts.</p>
+                        <pre><code class="language-bash"># Clean all temporary files
+./scripts/clean.sh
+
+# Clean specific directories
+./scripts/clean.sh --logs --cache
+
+# Deep clean
+./scripts/clean.sh --deep</code></pre>
+
+                        <h3 class="docs-subsection-title">setup.sh</h3>
+                        <p>Set up development environment and dependencies.</p>
+                        <pre><code class="language-bash"># Full setup
+./scripts/setup.sh
+
+# Setup without database
+./scripts/setup.sh --no-db
+
+# Setup for production
+./scripts/setup.sh --production</code></pre>
+
+                        <h3 class="docs-subsection-title">health-check.sh</h3>
+                        <p>Perform comprehensive health checks on all system components.</p>
+                        <pre><code class="language-bash"># Basic health check
+./scripts/health-check.sh
+
+# Detailed health check
+./scripts/health-check.sh --detailed
+
+# Continuous monitoring
+./scripts/health-check.sh --watch</code></pre>
+                    </section>
+
+                    <section class="docs-section">
+                        <h2 id="script-best-practices" class="docs-section-title">Script Best Practices</h2>
+                        
+                        <h3 class="docs-subsection-title">Usage Guidelines</h3>
+                        <div class="alert alert-success">
+                            <strong>Environment Safety:</strong> Production operations require explicit confirmation<br>
+                            <strong>Error Handling:</strong> All scripts include comprehensive error handling<br>
+                            <strong>Logging:</strong> Detailed logging for debugging and audit trails<br>
+                            <strong>Idempotency:</strong> Scripts can be run multiple times safely
+                        </div>
+
+                        <h3 class="docs-subsection-title">Security Considerations</h3>
+                        <div class="alert alert-warning">
+                            <strong>Permissions:</strong> Scripts run with minimum required permissions<br>
+                            <strong>Secrets:</strong> Sensitive data handled securely<br>
+                            <strong>Validation:</strong> Input validation for all parameters<br>
+                            <strong>Audit Trail:</strong> All operations logged for compliance
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/search.js"></script>
+    <script src="../assets/js/navigation.js"></script>
+</body>
+</html>
